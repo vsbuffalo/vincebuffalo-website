@@ -130,6 +130,13 @@ few. Admire their skill *and* their personality.
 
 ## Being a dick hurts science
 
+<a href="http://www.flickr.com/photos/mclapics/6121420214/"
+title="Science is great, open it (open science) by mclapics, on
+Flickr"><img
+src="http://farm7.staticflickr.com/6188/6121420214_7f4fe7200a.jpg"
+width="500" height="333" alt="Science is great, open it (open
+science)"></a>
+
 There's been an explosion of open source software utilization in the
 sciences. My field, bioinformatics, provides an interesting case
 study. There are bioinformaticians like myself that write
