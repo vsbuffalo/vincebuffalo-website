@@ -121,7 +121,7 @@ because they are gifted visionaries. I'm not sure why, but other
 developers admire this dickishness. But don't idolize their
 dickishness, idolize their skill. There are also overwhelmingly nice
 programmers: [John
-McCarthy](http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)),
+McCarthy](http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist\)),
 [Donald Knuth](http://en.wikipedia.org/wiki/Donald_Knuth), and [Alan
 Turing](http://en.wikipedia.org/wiki/Alan_Turing) to name a
 few. Admire their skill *and* their personality.
