@@ -127,3 +127,22 @@ McCarthy](http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist\)),
 [Donald Knuth](http://en.wikipedia.org/wiki/Donald_Knuth), and [Alan
 Turing](http://en.wikipedia.org/wiki/Alan_Turing) to name a
 few. Admire their skill *and* their personality.
+
+## Being a dick hurts science
+
+There's been an explosion of open source software utilization in the
+sciences. My field, bioinformatics, provides an interesting case
+study. There are bioinformaticians like myself that write
+software. Users are divided into other programmer types (other
+bioinformaticians) and biologists (on average, less knowledgeable of
+programming). All else equal, biologists and bioinformaticians prefer
+free, open source software to costly proprietary software.
+
+For these reasons, being helpful and nice to scientific users is
+really important. For biologists, choosing tools is about getting
+analysis done quickly and easily. Rude bioinformaticians will quickly
+increase the cost of using OSS tools, which is already high for many
+biologists who aren't experienced with Unix tools and
+programming. Consequently, science could become less open, something
+neither group wants.
+
