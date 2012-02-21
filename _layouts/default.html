@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen,projection" />
+    <link rel="stylesheet" href="/stylesheets/print.css"  type="text/css" media="print" />
+    <link rel="stylesheet" href="/stylesheets/site.css"  type="text/css" media="screen" />
+    <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    
+    
+    <!--start-container-->
+    <div class="container">
+      
+      <!--start-header-->
+      <div class="span-24">
+        <h1 id="top-header"><a href="/" title="main page">a digital notebook</a></h1>
+      </div>
+      <!--end-header-->
+      
+      <!--start-left-->
+      <div class="span-7 last" id="left-list">
+        <p>
+          <img src="images/me.jpg" width=200 alt="A photo of me at the
+        top of a climb at Phantom Spires, South Lake Tahoe."/>
+        </p>
+        <p>
+          <span class="left-title">About</span><br/>
+
+          I'm Vince Buffalo, a Bioinformatics Programmer working for
+          the <a href="http://bioinformatics.ucdavis.edu"
+          title="Bioinformatics Core website">Bioinformatics Core</a>
+          at the <a href="http://genomics.ucdavis.edu" title="UC Davis
+          Genome Center website">UC Davis Genome Center</a>.
+        </p>
+        <p>
+          <span class="left-title">Contact</span><br/>
+          
+          <a href="mailto:vsbuffaloAAAAA@gmail.com">vsbuffaloAAAAA@gmail.com</a>
+          (sans poly-A tail)<br/>
+          <a href="http://twitter.com/vsbuffalo">twitter.com/vsbuffalo</a><br/>
+          <a href="http://github.com/vsbuffalo">github.com/vsbuffalo</a><br/>
+          
+        </p>
+      </div>
+      <!--end-left-->
+          
+      <!--start-mid-->
+      <div class="span-16 colborder" id="content">
+        <ul class="posts">
+          {% for post in site.posts %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+
+      </div>
+      <!--end-mid-->
+      
+      <!--start-footer-->
+      <div class="span-24" id="footer">
+        <p>Copyright (c) Vince Buffalo, 2012</p>
+      </div>
+      <!--end-footer-->
+      
+    </div>
+    <!--end-container-->
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+/*
+  The CSS stylesheet for my site.
+*/
+
+#top-header {
+    margin-top: 10px;
+    text-align: center;
+    color: #333333;
+}
+
+#top-header a {
+    color: #333333;
+    text-decoration: none;
+}
+
+#footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.left-title {
+    font-weight: 900;
+    color: red;
+}
