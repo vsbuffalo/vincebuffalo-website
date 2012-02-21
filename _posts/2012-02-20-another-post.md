@@ -28,3 +28,13 @@ don't believe me). If I want to search all my posts using regular
 expressions, I can with `grep`. How could this be done if I was using
 WordPress or any blogging system that used database backend?
 
+## Code-friendly
+
+Jekyll plays well with [Pygments](http://pygments.org/), a Python
+syntax highlighter. This is import because I want to share code. 
+
+    # Jekyll is code friendly
+    x <- seq(-1, 3, 0.1)
+    y <- sin(x) + rnorm(length(x), 0, 0.3)
+    plot(x, y)
+
