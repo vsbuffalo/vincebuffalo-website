@@ -3,6 +3,8 @@ layout: post
 title: Please developers, don't be a dick.
 ---
 
+# Please Developers, don't be a dick
+
 As the author of a few open source tools, I've had my fair share of
 users seeking help. Emails range from the very useful (bug reports,
 patches, etc) to the annoying ("can you help guide me through this
@@ -11,7 +13,7 @@ process"). But never once (that I can remember) have I been a dick
 sounding self-righteous, but I hope to make the case that open source
 developers shouldn't be dicks in all cases.
 
-# We've All Been There (WABT)
+## We've All Been There (WABT)
 
 The first reason to never be a dick is that We've All Been There (I'm
 going to give this the acronym WABT). Even the most voracious and
@@ -31,7 +33,7 @@ dick will cause them to get more frustrated and *really* not grasp
 anything. They're not going to have an "ah ha!" moment when they're
 too busy trying to come up with a witty response to your burn on IRC.
 
-# PCTM has the same number of letters as RTFM
+## PCTM has the same number of letters as RTFM
 
 Please Check The Manual (PCTM) has the same number of letters as Read
 The Fucking Manual (RTFM). I strongly believe it takes more energy for
@@ -42,7 +44,7 @@ responding to users' questions. Make this a FAQ. Then respond, PCTM
 (Please Check the Manual) and send them the link. If they get needy,
 tell them open source software doesn't come with a warranty.
 
-# People remember dicks
+## People remember dicks
 
 Someone was once a dick to me via email. He's a moderately well-known
 developer (I'll name him Tom). I had voiced some frustrations about an
@@ -70,7 +72,7 @@ is an excellent developer, but do you think any of us will add him to
 our shortlist of developers to hire? Do you think we won't share our
 experiences with this developer? 
 
-# If you're a dick, you're hurting OSS
+## If you're a dick, you're hurting OSS
 
 OSS has seen an explosion in recent years. Biologsts, ecologists, and
 social scientists that never thought they'd write code are using R to
@@ -102,7 +104,7 @@ Tom's actions guarantee I will avoid working on his projects at all
 costs. The two other developers, and anyone else we've told will
 too. In the end, the software loses.
 
-# Idolize programmers, not their dickishness
+## Idolize programmers, not their dickishness
 
 Some abrasive programmers are really gifted. Erik Naggum is regarded
 as the [first Usenet
