@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Please developers, don't be a dicks.
+title: Please developers, don't be dicks.
 ---
 
-# Please developers, don't be a dicks.
+# Please developers, don't be dicks.
 
 As the author of a few open source tools, I've had my fair share of
 users seeking help. Emails range from the very useful (bug reports,
