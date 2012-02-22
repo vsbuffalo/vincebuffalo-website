@@ -86,11 +86,11 @@ encourage others to use my software. Of course this is bad for OSS;
 consider this passage from Eric S. Raymond's [Jargon
 File](http://catb.org/jargon/html/F/forked.html):
 
-> Forking is considered a Bad Thing - not merely because it implies a lot
-of wasted effort in the future, but because forks tend to be
-accompanied by a great deal of strife and acrimony between the
-successor groups over issues of legitimacy, succession, and design
-direction. There is serious social pressure against forking.
+> Forking is considered a Bad Thing - not merely because it implies a
+> lot of wasted effort in the future, but because forks tend to be
+> accompanied by a great deal of strife and acrimony between the
+> successor groups over issues of legitimacy, succession, and design
+> direction. There is serious social pressure against forking.
 
 Tom's actions guarantee I will avoid working on his projects at all
 costs. The two other developers, and anyone else we've told will

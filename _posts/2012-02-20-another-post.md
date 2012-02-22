@@ -98,3 +98,4 @@ which disables plugins. LaTeX to PNG rendering is built into Maruku,
 not a plugin, yet builds still fail on Github (even though they are
 fine with these options locally). I also host this site at
 <http://vincebuffalo.org>, so there's not a huge problem here.
+
