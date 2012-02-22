@@ -40,30 +40,43 @@ syntax highlighter. This is import because I want to share code.
 
 ## Formulae
 
-Does this work?
+This was my final worry - org-mode is a bit "heavy" for publishing
+quick notes (although entirely necessary for other things), but it has
+excellent LaTeX integration. I would be very disappointed if I
+couldn't easily incorporate LaTeX into Jekyll. Luckily, I can! The
+default Maruku Markdown interpreter just needs to have LaTeX support
+turned on (see below)... and wahla! I can include math:
 
-$$ \frac{x}{y^2} $$
+$$ \widehat{\boldsymbol \theta}_{JS} = \left( 1 - \frac{(m-2)
+\sigma^2}{\|{\overline{\mathbf y}}\|^2} \right) {\overline{\mathbf y}} $$
 
 # My configuration
 
 There's a myriad of Ruby tools and plugins for Jekyll - it's all a bit
-intimidating. Here are a few notes on my configuration.
+intimidating. Here are a few notes on my configuration. [My
+`_config.yml` file is definitely
+important.](http://github.com/vsbuffalo/vsbuffalo.github.com/blob/master/_config.yml)
 
-[My `_config.yml` file illustrates some important
-configurations.](http://github.com/vsbuffalo/vsbuffalo.github.com/blob/master/_config.yml)
-
-I am using the default Markdown parser, maruku. Maruku has formulae
+I am using the default Markdown parser, Maruku. Maruku has formulae
 support, but it experimental and not on my default. Formulae are very
-important to this, so getting them to work is paramount. Here's how I
-did it:
+important to my notebook, so getting them to work is paramount. Here's
+how I did it:
 
-  1. Add the Maruku configurations below:
+  1. Add the Maruku configurations below. Note the trailing slashes -
+  these are important (and a sign that LaTeX support is still a bit
+  rough.)
 
     maruku:
       use_tex: true
       use_divs: true
       png_engine: blahtex
-      png_dir: images/latex
-      png_url: /images/latex
+      png_dir: images/latex/
+      png_url: /images/latex/
 
-  2. 
+  2. Install Xerces-C. On a Mac with MacPorts, use `sudo port install
+  xercesc`. This is a requirement for `blahtexml`, which Maruku uses.
+
+  3. Install `blahtexml`. Get the source at
+  <http://gva.noekeon.org/blahtexml> and on a Mac, use `make
+  blahtex-mac` and put this binary in `/usr/local/bin/` or some other
+  place in your `$PATH`.
