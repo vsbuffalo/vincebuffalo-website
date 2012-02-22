@@ -33,10 +33,12 @@ WordPress or any blogging system that used database backend?
 Jekyll plays well with [Pygments](http://pygments.org/), a Python
 syntax highlighter. This is import because I want to share code. 
 
+    {% highlight r %}
     # Jekyll is code friendly
     x <- seq(-1, 3, 0.1)
     y <- sin(x) + rnorm(length(x), 0, 0.3)
     plot(x, y)
+    {% endhighlight %}
 
 ## Formulae
 
@@ -57,6 +59,7 @@ intimidating. Here are a few notes on my configuration. [My
 `_config.yml` file is definitely
 important.](http://github.com/vsbuffalo/vsbuffalo.github.com/blob/master/_config.yml)
 
+## Maruku and LaTeX
 I am using the default Markdown parser, Maruku. Maruku has formulae
 support, but it experimental and not on my default. Formulae are very
 important to my notebook, so getting them to work is paramount. Here's
@@ -80,3 +83,18 @@ how I did it:
   <http://gva.noekeon.org/blahtexml> and on a Mac, use `make
   blahtex-mac` and put this binary in `/usr/local/bin/` or some other
   place in your `$PATH`.
+
+## Pygments and Blueprint CSS
+
+Blueprint CSS has a class `highlight` in `screen.css` that clashes
+with Pygment (giving code a hideous yellow background). I just renamed
+the class `highlight-alt` in `screen.css` and everything looks great
+now.
+
+## Build errors with Github
+
+Github's Jekyll engine apparently runs with `jekyll --pygments --safe`
+which disables plugins. LaTeX to PNG rendering is built into Maruku,
+not a plugin, yet builds still fail on Github (even though they are
+fine with these options locally). I also host this site at
+<http://vincebuffalo.org>, so there's not a huge problem here.
