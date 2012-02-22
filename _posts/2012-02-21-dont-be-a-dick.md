@@ -61,7 +61,7 @@ Jerry's software years ago. This is evidence of my first point,
 WABT. It also shows that developers remember interactions with other
 developers *really* well. Since then, I've also heard other
 programmers complaining about interactions with Tom. This is all too
-bad, as Tom probably is very nice in perosn and certainly a good
+bad, as Tom is probably very nice in person and certainly a good
 programmer.
 
 ## If you're a dick, you're hurting OSS
