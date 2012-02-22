@@ -46,31 +46,23 @@ tell them open source software doesn't come with a warranty.
 
 ## People remember dicks
 
-Someone was once a dick to me via email. He's a moderately well-known
-developer (I'll name him Tom). I had voiced some frustrations about an
-encounter with software Tom wrote and he attacked me for these public
-comments on Twitter. Now, as an aside, there's a lot of shitty
+Someone was once quite rude to me via email (I'll name him Tom). I had
+voiced some frustrations with software Tom wrote and he attacked me
+for these public comments. Now, as an aside, there's a lot of shitty
 software out there, and signals about software quality (even noisy
-signals) are *very valuable*. Tom's email was bizarre: on one hand, he
-attacked me for saying something negative about his software, and on
-the other hand he asked me to help fix it, emphasizing it was open
-source software.
+signals) are *very valuable*. Tom on one hand attacked me for saying
+something negative about his software, and on the other hand asked me
+to help fix it, emphasizing it was open source software. I agree with
+this sentiment 100%, however the email was clearly very angry.
 
 I told another developer who I'll call Jerry about the encounter, and
-he laughed. Jerry is a more well-known developer. Apparently, Tom
-nagged Jerry about portability issues of Jerry's software years
-ago. This is evidence of my first point, WABT. It also shows that
-developers remember interactions with other developers *really*
-well. But it doesn't stop there.
-
-I also shared this encounter with Tom two other developers (who were
-both shocked). Since then, *both* have told me about future encounters
-with Tom that were negative. It's been two years since my original
-interaction and both remembered it well enough, and were equally
-annoyed that they shared their negative experiences with me. Now, Tom
-is an excellent developer, but do you think any of us will add him to
-our shortlist of developers to hire? Do you think we won't share our
-experiences with this developer? 
+he laughed. Apparently, Tom nagged Jerry about portability issues of
+Jerry's software years ago. This is evidence of my first point,
+WABT. It also shows that developers remember interactions with other
+developers *really* well. Since then, I've also heard other
+programmers complaining about interactions with Tom. This is all too
+bad, as Tom probably is very nice in perosn and certainly a good
+programmer.
 
 ## If you're a dick, you're hurting OSS
 
@@ -86,12 +78,12 @@ worse. Let's go back to my story about Tom.
 
 In the second half of Tom's email (after attacking me), he asked me to
 help him fix his software. Now, collaboration can be difficult; code
-style clashes, merges fail, etc. In a small project, you're really in
-bed with your collaborators. Now that Tom has sent me the signal he's
-a dick, do you think I'll work on his project with him? Hell no. I'd
-rather fork, fix the problem and encourage others to use my
-software. Of course this is bad for OSS; consider this passage from
-Eric S. Raymond's [Jargon
+style clashes, merges fail, frustration is common. In a small project,
+you're really in bed with your collaborators. Now that Tom has sent me
+the signal he's nasty in correspondences, do you think I'll work on
+this project with him? Hell no. I'd rather fork, fix the problem and
+encourage others to use my software. Of course this is bad for OSS;
+consider this passage from Eric S. Raymond's [Jargon
 File](http://catb.org/jargon/html/F/forked.html):
 
 > Forking is considered a Bad Thing - not merely because it implies a lot
