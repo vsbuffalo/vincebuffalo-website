@@ -38,3 +38,32 @@ syntax highlighter. This is import because I want to share code.
     y <- sin(x) + rnorm(length(x), 0, 0.3)
     plot(x, y)
 
+## Formulae
+
+Does this work?
+
+$$ \frac{x}{y^2} $$
+
+# My configuration
+
+There's a myriad of Ruby tools and plugins for Jekyll - it's all a bit
+intimidating. Here are a few notes on my configuration.
+
+[My `_config.yml` file illustrates some important
+configurations.](http://github.com/vsbuffalo/vsbuffalo.github.com/blob/master/_config.yml)
+
+I am using the default Markdown parser, maruku. Maruku has formulae
+support, but it experimental and not on my default. Formulae are very
+important to this, so getting them to work is paramount. Here's how I
+did it:
+
+  1. Add the Maruku configurations below:
+
+    maruku:
+      use_tex: true
+      use_divs: true
+      png_engine: blahtex
+      png_dir: images/latex
+      png_url: /images/latex
+
+  2. 
