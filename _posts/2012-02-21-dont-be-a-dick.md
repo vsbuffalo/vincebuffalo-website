@@ -3,6 +3,14 @@ layout: post
 title: Please developers, don't be dicks.
 ---
 
+
+<a href="http://www.flickr.com/photos/mclapics/6121420214/"
+title="Science is great, open it (open science) by mclapics, on
+Flickr"><img
+src="http://farm7.staticflickr.com/6188/6121420214_7f4fe7200a.jpg"
+width="500" height="333" alt="Science is great, open it (open
+science)"></a>
+
 # Please developers, don't be dicks.
 
 As the author of a few open source tools, I've had my fair share of
@@ -114,20 +122,15 @@ Now, all of these developers have been dickish and are well-known
 because they are gifted visionaries. I'm not sure why, but other
 developers admire this dickishness. But don't idolize their
 dickishness, idolize their skill. There are also overwhelmingly nice
-programmers: [John
-McCarthy](http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist\)),
-[Donald Knuth](http://en.wikipedia.org/wiki/Donald_Knuth), and [Alan
-Turing](http://en.wikipedia.org/wiki/Alan_Turing) to name a
+programmers:
+[John McCarthy][1],
+[Donald Knuth](http://en.wikipedia.org/wiki/Donald_Knuth), and
+[Alan Turing](http://en.wikipedia.org/wiki/Alan_Turing) to name a
 few. Admire their skill *and* their personality.
 
-## Being a dick hurts science
+[1]: http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)
 
-<a href="http://www.flickr.com/photos/mclapics/6121420214/"
-title="Science is great, open it (open science) by mclapics, on
-Flickr"><img
-src="http://farm7.staticflickr.com/6188/6121420214_7f4fe7200a.jpg"
-width="500" height="333" alt="Science is great, open it (open
-science)"></a>
+## Being a dick hurts science
 
 There's been an explosion of open source software utilization in the
 sciences. My field, bioinformatics, provides an interesting case

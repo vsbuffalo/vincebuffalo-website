@@ -3,6 +3,11 @@ layout: post
 title: Arduino Notes
 ---
 
+<a href="http://www.flickr.com/photos/nickhubbard/6468346201/"
+title="Arduino UNO by Mr ATM, on Flickr"><img
+src="http://farm8.staticflickr.com/7164/6468346201_b458451c53.jpg"
+width="500" height="333" alt="Arduino UNO"></a>
+
 # Arduino Notes
 
 The following are some notes/links I've come across when working with

@@ -26,4 +26,10 @@
 
 .maruku-equation {
     text-align: center;
+    margin-bottom: 1em;
+}
+
+.caveat {
+    font-style: italic;
+    font-size: 0.8em;
 }
