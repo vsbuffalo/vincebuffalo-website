@@ -1,0 +1,3 @@
+<blahtex>
+<error><id>UnmatchedLeft</id><message>Encountered "\left" without matching "\right"</message></error>
+</blahtex>
