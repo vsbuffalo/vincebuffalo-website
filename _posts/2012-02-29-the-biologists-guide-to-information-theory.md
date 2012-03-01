@@ -105,7 +105,7 @@ this message. There are actually only 21 different symbols, yet we
 still use the full byte to represent each one. We could use five bits
 (2^5 = 32) to represent the 21 characters, and still have some bits
 left over. Since our new 21 character system is non-standard (unlike
-ASCII), we'd have to transmite our new alphabet with it, which
+ASCII), we'd have to transmit our new alphabet with it, which
 increases the message size.
 
 If we had to encode a message following this message that had an extra
@@ -118,11 +118,9 @@ character. If we look at Morse code, we see Samuel Morse's insight
 (although not immediate): encode frequent characeters like "e" into a
 code with a smaller length symbol, like an single dot. Other, less
 frequent letters are encoded with a longer symbol, like dash dash dot
-dot.
-
-Morse code operators use an encoding system that has an alphabet size
-of four: dot, dash, letter pause, word pause. In contrast, our
-alphabet size with binary was two: 0 and 1. 
+dot. Note that Morse code operators use an encoding system that has an
+alphabet size of four: dot, dash, letter pause, word pause. In
+contrast, our alphabet size with binary was two: 0 and 1.
 
 
     > t = paste(readLines('http://www.gutenberg.org/cache/epub/76/pg76.txt'), collapse=" ")
@@ -166,7 +164,8 @@ te". If we use a delimiter like ";" and add it to our alphabet, we
 lose some of the advantage of our compression because we have a longer
 message: "01;1;0;01;1". With digital communications, we can't add an
 extra symbol for ";", so it would need to be represented as a unique
-symbol like "1111", again increasing our message size.
+symbol like "1111", again increasing our message size (and still not
+able to be uniquely decoded!).
 
 This is were [prefix codes](http://en.wikipedia.org/wiki/Prefix_code)
 are useful: a encoding system with the "prefix property" means that no
