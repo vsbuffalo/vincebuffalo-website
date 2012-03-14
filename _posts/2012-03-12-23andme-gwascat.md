@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Using Bioconductor's gwascat Package to Analyze your 23andme Data
+title: Using Bioconductor to Analyze your 23andme Data
 tags: 
  - hide
 ---
 
-# Using Bioconductor's `gwascat` Package to Analyze your 23andme Data
+# Using Bioconductor to Analyze your 23andme Data
 
 Bioconductor is one of the open source projects of which I am most
 fond. The documentation is excellent, the community wonderful, the
@@ -313,11 +313,8 @@ for. First, using the rs ID as a key, let's join our SNP data with the
     gwrngs.emd <- as.data.frame(elementMetadata(gwrngs))
     dm <- merge(d, gwrngs.emd, by.x="rsid", by.y="SNPs")
 
-
-
-
-We can search for the risk allele in the 23andme genotype data
-with R:
+We can search for the risk allele in the 23andme genotype data with R
+and attach a vector of `i.have.risk` to the `dm` data frame:
 
     risk.alleles <- gsub("[^\\-]*-([ATCG?])", "\\1", dm$Strongest.SNP.Risk.Allele)
     i.have.risk <- mapply(function(risk, mine) {
@@ -325,3 +322,62 @@ with R:
     }, risk.alleles, dm$genotype)
     dm$i.have.risk <- i.have.risk
 
+Now that you have this data frame, you can mine it endlessly. You may
+want to sort by `Risk.Allele.Frequency` and whether you have the
+risk. Because there are quite a few columns in the element metadata,
+it's nice to define a quick-summary subset:
+
+
+    my.risk <- dm[dm$i.have.risk, ]
+    rel.cols <- c(colnames(d), "Disease.Trait", "Risk.Allele.Frequency",
+                  "p.Value", "i.have.risk", "X95..CI..text.")
+
+    head(my.risk[order(my.risk$Risk.Allele.Frequency), rel.cols], 1)
+              rsid chrom position genotype Disease.Trait Risk.Allele.Frequency
+    2553 rs2315504 chr17 36300407       AC        Height                  0.01
+         p.Value i.have.risk   X95..CI..text.
+    2553   8e-06        TRUE [NR] cm increase
+
+This is a rare variant, but the most important next question is, rare
+in who?
+
+    dm[which(dm$rsid == "rs2315504"), "Initial.Sample.Size"]
+    [1] 8,842 Korean individuals
+
+So this clearly doesn't mean much to me. We can use `grep` to find
+studies that mention "European":
+
+    head(my.risk[grep("European", my.risk$Initial.Sample.Size), rel.cols], 30)
+    
+One interesting rs ID that popped up in this list of my data is
+rs10166942, which is lightly linked to migraines (from which I
+suffer).
+
+## Making Graphics with `ggbio` 
+
+
+`ggbio` is a new-ish (Bioconductor 2.9) package that produces really
+nice graphics. Let's plot the location of all SNPs that `gwascat`
+tells me my allele is the "risk" allele (again, strange word choice as
+some "Disease.Traits" are height). `gwascat` uses hg19, and `ggbio`
+doesn't have ideogram cytobanding and chromosome position information
+for hg18 bundled with it (yet?) so we'll need to work with that.
+
+    library(ggbio)
+    p <- plotOverview(hg19IdeogramCyto, cytoband=FALSE)
+
+Now, let's take the `gwrngs` object and subset by my risk
+alleles. Notice how these assignment function `elementMetadata<-` is
+overloaded here:
+
+    (elementMetadata(gwrngs)$my.genotype <- 
+       d$genotype[(match(elementMetadata(gwrngs)$SNPs, d$rsid))])
+
+    elementMetadata(gwrngs)$my.risk <- with(elementMetadata(gwrngs), 
+        mapply(function(risk, mine) {
+          risk %in% unlist(strsplit(mine, ""))
+        }, gsub("[^\\-]*-([ATCG?])", "\\1", Strongest.SNP.Risk.Allele), my.genotype))
+
+Now  to plot these regions:
+
+    p + geom_hotregion(gwrngs, aes(color=my.risk))
