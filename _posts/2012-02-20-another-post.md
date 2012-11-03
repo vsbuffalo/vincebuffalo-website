@@ -42,15 +42,10 @@ syntax highlighter. This is import because I want to share code.
 
 ## Formulae
 
-This was my final worry - org-mode is a bit "heavy" for publishing
-quick notes (although entirely necessary for other things), but it has
-excellent LaTeX integration. I would be very disappointed if I
-couldn't easily incorporate LaTeX into Jekyll. Luckily, I can! The
-default Maruku Markdown interpreter just needs to have LaTeX support
-turned on (see below)... and wahla! I can include math:
-
-$$ \widehat{\boldsymbol \theta}_{JS} = \left( 1 - \frac{(m-2)
-\sigma^2}{\|{\overline{\mathbf y}}\|^2} \right) {\overline{\mathbf y}} $$
+Initially I configured Jekyll to typeset formulae. However, Github
+won't spend CPU cycles rendering everyone's LaTeX equations, so there
+isn't a way to get formula rendering to play well with Github
+posting. For hardcore math, I'll just share via PDF.
 
 # My configuration
 
@@ -84,18 +79,4 @@ how I did it:
   blahtex-mac` and put this binary in `/usr/local/bin/` or some other
   place in your `$PATH`.
 
-## Pygments and Blueprint CSS
-
-Blueprint CSS has a class `highlight` in `screen.css` that clashes
-with Pygment (giving code a hideous yellow background). I just renamed
-the class `highlight-alt` in `screen.css` and everything looks great
-now.
-
-## Build errors with Github
-
-Github's Jekyll engine apparently runs with `jekyll --pygments --safe`
-which disables plugins. LaTeX to PNG rendering is built into Maruku,
-not a plugin, yet builds still fail on Github (even though they are
-fine with these options locally). I also host this site at
-<http://vincebuffalo.org>, so there's not a huge problem here.
 

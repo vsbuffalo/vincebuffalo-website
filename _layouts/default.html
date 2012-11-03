@@ -1,42 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen,projection" />
-    <link rel="stylesheet" href="/stylesheets/print.css"  type="text/css" media="print" />
-    <link rel="stylesheet" href="/stylesheets/site.css"  type="text/css" media="screen" />
-    <link rel="stylesheet" href="/stylesheets/pygments.css"  type="text/css" media="screen" />
-    <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-    <title>{{ page.title }}</title>
-    <script type="text/javascript">
+    <meta charset="utf-8">
+      <style>
+        @import url("stylesheets/site.css")
+      </style>
       
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29374237-1']);
-      _gaq.push(['_trackPageview']);
+      <title>{{ page.title }}</title>
+      <script type="text/javascript">
       
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29374237-1']);
+        _gaq.push(['_trackPageview']);
       
-    </script>
-  </head>
-  <body>
-    
-    
-    <!--start-container-->
-    <div class="container">
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
       
-      <!--start-header-->
-      <div class="span-24">
-        <h1 id="top-header"><a href="/" title="main page">a digital notebook</a></h1>
-      </div>
-      <!--end-header-->
-      
-      <!--start-left-->
-      <div class="span-7 last" id="left-list">
+      </script>
+    </head>
+
+    <body>
+      <header>
+        <h1>a digital notebook</h1>
+        </header>
+
+      <div id="leftbox">
         <p>
           <img src="images/me.jpg" width="200" alt="A photo of me at the
         top of a climb at Phantom Spires, South Lake Tahoe."/>
@@ -77,10 +68,9 @@
           <a href="http://feeds.feedburner.com/vincebuffalo" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/vincebuffalo" rel="alternate" type="application/rss+xml">Feed</a>
         </p>
       </div>
-      <!--end-left-->
-          
-      <!--start-mid-->
-      <div class="span-16 colborder" id="content">
+
+
+      <div id="content">
         <ul class="posts">
           {% for post in site.posts %}
           {% if post.tags[0] != "hide" %}
@@ -88,18 +78,14 @@
           {% endif %}
           {% endfor %}
         </ul>
-
-
       </div>
-      <!--end-mid-->
-      
-      <!--start-footer-->
-      <div class="span-24" id="footer">
+
+      <footer>
         <p>Copyright (c) Vince Buffalo, 2012</p>
         <p>
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. Please notify me if you use my content.
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. Please notify me if you use my content or ideas.
         </p>
-      </div>
+      </footer>
       <!--end-footer-->
       
     </div>

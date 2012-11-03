@@ -2,7 +2,6 @@
 layout: post
 title: Using Bioconductor to Analyze your 23andme Data
 tags: 
- - hide
 ---
 
 # Using Bioconductor to Analyze your 23andme Data
@@ -16,16 +15,13 @@ There's a new package in the development branch (due to be released as
 as an interface to the [NHGRI's](http://www.genome.gov/) database of
 genome-wide association studies.
 
-If you're reading this after the release of 2.10, use `biocLite` to
-download; otherwise install
-[the source package](http://www.bioconductor.org/packages/devel/bioc/html/gwascat.html)
-via `R CMD INSTALL`. Loading the package with `library(gwascat)`
-creates a `GRanges` instance of SNPs and their diseases. `GRanges` is
-a fundamental data structure in `Bioconductor` (specifically the
-`GenomicRanges` package) that is designed to hold ranges on genomes
-efficiently, as well as metadata about the ranges. In this case, the
-object `gwrngs` holds SNP ranges (well, locations) and metadata
-provided by the GWA studies in NHGRI's database.
+Loading the package with `library(gwascat)` creates a `GRanges`
+instance of SNPs and their diseases. `GRanges` is a fundamental data
+structure in `Bioconductor` (specifically the `GenomicRanges` package)
+that is designed to hold ranges on genomes efficiently, as well as
+metadata about the ranges. In this case, the object `gwrngs` holds SNP
+ranges (well, locations) and metadata provided by the GWA studies in
+NHGRI's database.
 
 While I really do like 23andme's interface to one's genotype
 information and research, the `gwascat` package offers some nice data
@@ -45,8 +41,8 @@ correspondence with a 23andme representative they stated:
 > request a new sample. We do not return data to customers that does not
 > meet our quality thresholds.
 
-99.9% sounds like a lot, but considering there are 960,545 SNPs being
-called, it's not *that* high.
+The 99.9% figure sounds like a lot, but considering there are 960,545
+SNPs being called, it's not *that* high.
 
 To retrieve raw data, simply click the "Account" link at the top of
 the page (after you've signed in) and click "Browse Raw Data". There
@@ -62,27 +58,32 @@ Use `read.table` to load this data in R. It's a lot of data, so
 providing this function with information about the type of data can
 speed this up quite a bit. Here is the code I used:
 
+    {% highlight r %}
     library(gwascat)
     d <- read.table("data/genome_Vince_Buffalo_Full_20120313162059.txt", sep="\t", header=FALSE,
                    colClasses=c("character", "character", "numeric", "character"),
                    col.names=c("rsid", "chrom", "position", "genotype"))
-                   
+    {% endhighlight %}                   
+
 You may notice that chromosome has the class "character" - this is
 because there are chromosomes X, Y, and MT (for mitochondrial). For
 later plotting purposes, it's good to make this an ordered factor:
 
+    {% highlight r %}
     tmp <- d$chrom
     d$chrom = ordered(d$chrom, levels=c(seq(1, 22), "X", "Y", "MT"))
-    
     ## It's never a bad idea to check your work
     stopifnot(all(as.character(tmp) == as.character(d$chrom)))
+    {% endhighlight %}    
 
 ## Where are the SNPs 23andme Genotypes?
 
 Using [Hadley Wickham's](http://had.co.nz/) excellent `ggplot2`
 package, we can look at the distribution of SNPs by chromosome:
 
+    {% highlight r %}
     ggplot(d) + geom_bar(aes(chrom))
+    {% endhighlight %}
 
 ![distribution of SNPs by chromosome](/images/23andme_chrom_dist.png)
 
@@ -111,9 +112,11 @@ pre-packaged version, `TxDb.Hsapiens.UCSC.hg18.knownGene`. I use hg18
 rather than hg19 because this is the build that 23andme's coordinates
 reference.
 
+    {% highlight r %}
     library(TxDb.Hsapiens.UCSC.hg18.knownGene)
     txdb <- TxDb.Hsapiens.UCSC.hg18.knownGene
     class(txdb) ## do some digging around!
+    {% endhighlight %}
     
 `transcriptDb` objects have nice accessor functions for accessing
 their components. Behind the scenes, everything is in SQLite and very
@@ -122,7 +125,10 @@ efficient (are you seeing why I love Bioconductor?).
 If we look at the transcripts with the `transcripts` accessor
 function, we see it's a `GenomicRanges` object:
 
+    {% highlight r %}
     transcripts(txdb)
+    {% endhighlight %}
+
     GRanges with 66803 ranges and 2 elementMetadata values:
               seqnames               ranges strand   |     tx_id     tx_name
                  <Rle>            <IRanges>  <Rle>   | <integer> <character>
@@ -150,9 +156,12 @@ function, we see it's a `GenomicRanges` object:
 To interact with the wealth of data behind a `transcriptDb` object, we
 often group individual ranges into groups, leaving us with a
 `GRangesList`.
-
+    
+    {% highlight r %}              
     tx.by.gene <- transcriptsBy(txdb, "gene")
     tx.by.gene
+    {% endhighlight %}    
+
     GRangesList of length 20121:
     $1 
     GRanges with 2 ranges and 2 elementMetadata values:
@@ -193,8 +202,11 @@ in org.Hs.eg.db refers to Entrez Gene IDs. Printing the `org.Hs.eg.db`
 object gives a nice list of information. Let's look for the APOE
 gene's Entrez Gene ID.
 
+    {% highlight r %}
     library(org.Hs.eg.db)
     cols(org.Hs.eg.db)
+    {% endhighlight %}
+
       [1] "ENTREZID"     "ACCNUM"       "ALIAS"        "CHR"          "ENZYME"      
       [6] "GENENAME"     "MAP"          "OMIM"         "PATH"         "PMID"        
      [11] "REFSEQ"       "SYMBOL"       "UNIGENE"      "CHRLOC"       "CHRLOCEND"   
@@ -205,15 +217,22 @@ These are the columns we can query out. Certain keys exist: we can
 access these using `keytypes()`. Using it all together, we can extract
 the Entrez Gene ID:
 
+    {% highlight r %}
     select(org.Hs.eg.db, keys="APOE", cols=c("ENTREZID", "SYMBOL", "GENENAME"), keytype="SYMBOL")
+    {% endhighlight %}
+
     SYMBOL ENTREZID         GENENAME
     23200   APOE      348 apolipoprotein E
+
     
 Now, we can look for this in our `tx.by.gene` `GRangesList`. A word of
 caution: Entrez Gene IDs are **names** and thus they need to be quoted
 when working with `GRangesList` objects from transcript databases. 
 
+    {% highlight r %}
     tx.by.gene["348"]
+    {% endhighlight %}
+
     GRangesList of length 1:
     $348 
     GRanges with 1 range and 2 elementMetadata values:
@@ -233,32 +252,42 @@ schemes, and you should always check them. 23andme returns just
 numbers, X, Y, and MT. Let's change it to use the same as the
 Bioconductor annotation.
 
+    {% highlight r %}
     # CAREFUL: use levels() to check that you're making new factor names
     # that correspond to the old ones!
     levels(d$chrom) <- paste("chr", c(1:22, "X", "Y", "M"), sep="")
     my.snps <- with(d, GRanges(seqnames=chrom, 
                        IRanges(start=position, width=1), 
                        rsid=rsid, genotype=genotype)) # this goes into metadata
+    {% endhighlight %}
 
 Now, let's find overlaps using, well, `findOverlaps`:
 
+    {% highlight r %}
     apoe.i <- findOverlaps(tx.by.gene["348"], my.snps)
+    {% endhighlight %}
 
 `apoe.i` is an object of class `RangesMatching`. Note that had we not
 matched chromosome names, Bioconductor gives us a nice warning that
 sequence names don't match. We could look at the slots of `apoe.i` but
 output can be seen with `matchMatrix`:
-
+       
+    {% highlight r %}
     hits <- matchMatrix(apoe.i)[, "subject"]
     hits
+    {% endhighlight %}
+
      [1] 873650 873651 873652 873653 873654 873655 873656 873657 873658 873659
     [11] 873660 873661 873662 873663 873664 873665 873666 873667 873668 873669
     [21] 873670 873671 873672 873673 873674 873675 873676
-    
+
 So in our subject, we have two hits. Let's dig them up in our SNP
 `GRanges` object:
 
+    {% highlight r %}
     my.snps[hits]
+    {% endhighlight %}        
+
     GRanges with 27 ranges and 2 elementMetadata values:
            seqnames               ranges strand   |        rsid    genotype
               <Rle>            <IRanges>  <Rle>   | <character> <character>
@@ -281,6 +310,7 @@ So in our subject, we have two hits. Let's dig them up in our SNP
       [25]    chr19 [50104198, 50104198]      *   |    i5000206          CC
       [26]    chr19 [50104268, 50104268]      *   |    i5000204          GG
       [27]    chr19 [50104333, 50104333]      *   |  rs28931579          AA
+
 
 Now, we can verify that these SNPs are in the APOE gene using the UCSC
 Genome Browser (and actually pull open a browser to this spot from R
@@ -310,29 +340,35 @@ through with `elementMetadata(gwrngs)`. The
 for. First, using the rs ID as a key, let's join our SNP data with the
 `gwrngs` metadata:
 
+    {% highlight r %}
     gwrngs.emd <- as.data.frame(elementMetadata(gwrngs))
     dm <- merge(d, gwrngs.emd, by.x="rsid", by.y="SNPs")
+    {% endhighlight %}
 
 We can search for the risk allele in the 23andme genotype data with R
 and attach a vector of `i.have.risk` to the `dm` data frame:
 
+    {% highlight r %}
     risk.alleles <- gsub("[^\\-]*-([ATCG?])", "\\1", dm$Strongest.SNP.Risk.Allele)
     i.have.risk <- mapply(function(risk, mine) {
       risk %in% unlist(strsplit(mine, ""))
     }, risk.alleles, dm$genotype)
     dm$i.have.risk <- i.have.risk
+    {% endhighlight %}
 
 Now that you have this data frame, you can mine it endlessly. You may
 want to sort by `Risk.Allele.Frequency` and whether you have the
 risk. Because there are quite a few columns in the element metadata,
 it's nice to define a quick-summary subset:
 
-
+    {% highlight r %}
     my.risk <- dm[dm$i.have.risk, ]
     rel.cols <- c(colnames(d), "Disease.Trait", "Risk.Allele.Frequency",
                   "p.Value", "i.have.risk", "X95..CI..text.")
 
     head(my.risk[order(my.risk$Risk.Allele.Frequency), rel.cols], 1)
+    {% endhighlight %}
+
               rsid chrom position genotype Disease.Trait Risk.Allele.Frequency
     2553 rs2315504 chr17 36300407       AC        Height                  0.01
          p.Value i.have.risk   X95..CI..text.
@@ -340,14 +376,18 @@ it's nice to define a quick-summary subset:
 
 This is a rare variant, but the most important next question is, rare
 in who?
-
+   
+    {% highlight r %}
     dm[which(dm$rsid == "rs2315504"), "Initial.Sample.Size"]
     [1] 8,842 Korean individuals
+    {% endhighlight %}
 
 So this clearly doesn't mean much to me. We can use `grep` to find
 studies that mention "European":
-
+        
+    {% highlight r %}
     head(my.risk[grep("European", my.risk$Initial.Sample.Size), rel.cols], 30)
+    {% endhighlight %}
     
 One interesting rs ID that popped up in this list of my data is
 rs10166942, which is lightly linked to migraines (from which I
@@ -363,13 +403,16 @@ some "Disease.Traits" are height). `gwascat` uses hg19, and `ggbio`
 doesn't have ideogram cytobanding and chromosome position information
 for hg18 bundled with it (yet?) so we'll need to work with that.
 
+    {% highlight r %}
     library(ggbio)
     p <- plotOverview(hg19IdeogramCyto, cytoband=FALSE)
+    {% endhighlight %}
 
 Now, let's take the `gwrngs` object and subset by my risk
 alleles. Notice how these assignment function `elementMetadata<-` is
 overloaded here:
 
+    {% highlight r %}
     (elementMetadata(gwrngs)$my.genotype <- 
        d$genotype[(match(elementMetadata(gwrngs)$SNPs, d$rsid))])
 
@@ -377,7 +420,10 @@ overloaded here:
         mapply(function(risk, mine) {
           risk %in% unlist(strsplit(mine, ""))
         }, gsub("[^\\-]*-([ATCG?])", "\\1", Strongest.SNP.Risk.Allele), my.genotype))
+    {% endhighlight %}
 
 Now  to plot these regions:
 
+    {% highlight r %}
     p + geom_hotregion(gwrngs, aes(color=my.risk))
+    {% endhighlight %}

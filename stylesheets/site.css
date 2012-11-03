@@ -1,6 +1,75 @@
-/*
-  The CSS stylesheet for my site.
-*/
+/* 
+
+The CSS stylesheet for my site. Part of this is based on Mike
+Bostock's. */
+
+html {
+  min-width: 1040px;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  margin: 1em auto 4em auto;
+  position: relative;
+  font-size: 12px;
+}
+
+#leftbox {
+    width: 300px;
+    padding-left: 100px;
+    float: left;
+}
+
+#content {
+    width: 800px;
+    padding-left: 320px;
+    padding-top: 16px;
+    line-height: 1.5em;
+}
+
+#post {
+    width: 780px;
+    padding-left: 100px;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+#post > img {
+    margin-left: auto;
+    margin-rigth: auto;
+}
+
+#content > ul {
+    list-style-type: none;
+}
+
+h1 h2 h3 {
+    color: #111;
+    line-height: 1.8em;
+}
+
+header > h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    text-align: center;
+    font-weight:normal;
+}
+
+
+#main-link {
+    padding-left: 2em;
+    padding-bottom; 0;
+    font-size: 20px;
+}
+
+a {
+    color: steelblue;
+}
+
+a:not(:hover) {
+  text-decoration: none;
+}
 
 #top-header {
     margin-top: 10px;
@@ -13,10 +82,10 @@
     text-decoration: none;
 }
 
-#footer {
+footer {
+    font-size: 10px;
+    clear: both;
     text-align: center;
-    font-size: 0.8em;
-    color: #333333;
 }
 
 .left-title {
@@ -29,7 +98,16 @@
     margin-bottom: 1em;
 }
 
-.caveat {
+pre, code, textarea {
+  font-family: "Menlo", monospace;
+}
+
+pre {
+    padding-left: 5px;
+    border-left: 2px solid #DDD;
+}
+
+blockquote {
     font-style: italic;
-    font-size: 0.8em;
+    color: #444;
 }

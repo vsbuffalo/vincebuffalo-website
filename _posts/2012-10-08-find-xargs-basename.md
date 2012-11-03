@@ -1,9 +1,12 @@
 ---
 layout: post
 title: Simple Parallel Bioinformatics Pipelines with find, basename, and xargs
+tags: 
+ - hide
 ---
+# Simple Parallel Bioinformatics Pipelines with find, basename, and xargs
 
-# Big-Ass Servers and Data Parallelism
+## Big-Ass Servers and Data Parallelism
 
 A routine operation in bioinformatics is to process a lot of files on
 a so-called ["Big-Ass
@@ -19,7 +22,7 @@ taking reads from many samples, running quality diagnostics, and
 running adapter and quality trimming. None of these steps can be done
 in a task-parallel fashion; they must be pipelined.
 
-# Find-Basename-Xargs
+## Find-Basename-Xargs
 
 Suppose in this example I have genomic sequencing data of 50 human
 individuals. All individuals' sequences are in the directory `seq/`
@@ -76,7 +79,7 @@ and output the results to the trimmed directory, we'd use `xargs` with
 Note that we re-specify the directories and extensions so Scythe can
 find and process the appropriate file.
 
-# Redirecting Output in Parallel and XBF Chaining
+## Redirecting Output in Parallel and XBF Chaining
 
 I'm a stickler about gathering and analyzing statistics at all
 intermediary steps in a bioinformatics processing pipeline. Scythe

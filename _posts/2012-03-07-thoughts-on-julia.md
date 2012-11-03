@@ -36,9 +36,11 @@ However, R is suffering from growing pains. For example, there are now
 64-bit versions of R, however, vector indexing is still limited by
 `R_len_t` (see definition in `src/include/Rinternals.h`):
 
+    {% highlight c %} 
     /* type for length of vectors etc */
     typedef int R_len_t; /* will be long later, LONG64 or ssize_t on Win64 */
     #define R_LEN_T_MAX INT_MAX
+    {% endhighlight %}
 
 It appears that one can simply change this to a long and recompile to
 increase the longest possible addressable vector, but no. Take a look
@@ -73,28 +75,34 @@ the source, and working on the R language if it were more open.
 
 The last gripe I have is that R is fragmented. Consider Python:
 
+    {% highlight python %}
     import re
     re.search(r'R-([\d]+).([\d]+)', "R-2.15").groups()
-
+    {% endhighlight %} 
+   
 Now, consider R:
-
+     
+    {% highlight r %}
     gsub("R-([\\d]+)\\.([\\d]+)", "\\1", "R-2.15")
     
     # or
     
     library(stringr)
     str_match("R-2.15", "R-([0-9]+)\\.([0-9]+)")
+    {% endhighlight %}
     
 Now, Python also has PyPI's [`re2`](http://pypi.python.org/pypi/re2/),
 but most developers are using `re`. The motivation behind `stringr` is
 that R's currently family of string processing functions are horribly
 inconsistent:
 
+    {% highlight r %}
     # (my ... to avoid writing all parameters)
     grep(pattern, x, ...)
     regexpr(pattern, text, ...)
     gsub(pattern, replacement, x, ...)
     strsplit(x, split, ...)
+    {% endhighlight %}
     
 But rather than deprecate these and move forward, we now have *two*
 sets of string processing
