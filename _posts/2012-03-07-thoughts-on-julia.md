@@ -140,3 +140,9 @@ would love to see Julia surpass R. But if all developers want is a
 fast environment to analyze large data sets using a wealth of methods
 and libraries, it may be a lot easier to make R faster than to develop
 a new fast language and hope/wait/beg the community to move over.
+
+**Update:** Julia core developer Jeff Bezanson sent me a very kind
+  email on March 9th, 20012 about this post. In it, he said the
+  "challenge R" statement was made by a community member and is in no
+  way the mission of the Julia language. He had many kind words to say
+  about the R langauge and its statistical functionality.

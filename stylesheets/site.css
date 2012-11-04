@@ -11,13 +11,14 @@ body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   margin: 1em auto 4em auto;
   position: relative;
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
 #leftbox {
-    width: 300px;
+    width: 240px;
     padding-left: 100px;
     float: left;
+    font-size: 13px;
 }
 
 #content {

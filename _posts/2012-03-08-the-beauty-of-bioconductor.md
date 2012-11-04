@@ -4,7 +4,9 @@ title: The Beauty of Bioconductor
 tags: 
 ---
 
-# Introduction
+# The Beauty of Bioconductor
+
+## Introduction
 
 In talking with bioinformaticians, biologists, and other researchers,
 I’ve seen some worrying trends in computation in the sciences. I plan
