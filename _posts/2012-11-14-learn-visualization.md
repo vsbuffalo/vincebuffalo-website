@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "My First Recommendation to New Scientific Coders: Learn Visualization"
-tags:
- - hide
 ---
 
 # My First Recommendation to New Scientific Coders: Learn Visualization
