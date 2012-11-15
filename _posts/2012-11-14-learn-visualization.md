@@ -16,7 +16,7 @@ Saga](http://bioinformatics.mdanderson.org/Supplements/ReproRsch-All/Modified/St
 
 I think a lot about how scientists learn programming and how we can
 change this process to yield a better outcome (fewer errors, more
-readible and reproducubile code). Scientific coders must learn to
+readible and reproducible code). Scientific coders must learn to
 program in a particular fashion that "stacks the deck" to make errors
 apparent. On this front, unit tests, following coding standards, and
 peer code review get a lot of deserved attention. Yet for some reason,
@@ -68,7 +68,7 @@ Davies:
 
 ![Parallel sets visualization of Titanic survivors](/images/parallel-sets-titanic.png)
 
-Immediately parallel sets shows us the large numbers that perished in
+Immediately, parallel sets shows us the large numbers that perished in
 the Titanic's sinking. Width reveals not only the breakdown or
 survivors/non-survivors, but also the composition of the ship's
 passengers prior to hitting the iceberg. This additional data could

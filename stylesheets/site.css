@@ -44,11 +44,6 @@ body {
     list-style-type: none;
 }
 
-h1 h2 h3 {
-    color: #111;
-    line-height: 1.8em;
-}
-
 header > h1 {
     margin: 0;
     padding: 0;
@@ -57,7 +52,13 @@ header > h1 {
     font-weight:normal;
 }
 
+h1 h2 h3 {
+    color: #111;
+}
 
+#post > h1 {
+    line-height: 1.1;
+}
 #main-link {
     padding-left: 2em;
     padding-bottom; 0;
