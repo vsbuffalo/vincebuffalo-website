@@ -62,7 +62,7 @@ dataset from R:
        3rd    13     14                         3rd    75     76
        Crew    0      0                         Crew  192     20
 
-Now, consider [d3.js](d3js.org) [this parallel sets
+Now, consider [d3.js](http://www.d3js.org) [this parallel sets
 visualization](http://www.jasondavies.com/parallel-sets/) by Jason
 Davies:
 
