@@ -50,12 +50,12 @@ wasting our time on this and much more elegant solutions exist.
 
 If none of this so far concerns you, you should to learn Lisp. Not to
 use in bioinformatics, but because it will change your
-thinking. Learning Lisp will allow you to see what high-level *really*
-means, and you'll see how Common Lisp implementations like SBCL
-beautifully allow the low-level to interact with the high-level. SBCL
-implements Common Lisp's high-level elegance (the [for
-macro](http://www.gigamonkeys.com/book/loop-for-black-belts.html) is a
-good example), while simultaneously achieving [good
+perspective. Learning Lisp will allow you to see what high-level
+*really* means, and you'll see how Common Lisp implementations like
+SBCL beautifully allow the low-level to interact with the
+high-level. SBCL implements Common Lisp's high-level elegance (the
+[for macro](http://www.gigamonkeys.com/book/loop-for-black-belts.html)
+is a good example), while simultaneously achieving [good
 performance](http://benchmarksgame.alioth.debian.org/u32/benchmark.php?test=fasta&lang=all)
 via [assembly-level
 optimization](http://sbcl-internals.cliki.net/VOP). Even more
@@ -64,13 +64,14 @@ with high-level macros.
 
 Why should you, the bioinformatician, care about this interactivity
 between low-level and high-level code in some Lisp implementation
-you've never heard of? Because bioinformatics is about low-level and
-high-level interactivity. Command-line programs solve low-level
-problems, usually with C or C++ implementations because they need to
-do computationally intensive tasks like alignment or assembly, on huge
-amounts of data quickly. But alignment and assembly don't tell us
-anything about biology: that's a high-level problem. For small tasks,
-bioinformaticians interface these lower-level programs via
+you've never heard of? Because bioinformatics involves a lot of
+low-level and high-level interactivity. Command-line programs solve
+low-level problems, usually with C or C++ implementations because they
+need to do computationally intensive tasks like alignment or assembly,
+on huge amounts of data quickly. But really we're interested in the
+higher-level biological questions, which require tons of data
+processing and execution of low-level programs to tackle. For small
+tasks, bioinformaticians interface with these lower-level programs via
 command-line interaction. For complicated execution pipelines that
 require running many programs and passing data between them, it's
 standard practice to write scripts that make systems calls to
@@ -216,10 +217,10 @@ then reading and parsing the results not appealing, so I wrote
 interface to [Heng Li's](http://lh3lh3.users.sourceforge.net/) [Fermi
 assembler](https://github.com/lh3/fermi) (note that this software is
 experimental, so use it with caution). First off, I couldn't have done
-this without Heng's excellent assembler, clean code, and advice, so I
-owe him a debt of gratitude. The Fermi source has a beautiful example
-of high-level functions that can be interfaced with relative ease: see
-the `fm6_api_*` functions used in
+this without Heng's excellent assembler and code, so I owe him a debt
+of gratitude. The Fermi source has a beautiful example of high-level
+functions that can be interfaced with relative ease: see the
+`fm6_api_*` functions used in
 [example.c](https://github.com/lh3/fermi/blob/master/example.c).
 
 I was able to write a few extra C functions in pyfermi (mostly to deal
