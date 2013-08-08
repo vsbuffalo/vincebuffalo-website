@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Using Names Pipes and Process Substitution in Bioinformatics
-tags:
- - hide
 ---
 
 # Using Names Pipes and Process Substitution
