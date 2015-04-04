@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Using Names Pipes and Process Substitution in Bioinformatics
+title: Using Named Pipes and Process Substitution in Bioinformatics
 ---
 
-# Using Names Pipes and Process Substitution
+# Using Named Pipes and Process Substitution
 
 It's hard not to fall in love with Unix as a bioinformatician. In a
 [past post](http://vincebuffalo.org/2013/01/26/bioinfo-interfaces.html)
@@ -17,7 +17,7 @@ the named pipe and process substitution.
 
 A few weeks ago I stumbled across a great talk by
 [Gary Bernhardt](https://twitter.com/garybernhardt) entitled
-[The Unix Chainsaw](http://www.confreaks.com/videos/615-cascadiaruby2011-the-unix-chainsaw). Bernhardt's
+[The Unix Chainsaw](https://www.youtube.com/watch?v=sCZJblyT_XM). Bernhardt's
 "chainsaw" analogy is great: people sometimes fear doing work in Unix
 because it's a powerful tool, and it's easy to screw up with powerful
 tools. I think in the process of grokking Unix it's not uncommon to
@@ -177,7 +177,7 @@ simple, clearly understandable `|` that we're used to.
 
 So, is this really faster? Yes, quite. Writing and reading to the disk
 comes at a big price — see
-[latency numbers every programmer should know](www.eecs.berkeley.edu/~rcs/research/interactive_latency.html). Unfortunately
+[latency numbers every programmer should know](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html). Unfortunately
 I am too busy to do extensive benchmarks, but I wrote a slightly
 [insane read trimming script](https://gist.github.com/vsbuffalo/6181676)
 that makes use of process substitution. Use at your own risk, but
