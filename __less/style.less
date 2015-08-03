@@ -1,7 +1,10 @@
+
+
 // imports
 @import "bootstrap/less/bootstrap.less";
 @import "bootstrap/less/navbar.less";
 @import "bootstrap/less/tables.less";
+@import "bootstrap/less/grid.less";
 @import "bootstrap/less/code.less";
 @import "font-awesome/less/font-awesome.less";
 /*
@@ -20,8 +23,9 @@
 @navbar-height: 68px;
 
 // custom navbar settings
+@custom-nav-font-size: 18px;
 #navbar {
-  font-size: 18px;
+  font-size: @custom-nav-font-size;
 }
 .logo-pad {
   padding-top: 4px;
@@ -30,6 +34,9 @@
   //font-variant: small-caps;
   font-size: 32px;
   color: @gray-dark;
+}
+.fa-nav {
+  font-size: floor((@custom-nav-font-size * 1.2));
 }
 
 // headers settings
@@ -56,7 +63,34 @@ h6 {
   font-size: ceil((@font-size-base * 0.85));
 }
 
+// aside settings
+.content-container {
+  max-width: 940px;
+}
+aside {
+  margin-top: -2em;
+  font-size: smaller;
+  position: absolute;
+  width: 180px;
+  margin-left: 100%;
+  padding: 0px;
+  display: inline-block;
+  float: right;
+}
 
+ .aside-first {
+  text-indent: -6px;
+}
+
+// custom code settings for aside
+aside pre code {
+ border: 0px;
+}
+aside code.hljs {
+  padding: 0 2px 0 2px; 
+  margin: 0px;
+  font-size: floor((@font-size-base * 0.8));
+}
 
 // footer
 html {
@@ -81,20 +115,20 @@ body {
 }
 
 // highlight.js and custom code styles
-code {
-  max-width: 90%
-}
 @pre-bg: #fff;
 @pre-border-color: #fff;
+@code-bg: #fff;
 pre code {
-  margin: 0 0 22px 0;
-  font-size: 16px;
-  border-left: 5px solid #eee;
-  padding: 0px;
+  border-left: 5px solid #eee; // match block quote's border
 }
 pre {
-  padding: 0px;
   margin: 0px;
+  padding: 12px 0 12px 0;
+}
+code.hljs {
+  padding: 0 12px 0 24px; // matches bootstrap's blockquote
+  margin: 0px;
+  font-size: floor((@font-size-base * 0.8));
 }
 @code-color: #246798;
 //@code-bg: #ededed;

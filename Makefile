@@ -29,6 +29,7 @@ clean-font-awesome:
 
 clean: clean-font-awesome clean-bootstrap
 
+# remove the source directories from __less, e.g. for upgrades
 purge:
 	rm -rf __less/font-awesome __less/bootstrap
 

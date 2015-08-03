@@ -1,5 +1,7 @@
-  <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
-    <defs>
+<!-- copyright (c) 2015 Vince Buffalo, all rights reserved -->
+<!-- do not copy; use of this logo is prohibited -->
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
+  <defs>
     <clipPath id="cut-off-1">
       <rect x="2" y="100" width="340" height="400" transform="rotate(-5)" id="svg_1"/>
     </clipPath>
@@ -32,14 +34,3 @@
   <circle id="mask-ring" r="178" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" stroke="#f8f8f8" fill="none"/>
   <circle id="ring" r="170" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="8" stroke="#aaa" fill="none"/>
 </svg>
-
-
-
-
-
-
-
-
-
-
-
