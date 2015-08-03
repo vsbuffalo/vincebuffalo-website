@@ -1,0 +1,12 @@
+body {
+  font-size: 17px;
+}
+
+.logo-pad {
+  padding-top: 2px;
+}
+
+.site-name {
+  font-variant: smallcaps;
+  font-size: 28px;
+}
