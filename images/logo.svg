@@ -1,38 +1,45 @@
-<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <defs>
+  <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
+    <defs>
     <clipPath id="cut-off-1">
-      <rect x="-300" y="100" width="800" height="400" transform="rotate(-5)"/>
+      <rect x="2" y="100" width="340" height="400" transform="rotate(-5)" id="svg_1"/>
     </clipPath>
     <clipPath id="cut-off-2">
-      <rect x="-300" y="-200" width="800" height="400" transform="rotate(-5)"/>
+      <rect x="10" y="-200" width="380" height="400" transform="rotate(-5)" id="svg_2"/>
     </clipPath>
     <clipPath id="cut-off-3">
-      <rect x="-300" y="-100" width="800" height="400" transform="rotate(-5)"/>
+      <rect x="10" y="-100" width="380" height="400" transform="rotate(-5)" id="svg_3"/>
     </clipPath>
     <clipPath id="cut-off-4">
-      <rect x="-300" y="-300" width="800" height="400" transform="rotate(-5)"/>
+      <rect x="4" y="-300" width="340" height="400" transform="rotate(-5)" id="svg_9"/>
     </clipPath>
-    <clipPath>
-      <circle id="line-mask" r="140" cy="190.99999" cx="198.99999" stroke-width="20"/>
+    <clipPath id="rink-mask">
+      <circle stroke-width="10" cx="198.99999" cy="190.99999" r="186" id="mask-ring"/>
     </clipPath>
   </defs>
-  <g id="svg_24">
-
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#084594"
-	    clip-path="url(#cut-off-1)"/>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#2171b5"
-	    clip-path="url(#cut-off-3)"/>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#4292c6"
-	    clip-path="url(#cut-off-2)"/>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#c6dbef"
-	    clip-path="url(#cut-off-4)"/>
-
-    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="173.37922" y1="105.57863" x2="323.4142" y2="103.57863" id="svg_5" stroke-width="34" transform="rotate(116.3663558959961 249.396713256836,103.5786361694336) " clip-path="url(#line-mask)"/>
-    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="26.03561" y1="216.77596" x2="242.02299" y2="216.77596" stroke-width="28" transform="rotate(147.75296020507812 132.529296875,216.7759552001953) " id="svg_6" clip-path="url(#line-mask)"/>
-    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="165.93704" y1="256.84868" x2="372.62135" y2="256.84868" stroke-width="28" transform="rotate(62.83 269.2792053222656,256.84869384765625) " id="svg_7" clip-path="url(#line-mask)"/>
-    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="74.31013" y1="304.33503" x2="233.57456" y2="304.33503" stroke-width="28" transform="rotate(62.83 153.94235229492185,304.3350524902344) " id="svg_8" clip-path="url(#line-mask)"/>
-    <!-- <circle id="mask-ring" r="186" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="10" stroke="#f8f8f8" fill="none"/> -->
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="6" stroke="#aaa" fill="none"/>
+  <g>
+    <title>Layer 1</title>
+    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#084594" clip-path="url(#cut-off-1)"/>
+    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#2171b5" clip-path="url(#cut-off-3)"/>
+    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#4292c6" clip-path="url(#cut-off-2)"/>
+    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#c6dbef" clip-path="url(#cut-off-4)"/>
+    <!-- coalescent tree -->
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="176" y1="109" x2="316" y2="107" id="svg_5" stroke-width="34" transform="rotate(116 246.00000000000003,108.00000000000001) "/>
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="76.37424" y1="299.95545" x2="228.04119" y2="299.95545" stroke-width="28" transform="rotate(62 152.20770263671872,299.9554443359375) " id="svg_8"/>
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="30.71877" y1="215.42216" x2="241.63164" y2="215.42216" stroke-width="28" transform="rotate(148 136.17520141601565,215.4221649169922) " id="svg_6"/>
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="170.52831" y1="247.6941" x2="356.63249" y2="247.6941" stroke-width="28" transform="rotate(62 263.58041381835943,247.69409179687494) " id="svg_7"/>
   </g>
+
+  <circle id="mask-ring" r="178" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" stroke="#f8f8f8" fill="none"/>
+  <circle id="ring" r="170" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="8" stroke="#aaa" fill="none"/>
 </svg>
+
+
+
+
+
+
+
+
+
+
 
