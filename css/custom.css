@@ -12,11 +12,13 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
+  font-family: "Alegreya Sans";
+  font-weight: 300;
+  font-size: 48px;
   color: #c7254e;
-  font-weight: 100;
 }
 
-<!-- sticky footer -->
+/* sticky footer */
 html {
     position: relative;
     min-height: 100%;

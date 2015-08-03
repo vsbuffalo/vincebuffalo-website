@@ -5,13 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title></title>
+  <title>Vince Buffalo | vincebuffalo.org</title>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <link rel="stylesheet" href="css/solarized_dark.css"> -->
+  <script src="js/highlight.pack.js"></script>
+  
 </head>
 <body>
 
@@ -28,16 +30,15 @@
 	  <li><a href="#about">notes</a></li>
 	  <li><a href="#book">book</a></li>
 	  <li><a href="#about">about</a></li>
-
-	  <li><a href="#github">github</a></li>
-	  <li><a href="#twitter">twitter</a></li>
+	  <li><a href="http://twitter.com/vsbuffalo" title="Vince Buffalo's twitter"><i class="fa fa-twitter"></i></a></li>
+	  <li><a href="http://github.com/vsbuffalo" title="Vince Buffalo's Github"><i class="fa fa-github"></i></a></li>
 	</ul>
       </div>
     </div>
   </nav>
 
   <div class="container"> 
-    <h1> some header about cool probability shit</h1>
+    <h1> Methods of Probabilistic Inference</h1>
     <blockquote>
       Some stupid thing.
       <small>some guy</small>
@@ -51,14 +52,55 @@
     pellentesque dui ut ex sollicitudin, a vehicula leo placerat. Etiam a
     fringilla ante, eu mattis massa. Suspendisse potenti. Integer luctus nulla
     risus, id molestie quam tincidunt vulputate. Etiam ultrices diam vel dui
-    egestas accumsan. Vivamus diam eros, scelerisque nec metus ut, dapibus
+    egestas accumsan.
+    </p>
+    $$n_k = \mathcal{F}_{k+2} = \frac{\phi^{k+2} - \psi^{k+2}}{\sqrt{5}}$$
+    <p>
+    Vivamus diam eros, scelerisque nec metus ut, dapibus
     bibendum mauris. Aliquam blandit dui id sem volutpat tristique. Aenean magna
     tortor, finibus sit amet quam vel, maximus condimentum orci. Sed eget purus
-    ante. Phasellus vitae felis vel ipsum gravida feugiat. Donec ac tristique
+    ante.
+    <pre>
+      <code class="python">
+      def get_yaml_header(rawfile):
+  	"""
+  	Grab the YAML header of a file -- 'a peeker'.
+  	TODO: move
+  	"""
+  	filename = rawfile.filename
+  	maxlines = 10 # if we read ten lines with seeing "^---", something's fucky
+  	header = list()
+  	with open(filename) as f:
+  	    for ln, line in enumerate(f):
+  		if ln > maxlines:
+  		    raise EnvironmentError(1, msg % filename, filename)
+  		if YAML_DELIM.match(line):
+  		    # we're in a YAML header, grab until end of YAML block (or end
+  		    # of file, and complain)
+  		    line = f.next()
+  		    try:
+  			while YAML_DELIM.match(line) is None:
+  			    header.append(line.strip())
+  			    line = f.next()
+  		    except StopIteration:
+  			msg = "file '%s' has an unclosed YAML delimeter"
+  			raise EnvironmentError(1, msg % filename, filename)
+  		if len(header) > 0:
+  		    # we've loaded all the YAML
+  		    break
+  	yaml_header = yaml.load('\n'.join(header))
+  	if 'body' in yaml_header:
+  	    msg = "YAML header cannot contain special keyword 'body'"
+  	    raise ValueError(msg)
+  	return yaml_header
+      </code>
+    </pre>
+    Phasellus vitae felis vel ipsum gravida feugiat. Donec ac tristique
     lorem, ultrices bibendum massa. Cras sed venenatis lacus, sollicitudin
     sodales dui. Quisque facilisis, ipsum id fringilla sodales, odio enim semper
     ante, et dignissim elit nulla imperdiet massa.
     </p>
+    <h2> this is a header two</h2>
     <p>
     Quisque mi lectus, efficitur eu mi eget, faucibus sodales
     lorem. Pellentesque maximus diam pellentesque condimentum dictum. Phasellus
@@ -68,6 +110,8 @@
     scelerisque semper. Nulla pulvinar ornare mi, nec volutpat justo efficitur
     quis. Nulla faucibus vestibulum hendrerit.
     </p>
+    <h3> this is a header two</h3>
+    <p>
     <p>
     Maecenas aliquet, enim id fermentum facilisis, lectus augue pulvinar magna,
     in tempor augue turpis eu magna. Mauris sit amet nulla placerat, pharetra
@@ -80,6 +124,7 @@
     dictumst. Maecenas mauris nisl, ullamcorper id ante sit amet, luctus
     interdum ipsum. Suspendisse potenti.
     </p>
+    <hr/>
     <p>
     Duis convallis scelerisque arcu, nec lobortis purus mattis ac. Quisque ut
     metus nisi. Praesent at tincidunt felis, eget placerat erat. Donec tempus
@@ -115,6 +160,9 @@
   <!-- necessary for bootstrap -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 
 </body>
 </html>

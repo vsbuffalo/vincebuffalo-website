@@ -1,0 +1,100 @@
+// imports
+@import "bootstrap/less/bootstrap.less";
+@import "bootstrap/less/navbar.less";
+@import "bootstrap/less/tables.less";
+@import "bootstrap/less/code.less";
+@import "font-awesome/less/font-awesome.less";
+/*
+@import (inline) "highlight-js/solarized_light.css";
+@import (inline) "highlight-js/default.css";
+@import (inline) "highlight-js/solarized_dark.css";
+*/
+@import (inline) "highlight-js/color-brewer.css";
+
+// font-awesome settings
+@fa-font-path: "../fonts";
+
+// bootstrap custom styles
+@font-size-base: 17px;
+@font-family-sans-serif: "Quattrocento Sans", Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+@navbar-height: 68px;
+
+// custom navbar settings
+#navbar {
+  font-size: 18px;
+}
+.logo-pad {
+  padding-top: 4px;
+}
+.site-name {
+  font-variant: small-caps;
+  font-size: 32px;
+  color: @gray-dark;
+}
+
+// headers settings
+@header-font-size: 32px; // sets h1, others are fractions of this
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Alegreya Sans", @font-family-sans-serif;
+  font-weight: 300;
+  //color: #c7254e;
+}
+h2 {
+  font-size: floor((@font-size-base * 2.15));
+}
+h3 {
+  font-size: ceil((@font-size-base * 1.7));
+}
+h4 {
+  font-size: ceil((@font-size-base * 1.25));
+}
+h5 {
+  font-size: @font-size-base;
+}
+h6 {
+  font-size: ceil((@font-size-base * 0.85));
+}
+
+
+
+// footer
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  padding-top: 1em;
+  margin-top: 3em;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #eee;
+}
+
+// highlight.js fixes
+code {
+  max-width: 90%
+}
+
+@pre-bg: #fff;
+@pre-border-color: #fff;
+
+code {
+  margin: 0 0 22px;
+  font-size: 16px;
+  border-left: 5px solid #eee;
+  padding: 0px;
+}
+
+pre {
+  padding: 0px;
+  margin: 0px;
+}
