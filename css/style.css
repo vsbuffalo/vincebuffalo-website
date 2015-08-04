@@ -9016,14 +9016,6 @@ aside {
 .aside-first {
   text-indent: -6px;
 }
-aside pre code {
-  border: 0px;
-}
-aside code.hljs {
-  padding: 0 2px 0 2px;
-  margin: 0px;
-  font-size: 13px;
-}
 html {
   position: relative;
   min-height: 100%;
@@ -9055,4 +9047,15 @@ code.hljs {
   padding: 0 12px 0 24px;
   margin: 0px;
   font-size: 13px;
+}
+aside pre code {
+  border: 0px;
+}
+aside code.hljs {
+  padding: 0 2px 0 2px;
+  margin: 0px;
+  font-size: 10px;
+}
+.references {
+  font-size: smaller;
 }
