@@ -18,7 +18,7 @@ Ported by Fabrício Tavares de Oliveira
 .hljs-subst,
 .hljs-tag .hljs-title,
 .nginx .hljs-title {
-  color: @gray-light;
+  color: #666;
 }
 
 .hljs-string,

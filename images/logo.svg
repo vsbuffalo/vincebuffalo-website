@@ -19,11 +19,11 @@
     </clipPath>
   </defs>
   <g>
-    <title>Layer 1</title>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#084594" clip-path="url(#cut-off-1)"/>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#2171b5" clip-path="url(#cut-off-3)"/>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#4292c6" clip-path="url(#cut-off-2)"/>
-    <circle id="svg_4" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#c6dbef" clip-path="url(#cut-off-4)"/>
+    <title>Background</title>
+    <circle id="bg-0" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#084594" clip-path="url(#cut-off-1)"/>
+    <circle id="bg-1" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#2171b5" clip-path="url(#cut-off-3)"/>
+    <circle id="bg-2" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#4292c6" clip-path="url(#cut-off-2)"/>
+    <circle id="bg-3" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#c6dbef" clip-path="url(#cut-off-4)"/>
     <!-- coalescent tree -->
     <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="176" y1="109" x2="316" y2="107" id="svg_5" stroke-width="34" transform="rotate(116 246.00000000000003,108.00000000000001) "/>
     <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="76.37424" y1="299.95545" x2="228.04119" y2="299.95545" stroke-width="28" transform="rotate(62 152.20770263671872,299.9554443359375) " id="svg_8"/>
