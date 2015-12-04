@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<div class="container content-container"> 
+  {% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+    {% block content %}
+    <div class="col-md-9 content-caontainer"> 
+      <article>
+        <div class="page-header">
+            <h1>{{ article.title }}</h1>
+          </div>
+
+            {{ article.content }}
+        </article>
+    </div>
+{% endblock %}
+</div><!-- end container content-container-->
+
+

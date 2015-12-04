@@ -1,8 +1,15 @@
 # Notes about my site
 
-## Fonts
+## Requirements
 
-## CSS & less
+ - Pelican: `pip install pelican`
+ - beautifulsoup4: `pip install beautifulsoup4`
+
+## Theme
+
+All theme-related files (CSS, etc.) are in `theme/`.
+
+### CSS & less
 
 This site uses the terrific [less](http://lesscss.org/) CSS pre-processor to
 create the CSS. All less files are in `__less/` and are compiled into CSS files
@@ -44,6 +51,7 @@ attribution:
     > than an exact answer to the wrong question, which can always be made precise.
     > <small>John Tukey, 1962</small>
 
+    
 ### pre/code styling
 
 `<pre></pre>` blocks are temperamental about newlines; this can affect

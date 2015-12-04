@@ -1,0 +1,36 @@
+<!-- copyright (c) 2015 Vince Buffalo, all rights reserved -->
+<!-- do not copy; use of this logo is prohibited -->
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="cut-off-1">
+      <rect x="2" y="100" width="340" height="400" transform="rotate(-5)" id="svg_1"/>
+    </clipPath>
+    <clipPath id="cut-off-2">
+      <rect x="10" y="-200" width="380" height="400" transform="rotate(-5)" id="svg_2"/>
+    </clipPath>
+    <clipPath id="cut-off-3">
+      <rect x="10" y="-100" width="380" height="400" transform="rotate(-5)" id="svg_3"/>
+    </clipPath>
+    <clipPath id="cut-off-4">
+      <rect x="4" y="-300" width="340" height="400" transform="rotate(-5)" id="svg_9"/>
+    </clipPath>
+    <clipPath id="rink-mask">
+      <circle stroke-width="10" cx="198.99999" cy="190.99999" r="186" id="mask-ring"/>
+    </clipPath>
+  </defs>
+  <g>
+    <title>Background</title>
+    <circle id="bg-0" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#084594" clip-path="url(#cut-off-1)"/>
+    <circle id="bg-1" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#2171b5" clip-path="url(#cut-off-3)"/>
+    <circle id="bg-2" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#4292c6" clip-path="url(#cut-off-2)"/>
+    <circle id="bg-3" r="171.17537" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#c6dbef" clip-path="url(#cut-off-4)"/>
+    <!-- coalescent tree -->
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="176" y1="109" x2="316" y2="107" id="svg_5" stroke-width="34" transform="rotate(116 246.00000000000003,108.00000000000001) "/>
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="76.37424" y1="299.95545" x2="228.04119" y2="299.95545" stroke-width="28" transform="rotate(62 152.20770263671872,299.9554443359375) " id="svg_8"/>
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="30.71877" y1="215.42216" x2="241.63164" y2="215.42216" stroke-width="28" transform="rotate(148 136.17520141601565,215.4221649169922) " id="svg_6"/>
+    <line fill="none" stroke="#c6dbef" stroke-linejoin="null" stroke-linecap="null" x1="170.52831" y1="247.6941" x2="356.63249" y2="247.6941" stroke-width="28" transform="rotate(62 263.58041381835943,247.69409179687494) " id="svg_7"/>
+  </g>
+
+  <circle id="mask-ring" r="178" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="12" stroke="#f8f8f8" fill="none"/>
+  <circle id="ring" r="170" cy="190.99999" cx="198.99999" stroke-linecap="null" stroke-linejoin="null" stroke-width="8" stroke="#aaa" fill="none"/>
+</svg>

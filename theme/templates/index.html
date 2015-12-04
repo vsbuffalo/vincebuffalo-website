@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+
+{% block content %}
+
+{% for article in articles %}
+
+  {% if loop.index == 1 %}
+  <div>
+  <article>
+    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    <div class="article-summary">
+        {% if  article.featured_image %}
+        <img src="{{ article.featured_image }}" class="featured-image-container"/>
+        {% endif %}
+        {{ article.summary }}
+        <a class="btn" href="{{ SITEURL }}/{{ article.url }}">continue reading→</a>
+    </div>
+  </article>
+</div>
+
+  {% if loop.length > 1 %}
+  <div>            
+      <h3>Recent Blog Posts</h3>
+      <ul class="archive">
+          {% endif %}
+          {% elif loop.index < 7 %}
+          <li>
+              <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">
+                  <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.locale_date }}</time> {{ article.title }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+      </ul>
+      <!-- <p><a href="{{ SITEURL }}/archives.html">Blog Archive</a></p> -->
+  </div>
+
+  {% endblock content %}
+
+
