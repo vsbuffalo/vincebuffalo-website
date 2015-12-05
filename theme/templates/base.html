@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="{{ HTML_LANG }}">   
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% block title %} | {{ SITENAME }}{%endblock%}</title>  
+    <title>{% block title %} | {{ SITENAME }}{%endblock%}</title>  
 
-  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-  <link href="{{ SITEURL }}/theme/css/style.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="{{ SITEURL }}/theme/css/style.min.css" rel="stylesheet">
 
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-</head>
-<body>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
 
-  <nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-     <div id="navbar">
-       <a href="/" title="return to main page"><img src="{{ SITEURL }}/theme/images/logo.svg"/ class="pull-left logo-pad" type="image/svg+xml"></a>
-	<ul class="nav navbar-nav navbar-left">
-	  <li><a href="/" title="return to main page" class="site-name">vince buffalo</a></li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right">
-	  <li><a href="/blog">blog</a></li>
-	  <li><a href="/note">notes</a></li>
-	  <li><a href="/book">book</a></li>
-	  <li><a href="/about">about</a></li>
-	  <li><a href="/cv">cv</a></li>
-	  <li><a href="http://twitter.com/vsbuffalo" title="Vince Buffalo's twitter"><i class="fa fa-twitter fa-nav"></i></a></li>
-	  <li><a href="http://github.com/vsbuffalo" title="Vince Buffalo's Github"><i class="fa fa-github fa-nav"></i></a></li>
-	</ul>
-      </div>
-    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" title="return to main page"><img src="{{ SITEURL }}/theme/images/logo.svg"/ class="pull-left logo-pad" type="image/svg+xml"></a>
+          <a href="/" title="return to main page" class="site-name navbar-brand">the blind play of genes</a></li>
+      </div> <!-- navbar-header -->
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/blog">blog</a></li>
+          <li><a href="/note">notes</a></li>
+          <li><a href="/book">book</a></li>
+          <li><a href="/about">about</a></li>
+          <li><a href="/cv">cv</a></li>
+          <li><a href="http://twitter.com/vsbuffalo" title="Vince Buffalo's twitter"><i class="fa fa-twitter fa-nav"></i></a></li>
+          <li><a href="http://github.com/vsbuffalo" title="Vince Buffalo's Github"><i class="fa fa-github fa-nav"></i></a></li>
+        </ul>
+      </div><!-- navbar-collapse -->
+    </div><!-- container-fluid -->
   </nav>
 
-  <div class="container"> 
-    {% block content %}
-    {% endblock %}  
-  </div><!-- end container -->
- <footer class="footer">
+  {% block content %}
+  {% endblock %}  
+  <footer class="footer">
     <div class="container">
       <p class="text-muted">copyright <i class="fa fa-copyright"></i> 2012-2015 Vince Buffalo <br/>
-	some content licensed under
-	<i class="fa fa-creative-commons"></i>
-	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA</a>
+        some content licensed under
+        <i class="fa fa-creative-commons"></i>
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA</a>
       </p>
     </div>
   </footer>
 
   <!-- necessary for bootstrap -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+
+
   <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
 
   <!-- highlighting -->

@@ -1,17 +1,16 @@
 {% extends "base.html" %}
-<div class="container content-container"> 
-  {% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
-    {% block content %}
-    <div class="col-md-9 content-caontainer"> 
-      <article>
-        <div class="page-header">
-            <h1>{{ article.title }}</h1>
-          </div>
-
-            {{ article.content }}
-        </article>
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+{% block content %}
+<div class="container">
+  <article>
+    <div class="col-md-9 page-header">
+      <h1>{{ article.title }}</h1>
     </div>
+    <div class="col-md-9" style="padding: 0;">
+      {{ article.content }}
+    </div>
+  </article>
+</div><!-- container-fluid -->
 {% endblock %}
-</div><!-- end container content-container-->
 
 

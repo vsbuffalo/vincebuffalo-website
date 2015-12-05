@@ -8968,10 +8968,15 @@ Ported by Fabrício Tavares de Oliveira
 }
 .logo-pad {
   padding-top: 4px;
+  padding-left: 20px;
+  margin-right: 20px;
 }
 .site-name {
   font-size: 32px;
   color: #333333;
+}
+.site-logo {
+  padding: 0;
 }
 .fa-nav {
   font-size: 21px;
@@ -8982,23 +8987,30 @@ h3,
 h4,
 h5,
 h6 {
+  font-size: 32px;
   font-family: "Alegreya Sans", "Quattrocento Sans", Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   font-weight: 300;
 }
 h2 {
-  font-size: 36px;
+  font-size: 25px;
 }
 h3 {
-  font-size: 29px;
+  font-size: 20px;
 }
 h4 {
-  font-size: 22px;
+  font-size: 17px;
 }
 h5 {
   font-size: 17px;
 }
 h6 {
-  font-size: 15px;
+  font-size: 17px;
+}
+.latest {
+  color: #666;
+  font-style: italic;
+  font-size: 0.7em;
+  padding-left: 1em;
 }
 .content-container {
   max-width: 940px;
@@ -9009,7 +9021,7 @@ aside {
   font-size: smaller;
   position: absolute;
   width: 180px;
-  margin-left: 100%;
+  margin-left: 110%;
   padding: 0px;
   display: inline-block;
   float: right;
@@ -9067,4 +9079,9 @@ aside code.hljs {
   float: right;
   max-width: 280px;
   height: auto;
+}
+.page-header {
+  padding-left: 0px;
+  margin-top: -16px;
+  padding-bottom: 0px;
 }

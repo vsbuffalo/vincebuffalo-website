@@ -14,6 +14,7 @@ __less/bootstrap:
 	wget https://github.com/twbs/bootstrap/archive/v$(BOOTSTRAP_VERSION).zip -O bootstrap.zip && unzip bootstrap.zip
 	mkdir -p $@
 	cp -r bootstrap-$(BOOTSTRAP_VERSION)/* $@
+	wget -O js/jquery-1.11.3.min.js http://code.jquery.com/jquery-1.11.3.min.js
 
 __less/font-awesome:
 	wget http://fortawesome.github.io/Font-Awesome/assets/font-awesome-$(FONT_AWESOME_VERSION).zip -O font-awesome.zip && unzip font-awesome.zip
