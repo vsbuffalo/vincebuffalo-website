@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Vince Buffalo'
+AUTHOR_EMAIL = u'vsbuffalo@gmail.com'
 SITENAME = u'vincebuffalo.com'
 SITEURL = ''
 
@@ -40,7 +41,7 @@ DEFAULT_PAGINATION = False
 STATIC_PATHS = ['images', 'static']
 
 PLUGIN_PATHS = ['plugins/']
-PLUGINS = ['pandoc_reader', 'representative_image']
+PLUGINS = ['pandoc_reader', 'representative_image', 'gravatar']
 
 # Pandoc settings
 PANDOC_ARGS = ['--mathjax',

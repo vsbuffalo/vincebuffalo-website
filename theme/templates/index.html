@@ -2,7 +2,14 @@
 {% block content %}
 <div class="container-fluid index-container">
   <div class="rows">
-    <div class="col-md-7">
+    <div id="bio" class="col-md-3">
+      <div id="bio-image">
+        <img src="images/me.png" width="220" alt="photo of Vince Buffalo"/>
+      </div>
+      <p>I'm Vince Buffalo, a PhD Student in Graham Coop's Lab.</p>
+    </div>
+
+    <div class="col-md-8">
       {% for article in articles %}
       {% if loop.index == 1 %}
       <article>
@@ -32,13 +39,7 @@
       </div><!-- margin-top spacer -->
 
     </div><!-- col-md-6 -->
-    <div class="col-md-1"></div>
-    <div class="col-md-4">
-      <h1>Vince Buffalo</h1>
-      <p>I'm Vince Buffalo, a PhD Student in Graham Coop's Lab.</p>
 
-
-    </div>
   </div>
 </div>
 {% endblock content %}

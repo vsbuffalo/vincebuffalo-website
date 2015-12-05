@@ -1,7 +1,4 @@
----
-layout: post
-title: Please developers, don't be dicks.
----
+Title: Please developers, don't be dicks.
 
 
 <a href="http://www.flickr.com/photos/mclapics/6121420214/"
@@ -12,6 +9,7 @@ width="500" height="333" alt="Science is great, open it (open
 science)"></a>
 
 # Please developers, don't be dicks.
+
 
 As the author of a few open source tools, I've had my fair share of
 users seeking help. Emails range from the very useful (bug reports,

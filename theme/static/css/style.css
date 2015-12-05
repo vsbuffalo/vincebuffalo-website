@@ -9085,3 +9085,13 @@ aside code.hljs {
   margin-top: -16px;
   padding-bottom: 0px;
 }
+#bio {
+  margin-top: 2.2em;
+  display: block;
+}
+#bio img {
+  display: block;
+}
+#bio-image {
+  margin-bottom: 1.4em;
+}
