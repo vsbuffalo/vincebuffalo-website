@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Vince Buffalo'
 AUTHOR_EMAIL = u'vsbuffalo@gmail.com'
 SITENAME = u'vincebuffalo.com'
+# SITEURL = '/ver2'
 SITEURL = ''
 
 PATH = 'content'
@@ -13,9 +14,11 @@ TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = u'en'
 
+DEFAULT_CATEGORY = 'blog'
 THEME = 'theme/'
-ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+ARTICLE_PATHS = ['blog', 'notes']
+ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
@@ -26,19 +29,13 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
 
-STATIC_PATHS = ['images', 'static']
+STATIC_PATHS = ['images', 'static', 'notes']
 
 PLUGIN_PATHS = ['plugins/']
 PLUGINS = ['pandoc_reader', 'representative_image', 'gravatar']
@@ -51,3 +48,5 @@ PANDOC_ARGS = ['--mathjax',
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+SUMMARY_MAX_LENGTH = 120

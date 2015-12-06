@@ -9086,12 +9086,42 @@ aside code.hljs {
   padding-bottom: 0px;
 }
 #bio {
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 0.8em;
   margin-top: 2.2em;
+  margin-right: 3em;
   display: block;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #e1e1e1;
+  text-align: justify;
+  text-justify: inter-word;
 }
 #bio img {
   display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 #bio-image {
   margin-bottom: 1.4em;
+}
+.article-preview {
+  padding-left: 2em;
+}
+figure > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+figcaption {
+  text-align: center;
+  margin-top: 0.6em;
+  margin-bottom: 2em;
+  font-style: italic;
+  font-size: 0.8em;
+}
+.article-summary > aside {
+  /* don't dislay asides in front page */
+  display: none;
 }

@@ -4,13 +4,28 @@
   <div class="rows">
     <div id="bio" class="col-md-3">
       <div id="bio-image">
-        <img src="images/me.png" width="220" alt="photo of Vince Buffalo"/>
+        <!-- <img src="images/me.png" width="180" alt="photo of Vince Buffalo"/> -->
+        <img src="images/me-alt.png" width="220" alt="photo of Vince Buffalo"/>
       </div>
-      <p>I'm Vince Buffalo, a PhD Student in Graham Coop's Lab.</p>
-    </div>
+      <p>
 
-    <div class="col-md-8">
-      {% for article in articles %}
+
+        I'm Vince Buffalo, an aspiring evolutionary geneticist in <a
+          href="http://gcbias.org/">Graham Coop</a>'s lab. Previously, I worked
+        as a bioinformatician at the <a
+          href="http://genomecenter.ucdavis.edu/">UC Davis Genome Center</a>
+        and in the <a href="http://dubcovskylab.ucdavis.edu">Dubcovsky</a> and
+        <a href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a
+          href="{{ SITEURL }}/book/">Bioinformatics Data Skills</a> published
+        by O'Reilly Media in July 2015. I write use statistics, probability,
+        and computers to understand evolution.
+
+      </p>
+
+    </div><!-- col-md-3 -->
+
+    <div class="col-md-8 article-preview">
+      {% for article in articles if article.category.name != 'notes' %}
       {% if loop.index == 1 %}
       <article>
         <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
@@ -22,8 +37,11 @@
           <a class="btn" href="{{ SITEURL }}/{{ article.url }}">continue reading→</a>
         </div>
       </article>
+    </div>
+
+    <div class="rows">
       {% if loop.length > 1 %}
-      <div style="margin-top: 200px;" >
+      <div class="col-md-4">
         <h2>Recent Blog Posts</h2>
         <ul class="archive">
           {% endif %}
@@ -36,11 +54,22 @@
           {% endfor %}
         </ul>
         <!-- <p><a href="{{ SITEURL }}/archives.html">Blog Archive</a></p> -->
-      </div><!-- margin-top spacer -->
+      </div> <!-- col-md-6 -->
 
-    </div><!-- col-md-6 -->
+      <div class="col-md-4">
+        {% for article in articles if article.category.name == "notes" %}
+        {% if loop.length > 0 %}
+        <h2>Recent Notes</h2>
+        <ul class="archive">
+          <li><a href="{{ SITEURL}}/{{ article.url }}" ref="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
+        </ul>
+        {% endif %}
+        {% endfor %}
+      </div><!-- col-md-6 -->
 
-  </div>
+    </div><!-- rows -->
+
+  </div><!-- rows -->
 </div>
 {% endblock content %}
 
