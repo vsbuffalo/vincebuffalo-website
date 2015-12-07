@@ -18,7 +18,8 @@
         <a href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a
           href="{{ SITEURL }}/book/">Bioinformatics Data Skills</a> published
         by O'Reilly Media in July 2015. I write use statistics, probability,
-        and computers to understand evolution.
+        and computers to understand evolution. » <a href="{{ SITEURL }}/about">
+          read more</a>
 
       </p>
 
@@ -41,14 +42,14 @@
 
     <div class="rows">
       {% if loop.length > 1 %}
-      <div class="col-md-4">
+      <div class="col-md-4 archive">
         <h2>Recent Blog Posts</h2>
-        <ul class="archive">
+        <ul>
           {% endif %}
           {% elif loop.index < 7 %}
           <li>
-            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">
-              <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.locale_date }}</time> {{ article.title }}</a>
+              <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+              <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">{{ article.title }}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -56,12 +57,15 @@
         <!-- <p><a href="{{ SITEURL }}/archives.html">Blog Archive</a></p> -->
       </div> <!-- col-md-6 -->
 
-      <div class="col-md-4">
+
+      <div class="col-md-4 archive">
         {% for article in articles if article.category.name == "notes" %}
         {% if loop.length > 0 %}
         <h2>Recent Notes</h2>
-        <ul class="archive">
-          <li><a href="{{ SITEURL}}/{{ article.url }}" ref="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
+        <ul>
+          <li>
+            <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+            <a href="{{ SITEURL}}/{{ article.url }}" ref="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
         </ul>
         {% endif %}
         {% endfor %}

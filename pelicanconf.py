@@ -22,6 +22,10 @@ ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
+DIRECT_TEMPLATES = ('index', )
+TEMPLATE_PAGES = {'blog.html': 'blog/index.html',
+                  'notes.html': 'notes/index.html'}
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -35,7 +39,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = False
 
-STATIC_PATHS = ['images', 'static', 'notes']
+STATIC_PATHS = ['images', 'static']
 
 PLUGIN_PATHS = ['plugins/']
 PLUGINS = ['pandoc_reader', 'representative_image', 'gravatar']
