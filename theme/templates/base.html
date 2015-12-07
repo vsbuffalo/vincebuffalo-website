@@ -26,17 +26,18 @@
             <span class="icon-bar"></span>
           </button>
           <a href="/" title="return to main page"><img src="{{ SITEURL }}/theme/images/logo.svg"/ class="pull-left logo-pad" type="image/svg+xml"></a>
-          <a href="/" title="return to main page" class="site-name navbar-brand">the blind play of genes</a></li>
+          <a href="/" title="return to main page" class="site-name navbar-brand">the blind play of genes</a>
+        </li>
       </div> <!-- navbar-header -->
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{ SITEURL }}/blog">blog</a></li>
-          <li><a href="{{ SITEURL }}/notes">notes</a></li>
-          <li><a href="{{ SITEURL }}/book">book</a></li>
+          <li {% if active_page == "blog" %}class="active"{% endif %}><a href="{{ SITEURL }}/blog">blog</a></li>
+          <li {% if active_page == "notes" %}class="active"{% endif %}><a href="{{ SITEURL }}/notes">notes</a></li>
+          <li {% if active_page == "book" %}class="active"{% endif %}><a href="{{ SITEURL }}/book">book</a></li>
           <!-- <li><a href="{{ SITEURL }}/photos">photos</a></li> -->
-          <li><a href="{{ SITEURL }}/publications">publications</a></li>
-          <li><a href="{{ SITEURL }}/about">about</a></li>
+          <li {% if active_page == "publications" %}class="active"{% endif %}><a href="{{ SITEURL }}/publications">publications</a></li>
+          <li  {% if active_page == "about" %}class="active"{% endif %}><a href="{{ SITEURL }}/about">about</a></li>
           <li><a href="http://twitter.com/vsbuffalo" title="Vince Buffalo's twitter"><i class="fa fa-twitter fa-nav"></i></a></li>
           <li><a href="http://github.com/vsbuffalo" title="Vince Buffalo's Github"><i class="fa fa-github fa-nav"></i></a></li>
         </ul>

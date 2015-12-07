@@ -1,3 +1,8 @@
+{% if article.category.name == "notes" %}
+  {% set active_page = 'notes' %} 
+{% else %}
+  {% set active_page = 'blog' %} 
+{% endif %}
 {% extends "base.html" %}
 {% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
 {% block content %}
