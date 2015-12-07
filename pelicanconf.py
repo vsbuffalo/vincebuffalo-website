@@ -24,6 +24,8 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 DIRECT_TEMPLATES = ('index', )
 TEMPLATE_PAGES = {'blog.html': 'blog/index.html',
+                  'blog_archive.html': 'blog/archive/index.html',
+                  'notes_archive.html': 'notes/archive/index.html',
                   'notes.html': 'notes/index.html'}
 
 # Feed generation is usually not desired when developing

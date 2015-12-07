@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="col-md-7 article-preview">
+    {% for article in articles if article.category.name == 'notes' %}
+    {% if loop.index == 1 %}
+    <article>
+      <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+      <div class="article-summary">
+        {% if  article.featured_image %}
+        <img src="{{ article.featured_image }}" class="featured-image-container" alt="thumbnail of {{ article.title }}'s featured image"/>
+        {% endif %}
+        {{ article.content }}
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div><!-- col-md-7 -->
+
+  <div class="col-md-4 archive blog-archive">
+
+    <div class="blog-archive-header">
+      <span class="h2">Recent Notes</span>
+      <span>» <a href="{{ SITEURL }}/notes/archive">archive</a></span>
+    </div>
+    <ul>
+      {% for article in articles if article.category.name == "notes" %}
+      {% if loop.index < 10 %}
+      <li>
+        <div>
+          <time class="archive-time" datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+          <span class="archive-link"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">{{ article.title }}</a></span>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+
+    <p class="blog-archive-header" style="font-size: 0.8em; margin-top: 60px; font-style: italic;">
+
+      Notes includes my technical writing on population and evolutionary genetics, evolution, statistics and probability, and computing.
+
+    </p>
+
+  </div><!-- col-md-4 -->
+
+</div><!-- container -->
+
+{% endblock %}
