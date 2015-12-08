@@ -9,9 +9,6 @@
     <article>
       <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
       <div class="article-summary">
-        {% if  article.featured_image %}
-        <img src="{{ article.featured_image }}" class="featured-image-container" alt="thumbnail of {{ article.title }}'s featured image"/>
-        {% endif %}
         {{ article.content }}
       </div>
     </article>

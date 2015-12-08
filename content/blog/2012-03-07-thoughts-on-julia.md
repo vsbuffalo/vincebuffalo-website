@@ -70,7 +70,7 @@ the source, and working on the R language if it were more open.
 
 The last gripe I have is that R is fragmented. Consider Python:
 
-```Python
+```python
 import re
 re.search(r'R-([\d]+).([\d]+)', "R-2.15").groups()
 ```

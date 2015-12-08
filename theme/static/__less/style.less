@@ -16,7 +16,7 @@
 @fa-font-path: "../fonts";
 
 // == RWD settings
-@grid-float-breakpoint: 848px;
+@grid-float-breakpoint: 912px;
 
 // == bootstrap custom styles
 @font-size-base: 17px;
@@ -27,45 +27,59 @@
 @custom-nav-font-size: 18px;
 
 /* responsive logo size */
+#logo {
+  background-position: left center;
+  float: left;
+  margin-top: 5px;
+  width: 62px;
+  height: 62px;
+  background-repeat: no-repeat;
+  background-size: 62px;
+  background-image: url('/theme/images/logo.svg');
+}
+
+#logo-container {
+  font-size: @custom-nav-font-size;
+  margin-left: 1em;
+}
+
+#logo-container > a {
+  margin-left: 0.2em;
+}
+ 
 @media all and (min-width: 970px) {
   .site-name {
     font-size: 32px;
     color: @gray-dark;
   }
-  #navbar {
+  #logo-container {
     font-size: @custom-nav-font-size;
   }
-  .logo-pad {
-    padding: 0px;
-    margin: 4px 20px 0 20px;
-  }
 }
 
-@media all and (max-width: 969px) and (min-width: 420px) {
+@media all and (max-width: 969px) and (min-width: 460px) {
   .site-name {
-    font-size: floor((32*0.9))px;
+    font-size: 28px;
     color: @gray-dark;
   }
-  #navbar {
-    font-size: floor((@custom-nav-font-size*0.9));
+  #logo {
+    width: 54px;
+    background-size: 54px;
   }
-  .logo-pad {
-    padding: 0px;
-    margin: 4px 20px 0 20px;
-  }
+
 }
 
-@media all and (max-width: 419px) and (min-width: 320px) {
+@media all and (max-width: 461px) and (min-width: 300px) {
+  #logo-container {
+    margin-left: 0.8em;
+  }
   .site-name {
     font-size: 22px;
     color: @gray-dark;
   }
-  #navbar {
-    font-size: floor((@custom-nav-font-size*0.9));
-  }
-  .logo-pad {
-    padding: 0px;
-    margin: 4px 6px 0 6px;
+  #logo {
+    width: 50px;
+    background-size: 50px;
   }
 }
 
@@ -143,7 +157,7 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  min-height: 60px;
   padding-top: 1em;
   margin-top: 3em;
   border-width: 1px 0 0 0;
@@ -207,8 +221,8 @@ aside code.hljs {
 }
 
 #bio {
-  max-width: 380px;
-  height: 400px;
+  max-width: 300px;
+  /* min-height: 480px; */
   padding-left: 2em;
   padding-right: 2em;
   font-size: 0.8em;
@@ -219,7 +233,6 @@ aside code.hljs {
   border-style: solid;
   border-color: rgb(225, 225, 225);
   text-align: justify;
-  text-justify: inter-word;
 }
 
 #bio img {
@@ -233,7 +246,7 @@ aside code.hljs {
 }
 
 .article-preview {
-  padding-left: 2em;
+  margin-bottom: 6em;
 }
 
 figure > img {

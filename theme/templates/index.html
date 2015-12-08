@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container-fluid index-container">
-  <div class="rows">
+  <div class="row">
     <div id="bio" class="col-md-3">
       <div id="bio-image">
         <!-- <img src="images/me.png" width="180" alt="photo of Vince Buffalo"/> -->
@@ -10,14 +10,16 @@
       <p>
 
         I'm Vince Buffalo, a Ph.D. student in <a
-href="http://gcbias.org/">Graham Coop</a>'s lab, studying evolutionary and
-population genetics. Previously, I worked as a bioinformatician at the <a
-href="http://genomecenter.ucdavis.edu/">UC Davis Genome Center</a> and in the
-<a href="http://dubcovskylab.ucdavis.edu">Dubcovsky</a> and <a
-href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
-}}/book/">Bioinformatics Data Skills</a> published by O'Reilly Media in July
-2015. I use statistics, probability, and computers to learn about evolution.  »
-<a href="{{ SITEURL }}/about">read more</a>
+          href="http://gcbias.org/">Graham Coop</a>'s lab at UC Davis in the <a
+          href="http://www.cpb.ucdavis.edu/">Center for Population Biology</a>, studying
+        evolutionary and population genetics.  Previously, I worked as a
+        bioinformatician at the <a href="http://genomecenter.ucdavis.edu/">UC Davis
+          Genome Center</a> and in the <a
+          href="http://dubcovskylab.ucdavis.edu">Dubcovsky</a> and <a
+          href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
+          }}/book/">Bioinformatics Data Skills</a> published by O'Reilly Media in July
+        2015. I use statistics, probability, and computers to learn about evolution.  »
+        <a href="{{ SITEURL }}/about">read more</a>
 
 
       </p>
@@ -27,7 +29,6 @@ href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
     <div class="col-md-8 article-preview">
       {% for article in articles if article.category.name != 'notes' %}
       {% if loop.index == 1 %}
-      <article>
         <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
         <div class="article-summary">
           {% if  article.featured_image %}
@@ -36,12 +37,10 @@ href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
           {{ article.summary }}
           <a class="btn" href="{{ SITEURL }}/{{ article.url }}">continue reading→</a>
         </div>
-      </article>
-    </div>
 
     <div class="rows">
       {% if loop.length > 1 %}
-      <div class="col-md-4 archive">
+      <div class="col-md-6 archive">
         <h2>Recent Blog Posts</h2>
         <ul>
           {% endif %}
@@ -57,7 +56,7 @@ href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
       </div> <!-- col-md-6 -->
 
 
-      <div class="col-md-4 archive">
+      <div class="col-md-6 archive">
         {% for article in articles if article.category.name == "notes" %}
         {% if loop.length > 0 %}
         <h2>Recent Notes</h2>
@@ -71,6 +70,8 @@ href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
       </div><!-- col-md-6 -->
 
     </div><!-- rows -->
+
+    </div>
 
   </div><!-- rows -->
 </div>
