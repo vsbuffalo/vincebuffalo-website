@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="title" content="Research">
+    <meta name="date" content="2015-12-04">
+    <meta name="slug" content="research">
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-8 page-header">
+        <h1>Research</h1>
+      </div>
+      <div class="row">
+         <div class="col-md-8">
+          <article>
+
+           <p>
+           <em>I've finished up my Population Biology core examinations and
+             teaching requirements and am beginning my research. Below are some
+             projects I'm currently working on.</em>
+           </p>
+
+           <h2>X Chromosome Genealogies</h2>
+
+           <figure>
+             <img src="/images/x-arc.png" width="640" class="img-responsive"/>
+             <figcaption>
+               
+               One simulation of an X-genealogy 10 generations back. Gray
+               indicates genealogical ancestors that are not X ancestors, blue
+               indicates male ancestors, red indicates female ancestors, and
+               white indicates genealogical X ancestors that do not share
+               genetic material with the present day individual. The
+               transparency of the red and blue arcs is proportional to the
+               genetic material shared that X ancestor and the present-day
+               individual.
+             
+             </figcaption>
+
+           </figure>
+           <p>
+  
+             This summer, Graham and I worked out a set of probability
+             distributions that model the number of blocks and their lengths
+             one shares with an <a
+               href="https://en.wikipedia.org/wiki/X_chromosome">X
+               chromosome</a> ancestor $k$ generations back in the past.
+             Additionally, we modelled the number and lengths blocks one shares
+             with a present-day relative on the X chromosome. As ancestry
+             services like <a href="https://www.23andme.com/">23andme</a> and
+             <a href="http://www.ancestry.com/">ancestry.com</a> use identical
+             by descent blocks<sup>1</sup> between individuals to infer shared
+             ancestry, Graham and I were curious how much information about
+             ancestry is in X chromosomes and what these block distributions
+             look like.  </p> <aside><sup>1</sup>A stretch of DNA that that
+             derived from a common ancestor without being broken by
+             recombination or changed via mutation is <strong>identical by
+               descent</strong>. For more technical details on identity by
+             descent, see <a
+               href="http://www.genetics.org/content/194/2/301.short">this
+               terrific review</a> by Elizabeth Thompson (Thompson,
+             2012).</aside>
+
+
+           <figure>
+             <img src="/images/tree.png" width="640" class="img-responsive"/>
+             <figcaption>
+               X chromosome blocks shared between a present-day individual and their ancestors.
+             </figcaption>
+
+           </figure>
+
+           <p>Since the heterogametic sex only has <em>one</em> X ancestor
+             (e.g. in humans, males have only one X ancestor in the previous
+             generation — their mother), one's number of X ancestors $k$
+             generations back is curiously enough the $(k+2)^\text{th}$ <a
+               href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci
+               number</a>. Additionally, X chromosomes only undergo meiotic
+             recombination in females, so the distribution of recombinational
+             meioses varies depending on the lineage to a particular ancestor.
+             This leads to some neat combinatorics that we use in our
+             derivation of our distributions.</p>
+
+           <p>Graham and I are currently writing (in collaboration with Steve
+             Mount) this up and will have a preprint up quite soon (January
+             2016). As an scientific outreach component, I will post some blogs
+             discussing X ancestry on my blog, inspired by Graham's terrific
+             posts on <a
+               href="http://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/">one's
+               number of genetic ancestors</a>, <a
+               href="http://gcbias.org/2013/11/04/how-much-of-your-genome-do-you-inherit-from-a-particular-ancestor/">how
+               much genome one shares with a particular ancestor</a>, and the
+             Thanksgiving question on everyone's mind: <a
+               href="http://gcbias.org/2013/12/02/how-many-genomic-blocks-do-you-share-with-a-cousin/">how
+               of my genome do I share with a particular cousin</a>?  </p>
+
+           <h2>Demographic and Geographic Summaries of Pairwise Coalescent Time Distributions</h2>
+
+           <figure>
+             <img src="/images/grfp-image.png" width="380" class="img-responsive"/>
+            <figcaption>
+
+            Preliminary versions of this method (top figure), show that my
+            low-rank approximations of older coalescent times (as captured by
+            short shared genomic regions) capture older European population
+            history, while low-rank approximations (bottom figure) of more
+            recent coalescent times (very long shared genomic regions) capture
+            more recent history between individuals from Albania and Kosovo.
+
+            </figcaption>
+           </figure>
+           <p>
+
+             <em>This is the project I proposed in my NSF Graduate Scholars
+               Fellowship application (funded).</em>
+           </p>
+
+           <p>
+             Most species live in spatially structured populations, connected
+             through a complex demographic history of population movements and
+             splits, migrations, expansions, and declines. The demography of
+             populations both reflects and impacts processes on evolutionary
+             time scales (e.g. speciation, local adaptation, gene flow) and
+             ecological timescales (e.g. competition, disease spread,
+             predation). Population genomic methods (Novembre et al., 2008; Li
+             and Durbin, 2011) seek to infer these demographic and
+             geographic histories.
+           </p>
+
+           <p>
+             
+             However, I see current methods as having two limitations: (1) they
+             are unable to reconstruct recent demographic and migratory events
+             over the past tens to hundreds of generations, and (2) these
+             methods are not well positioned to utilize the hundreds to
+             thousands of individuals currently being sequenced and genotyped. 
+           </p>
+
+           <p>
+
+            Graham and I are currently looking into how to tackle this problem
+            by summarizing pairwise coalescent time distributions across each
+            pair in a sample, and then summarizing these coalescent times
+            across various time slices (e.g. 0-10, 11-30 generations, etc).
+            Over all pairs of individuals we obtain a matrix of the number of
+            shared common ancestors for each time period, which captures
+            individuals’ relatedness in particular time slices. However, each
+            matrix is likely to be sparse (contain many zero entries), due to
+            noise in coalescent time estimation — which we're tackling with
+            statistical approaches that smooth across adjacent time slices and
+            across individuals.</p>
+
+          <p> You can read my full proposal on <a
+              href="https://brandvainlab.wordpress.com/">Yaniv Brandvain's</a>
+            collection of <a
+              href="https://github.com/ybrandvain/GRFP">successful GRFP
+              applications</a>.
+          </p>
+
+        </article>
+        </div><!-- col-md-8-->
+       </div>
+     </div>
+   </body>
+ </html>
+
+ 
