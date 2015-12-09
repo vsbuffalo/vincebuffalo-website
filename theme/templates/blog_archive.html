@@ -1,4 +1,5 @@
 {% set active_page = 'blog' %} 
+{% set subsitename = 'the blind play of genes' %} 
 {% extends "base.html" %}
 {% block content %}
 
@@ -12,7 +13,7 @@
       {% for article in articles if article.category.name != "notes" %}
       <li>
         <div>
-          <time class="archive-time" datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+          <time class="archive-time" datetime="{{ article.date.isoformat() }}" >{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
           <span class="archive-link"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">{{ article.title }}</a></span>
         </div>
       </li>

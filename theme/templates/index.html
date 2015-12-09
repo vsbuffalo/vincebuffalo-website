@@ -1,3 +1,4 @@
+{% set subsitename = 'vince buffalo' %} 
 {% extends "base.html" %}
 {% block content %}
 <div class="container-fluid index-container">
@@ -5,48 +6,66 @@
     <div id="bio" class="col-md-3">
       <div id="bio-image">
         <!-- <img src="images/me.png" width="180" alt="photo of Vince Buffalo"/> -->
-        <img src="images/me-alt.png" width="220" alt="photo of Vince Buffalo"/>
+        <img src="images/me-alt.png" width="220" alt="photo of Vince Buffalo" class="img-responsive"/>
       </div>
       <p>
 
         I'm Vince Buffalo, a Ph.D. student in <a
-          href="http://gcbias.org/">Graham Coop</a>'s lab at UC Davis in the <a
-          href="http://www.cpb.ucdavis.edu/">Center for Population Biology</a>, studying
-        evolutionary and population genetics.  Previously, I worked as a
-        bioinformatician at the <a href="http://genomecenter.ucdavis.edu/">UC Davis
-          Genome Center</a> and in the <a
-          href="http://dubcovskylab.ucdavis.edu">Dubcovsky</a> and <a
-          href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a href="{{ SITEURL
-          }}/book/">Bioinformatics Data Skills</a> published by O'Reilly Media in July
-        2015. I use statistics, probability, and computers to learn about evolution.  »
-        <a href="{{ SITEURL }}/about">read more</a>
+          href="http://gcbias.org/">Graham Coop</a>'s lab studying evolutionary
+        and population genetics at UC Davis in the <a
+          href="http://www.cpb.ucdavis.edu/">Center for Population Biology</a>.
+        Previously, I worked as a bioinformatician at the <a
+          href="http://genomecenter.ucdavis.edu/">UC Davis Genome Center</a>
+        and in the <a href="http://dubcovskylab.ucdavis.edu">Dubcovsky</a> and
+        <a href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a
+          href="{{ SITEURL }}/book/">Bioinformatics Data Skills</a> published
+        by O'Reilly Media in July 2015. I use statistics, probability, and
+        computers to learn about evolution.  » <a href="{{ SITEURL
+          }}/about">read more</a>
 
+        <p>
 
-      </p>
+          On this website, you can read my blog <a href="{{ SITEURL
+            }}/blog">the blind play of genes</a>, read about my <a href="{{
+            SITEURL }}/research">research</a>, or explore my digital <a
+            href="{{ SITEURL }}/notes">notes</a>.
+
+        </p>
 
     </div><!-- col-md-3 -->
 
     <div class="col-md-8 article-preview">
       {% for article in articles if article.category.name != 'notes' %}
       {% if loop.index == 1 %}
-        <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-        <div class="article-summary">
-          {% if  article.featured_image %}
-          <img src="{{ article.featured_image }}" class="featured-image-container" alt="thumbnail of {{ article.title }}'s featured image"/>
-          {% endif %}
-          {{ article.summary }}
-          <a class="btn" href="{{ SITEURL }}/{{ article.url }}">continue reading→</a>
-        </div>
+      <div><div class="latest-blog">latest blog post</div><div class='h2-summary'><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span></div>
+      <div class="article-summary">
+        <div class="row">
+
+          <div class="col-md-6">
+            {{ article.summary }}
+            <a class="btn" href="{{ SITEURL }}/{{ article.url }}">continue reading→</a>
+          </div>
+
+          <div class="col-md-4 featured-image">
+            {% if  article.featured_image %}
+            <img src="{{ article.featured_image }}" class="img-responsive" alt="thumbnail of {{ article.title }}'s featured image" />
+            {% endif %}
+          </div>
+ 
+       </div><!-- article-summary -->
+      </div><!-- article-preview -->
+
+    </div>
 
     <div class="rows">
       {% if loop.length > 1 %}
       <div class="col-md-6 archive">
-        <h2>Recent Blog Posts</h2>
+        <h2 class="index-article">Recent Blog Posts</h2>
         <ul>
           {% endif %}
           {% elif loop.index < 7 %}
           <li>
-            <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">{{ article.title }}</a>
           </li>
           {% endif %}
@@ -62,8 +81,8 @@
         <h2>Recent Notes</h2>
         <ul>
           <li>
-            <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
-            <a href="{{ SITEURL}}/{{ article.url }}" ref="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
+            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+            <a href="{{ SITEURL}}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
         </ul>
         {% endif %}
         {% endfor %}

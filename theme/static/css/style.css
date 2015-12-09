@@ -8963,6 +8963,13 @@ Ported by Fabrício Tavares de Oliveira
   color: #3182bd;
 }
 
+.content-container {
+  max-width: 940px;
+}
+aside {
+  padding: 1em;
+  font-size: smaller;
+}
 /* responsive logo size */
 #logo {
   background-position: left center;
@@ -9000,6 +9007,22 @@ Ported by Fabrício Tavares de Oliveira
     background-size: 54px;
   }
 }
+@media all and (min-width: 1000px) {
+  aside {
+    color: #666;
+    margin-top: -2em;
+    font-size: smaller;
+    position: absolute;
+    width: 180px;
+    margin-left: 110%;
+    padding: 0px;
+    display: inline-block;
+    float: right;
+  }
+  .aside-first {
+    text-indent: -6px;
+  }
+}
 @media all and (max-width: 461px) and (min-width: 300px) {
   #logo-container {
     margin-left: 0.8em;
@@ -9012,6 +9035,10 @@ Ported by Fabrício Tavares de Oliveira
     width: 50px;
     background-size: 50px;
   }
+  aside {
+    padding: 1em;
+    font-size: 0.8em;
+  }
 }
 .site-logo {
   padding: 0;
@@ -9023,13 +9050,17 @@ h4,
 h5,
 h6,
 .h1,
-.h2 {
+.h2,
+.h2-summary,
+.latest-blog {
   font-size: 32px;
   font-family: "Alegreya Sans", "Quattrocento Sans", Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   font-weight: 300;
 }
 h2,
-.h2 {
+.h2,
+.h2-summary,
+.latest-blog {
   font-size: 25px;
 }
 h3 {
@@ -9049,23 +9080,6 @@ h6 {
   font-style: italic;
   font-size: 0.7em;
   padding-left: 1em;
-}
-.content-container {
-  max-width: 940px;
-}
-aside {
-  color: #666;
-  margin-top: -2em;
-  font-size: smaller;
-  position: absolute;
-  width: 180px;
-  margin-left: 110%;
-  padding: 0px;
-  display: inline-block;
-  float: right;
-}
-.aside-first {
-  text-indent: -6px;
 }
 html {
   position: relative;
@@ -9110,9 +9124,6 @@ aside code.hljs {
 .references {
   font-size: smaller;
 }
-.article-summary {
-  float: left;
-}
 .featured-image-container {
   float: right;
   max-width: 280px;
@@ -9149,7 +9160,14 @@ aside code.hljs {
   margin-bottom: 6em;
 }
 figure > img {
+  margin-left: auto;
+  margin-right: auto;
+  /* same as .img-responsive in bootstrap 3 below */
   display: block;
+  height: auto;
+  max-width: 100%;
+}
+figure > figcaption {
   margin-left: auto;
   margin-right: auto;
 }
@@ -9205,4 +9223,32 @@ figcaption {
 }
 .cv-right-col {
   font-size: 0.8em;
+}
+h2 > a,
+h2 > a:visited {
+  color: #ccc;
+  margin-left: -0.7em;
+  text-decoration: none !important;
+}
+h2 > a:hover,
+h2 > a:active {
+  text-decoration: none !important;
+  color: #888;
+}
+.article-preview {
+  margin-top: 1em;
+}
+.article-preview > h1 {
+  font-size: 1.3em;
+}
+.article-summary > h2 {
+  font-size: 1em;
+}
+.latest-blog {
+  font-size: 0.9em;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 500;
+  color: #777;
+  padding-right: 1em;
 }

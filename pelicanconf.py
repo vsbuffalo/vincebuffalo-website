@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Vince Buffalo'
 AUTHOR_EMAIL = u'vsbuffalo@gmail.com'
-SITENAME = u'vincebuffalo.com'
-# SITEURL = '/ver2'
+SITENAME = u'vince buffalo'
+#SITEURL = '/ver2'
 SITEURL = ''
 
 PATH = 'content'
@@ -13,7 +13,7 @@ PATH = 'content'
 TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = u'en'
-
+TYPOGRIFY = True
 DEFAULT_CATEGORY = 'blog'
 THEME = 'theme/'
 ARTICLE_PATHS = ['blog', 'notes']

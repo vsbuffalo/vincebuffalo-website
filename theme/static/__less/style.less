@@ -18,6 +18,20 @@
 // == RWD settings
 @grid-float-breakpoint: 912px;
 
+
+// == aside
+// aside settings
+// article max width
+.content-container {
+  max-width: 940px;
+}
+aside {
+  padding: 1em;
+  font-size: smaller;
+}
+
+
+
 // == bootstrap custom styles
 @font-size-base: 17px;
 @font-family-sans-serif: "Quattrocento Sans", Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -66,7 +80,24 @@
     width: 54px;
     background-size: 54px;
   }
+}
 
+
+@media all and (min-width: 1000px) {
+  aside {
+    color: #666;
+    margin-top: -2em;
+    font-size: smaller;
+    position: absolute;
+    width: 180px;
+    margin-left: 110%;
+    padding: 0px;
+    display: inline-block;
+    float: right;
+  } 
+  .aside-first {
+    text-indent: -6px;
+  }
 }
 
 @media all and (max-width: 461px) and (min-width: 300px) {
@@ -81,6 +112,11 @@
     width: 50px;
     background-size: 50px;
   }
+  aside {
+    padding: 1em;
+    font-size: 0.8em;
+  }
+
 }
 
 
@@ -92,14 +128,14 @@
 
 // headers settings
 @header-font-size: 32px; // sets h1, others are fractions of this
-h1,h2,h3,h4,h5,h6,.h1,.h2 {
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h2-summary,.latest-blog {
   font-size: @header-font-size;
   //font-style: italic;
   font-family: "Alegreya Sans", @font-family-sans-serif;
   font-weight: 300;
   //color: #c7254e;
 }
-h2,.h2 {
+h2,.h2,.h2-summary,.latest-blog {
   font-size: floor((@header-font-size * 0.8));
 }
 h3 {
@@ -120,27 +156,6 @@ h6 {
   font-style: italic;
   font-size: 0.7em;
   padding-left: 1em;
-}
-
-// aside settings
-// article max width
-.content-container {
-  max-width: 940px;
-}
-aside {
-  color: #666;
-  margin-top: -2em;
-  font-size: smaller;
-  position: absolute;
-  width: 180px;
-  margin-left: 110%;
-  padding: 0px;
-  display: inline-block;
-  float: right;
-}
-
-.aside-first {
-  text-indent: -6px;
 }
 
 // footer
@@ -201,10 +216,6 @@ aside code.hljs {
   font-size: smaller;
 }
 
-.article-summary {
-  float: left;
-}
-
 .featured-image-container {
   float: right;
   max-width: 280px;
@@ -249,8 +260,17 @@ aside code.hljs {
   margin-bottom: 6em;
 }
 
+
 figure > img {
+  margin-left: auto;
+  margin-right: auto;
+  /* same as .img-responsive in bootstrap 3 below */
   display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+figure > figcaption {
   margin-left: auto;
   margin-right: auto;
 }
@@ -326,3 +346,38 @@ figcaption {
   font-size: 0.8em;
 }
 
+h2 > a, h2 > a:visited {
+  color: #ccc;
+  margin-left: -0.7em; 
+  text-decoration: none !important;
+}
+
+h2 > a:hover, h2 > a:active {
+  text-decoration: none !important;
+  color: #888;
+}
+
+.article-preview {
+  margin-top: 1em;
+}
+
+.article-preview > h1 {
+  font-size: 1.3em;
+}
+
+.article-summary > h2 {
+  font-size: 1em;
+}
+
+.h2-summary {
+  
+}
+
+.latest-blog {
+  font-size: 0.9em;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 500;
+  color: #777;  
+  padding-right: 1em;
+}

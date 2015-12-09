@@ -1,6 +1,6 @@
 <!-- copyright (c) 2015 Vince Buffalo, all rights reserved -->
 <!-- do not copy; use of this logo is prohibited -->
-<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
   <defs>
     <clipPath id="cut-off-1">
       <rect x="2" y="100" width="340" height="400" transform="rotate(-5)" id="svg_1"/>

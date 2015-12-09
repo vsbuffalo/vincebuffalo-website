@@ -1,6 +1,9 @@
+
 {% if article.category.name == "notes" %}
+  {% set subsitename = 'vince buffalo' %} 
   {% set active_page = 'notes' %} 
 {% else %}
+  {% set subsitename = 'the blind play of genes' %} 
   {% set active_page = 'blog' %} 
 {% endif %}
 {% extends "base.html" %}

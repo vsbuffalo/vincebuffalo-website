@@ -11,6 +11,15 @@
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
     <link href="{{ SITEURL }}/theme/css/style.min.css" rel="stylesheet">
 
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
@@ -28,13 +37,13 @@
           <div id="logo-container">
             <div id="logo">
             </div>
-          <a href="{{ SITEURL }}/" title="return to main page" class="site-name navbar-brand">the blind play of genes</a>
-        </div>
-        </li>
+            <a href="{{ SITEURL }}/" title="return to main page" class="site-name navbar-brand">{{ subsitename }}</a>
+          </div>
       </div> <!-- navbar-header -->
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
+          <li  {% if active_page == "research" %}class="active"{% endif %}><a href="{{ SITEURL }}/research">research</a></li>
           <li {% if active_page == "blog" %}class="active"{% endif %}><a href="{{ SITEURL }}/blog">blog</a></li>
           <li {% if active_page == "notes" %}class="active"{% endif %}><a href="{{ SITEURL }}/notes">notes</a></li>
           <li {% if active_page == "book" %}class="active"{% endif %}><a href="{{ SITEURL }}/book">book</a></li>
