@@ -37,7 +37,7 @@
     <div class="col-md-8 article-preview">
       {% for article in articles if article.category.name != 'notes' %}
       {% if loop.index == 1 %}
-      <div><div class="latest-blog">latest blog post</div><div class='h2-summary'><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span></div>
+      <div><div class="latest-blog">latest blog post</div><div class='h2-summary'><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></div>
       <div class="article-summary">
         <div class="row">
 

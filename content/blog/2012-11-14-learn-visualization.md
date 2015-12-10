@@ -1,7 +1,7 @@
 Title: My First Recommendation to New Scientific Coders: Learn Visualization
 
 Scientists are learning programming at an unprecedented rate. I've
-[expressed](http://vincebuffalo.org/2012/03/08/the-beauty-of-bioconductor.html)
+[expressed](/blog/2012/03/08/the-beauty-of-bioconductor.html)
 [concern](http://www.dataists.com/2010/09/careful-statistical-computing-part-1/)
 over the fast-paced growth of computing across the sciences and what
 this could mean for reproducibility and incorrect findings in the

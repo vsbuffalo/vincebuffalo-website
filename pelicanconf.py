@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 AUTHOR = u'Vince Buffalo'
 AUTHOR_EMAIL = u'vsbuffalo@gmail.com'
 SITENAME = u'vince buffalo'
-#SITEURL = '/ver2'
 SITEURL = ''
 
 PATH = 'content'
@@ -27,6 +26,8 @@ TEMPLATE_PAGES = {'blog.html': 'blog/index.html',
                   'blog_archive.html': 'blog/archive/index.html',
                   'notes_archive.html': 'notes/archive/index.html',
                   'notes.html': 'notes/index.html'}
+
+IGNORE_FILES = ['draft-notes/']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
