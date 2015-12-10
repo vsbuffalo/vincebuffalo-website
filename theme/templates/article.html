@@ -6,7 +6,7 @@
   {% set active_page = 'blog' %} 
 {% endif %}
 {% extends "base.html" %}
-{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+{% block title %}{{ article.title|striptags }} | {{ SITENAME }}{% endblock %}
 {% block content %}
 <div class="container">
   <article>

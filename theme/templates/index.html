@@ -77,9 +77,9 @@
 
 
       <div class="col-md-6 archive">
+        <h2>Recent Notes</h2>
         {% for article in articles if article.category.name == "notes" %}
         {% if loop.length > 0 %}
-        <h2>Recent Notes</h2>
         <ul>
           <li>
             <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>

@@ -27,7 +27,7 @@ TEMPLATE_PAGES = {'blog.html': 'blog/index.html',
                   'notes_archive.html': 'notes/archive/index.html',
                   'notes.html': 'notes/index.html'}
 
-IGNORE_FILES = ['draft-notes/']
+IGNORE_FILES = ['dev-notes']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
