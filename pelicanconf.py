@@ -57,3 +57,9 @@ PANDOC_ARGS = ['--mathjax',
 # RELATIVE_URLS = True
 
 SUMMARY_MAX_LENGTH = 120
+
+# RSS
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_RSS = 'feeds/all.rss.xml'
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None

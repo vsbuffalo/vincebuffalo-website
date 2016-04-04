@@ -77,7 +77,7 @@ function segmentsTree(config) {
                  stroke: '#aaa'
                })
               .attr("stroke-width", 1.5)
-              .style("opacity", config.animate ? 0 : 1);
+              // .style("opacity", config.animate ? 0 : 1);
     if (config.animate) {
       tree.transition()
           .delay(function(d) {
