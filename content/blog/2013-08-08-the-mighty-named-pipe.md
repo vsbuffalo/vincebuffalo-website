@@ -185,7 +185,7 @@ simple, clearly understandable `|` that we're used to.
 
 So, is this really faster? Yes, quite. Writing and reading to the disk
 comes at a big price — see
-[latency numbers every programmer should know](www.eecs.berkeley.edu/~rcs/research/interactive_latency.html). Unfortunately
+[latency numbers every programmer should know](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html). Unfortunately
 I am too busy to do extensive benchmarks, but I wrote a slightly
 [insane read trimming script](https://gist.github.com/vsbuffalo/6181676)
 that makes use of process substitution. Use at your own risk, but

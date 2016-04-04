@@ -81,7 +81,7 @@
     {% endblock %}  
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">copyright <i class="fa fa-copyright"></i> 2012-2015 Vince Buffalo <br/>
+        <p class="text-muted">copyright <i class="fa fa-copyright"></i> 2012-2016 Vince Buffalo <br/>
           some content licensed under
           <i class="fa fa-creative-commons"></i>
           <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA</a>
@@ -102,13 +102,13 @@
       hljs.initHighlightingOnLoad();
     </script>
     <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-548051-4']);
-      _gaq.push(['_setDomainName', 'vincebuffalo.org']);
-      _gaq.push(['_setAllowLinker', true]);
-      _gaq.push(['_trackPageview']);
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-548051-4', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
