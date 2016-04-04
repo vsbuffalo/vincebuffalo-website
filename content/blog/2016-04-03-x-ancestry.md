@@ -94,7 +94,7 @@ cousins—e.g. if we assume a generation time of about 30 years, this means thes
 parents shared an ancestor around 270 years ago. This phenomenon is known as
 *pedigree collapse*, and it's a source of inbreeding. The further back through
 the generation you go back, pedigree collapse *must* happen—it's exceedingly
-unlikely that 20 generations ago, your 10,48,576 ancestors are all
+unlikely that 20 generations ago, your 1,048,576 ancestors are all
 distinct.<sup>2</sup> While pedigree collapse definitely occurs, throughout the
 rest of this blog post (and in our paper) we ignore it, as we model ancestry
 that's recent enough where pedigree collapse isn't a large problem.
