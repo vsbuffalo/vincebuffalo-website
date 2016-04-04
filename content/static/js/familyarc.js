@@ -222,7 +222,7 @@ var plotFamilyArc = function(data, genlen, type, width, height, svg_element, des
        relat = "great-".repeat(ind.gen-2) + "grand" + relat
      }
      var nblocks = ind.blocks.length;
-     var blocks = "shares " + nblocks + plural(" autosomal block", nblocks) +
+     var blocks = "shares " + nblocks + plural(" block", nblocks) +
                    ", " + Math.round(blocklen(ind.blocks)*1000)/1000  + " cM";
      text.text(relat);
      text.append("p").text(blocks)

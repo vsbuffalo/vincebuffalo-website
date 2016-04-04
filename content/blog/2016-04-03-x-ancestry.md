@@ -58,8 +58,8 @@ genealogies and ancestry. Then, in the next section we'll look at how one's
 genetic ancestors —the subset of ancestors that you share genetic material
 with— vary back through the generations. With these concepts reviewed, we'll
 look at the genealogy that includes all of our *X ancestors*, which due to the
-special inheritance pattern of the X chromosome is only a subset of
-genealogies.  The embedded X genealogy has some properties that impact how
+special inheritance pattern of the X chromosome is only a subset of one's
+genealogy.  The embedded X genealogy has some properties that impact how
 segments of DNA are shared between individuals with recent common ancestry
 (e.g. 6<sup>th</sup> degree cousins), which we look at through a simple
 probability model. Finally, we'll look at what we can learn about the
@@ -92,19 +92,19 @@ occurs when one's two parents are actually related some number of generations
 back. For example, one's two parents could be 9<sup>th</sup> degree
 cousins—e.g. if we assume a generation time of about 30 years, this means these
 parents shared an ancestor around 270 years ago. This phenomenon is known as
-*pedigree collapse*, and it's a source of inbreeding. The further back through
-the generation you go back, pedigree collapse *must* happen—it's exceedingly
-unlikely that 20 generations ago, your 10,48,576 ancestors are all
+*pedigree collapse*, and it's the same thing as inbreeding. The further back
+through the generations you go back, pedigree collapse *must* happen—it's
+exceedingly unlikely that 20 generations ago, your 1,048,576 ancestors are all
 distinct.<sup>2</sup> While pedigree collapse definitely occurs, throughout the
 rest of this blog post (and in our paper) we ignore it, as we model ancestry
 that's recent enough where pedigree collapse isn't a large problem.
 
-<aside> <sup>2</sup> Some beautiful probability theory by Chang (1999) has show
-that the **most recent common ancestor** (the ancestor from which all current
-individuals in the population descend from) of a population of size *N* lived
-$T_N = \log_2(N)$ generations ago. Furthermore, rather amazingly, any
+<aside> <sup>2</sup> Some beautiful probability theory by Chang (1999) has
+shown that the **most recent common ancestor** (the ancestor from which all
+current individuals in the population descend from) of a population of size *N*
+lived $T_N = \log_2(N)$ generations ago. Furthermore, rather amazingly, any
 individual $1.77 \log_2(N)$ generations ago that has *any* present-day
-descendents are actually (with very high probability) ancestors of *all* modern
+descendents is actually (with very high probability) ancestors of *all* modern
 day individuals.</aside>
 
 ## Genetic Ancestry
@@ -146,16 +146,15 @@ Currently, there are computational methods (e.g. Browning and Browning, 2011)
 that take polymorphism datasets and using probabilistic models, identify large
 identical by descent (IBD) regions shared between individuals—it's programs
 like these that services like 23andme use to infer how far back your relatives
-share ancestry with you. So if we wish to take genomic datasets and
-understand the large shared segments between relatives due to their shared
+share ancestry with you. So if we wish to take genomic datasets and understand
+the large shared segments between relatives due to their shared
 ancestry<sup>4</sup> we need a more appropriate mathematical model than the
-simple model of sampling marbles.  Numerous brilliant probabilists and
-statistical geneticists have tackled this using probability theory and
-stochastic processes (Donnelly 1983; Huff et al., 2011; Thomas et al., 1994).
-Some of the mathematical details are rather complex (leading to fun
-conceptualizations like "a random walk on a hypercube"), but the underlying
-model can be simplified considerably. I describe the model in the paragraph
-below, but you can skip this without losing too much if you don't like maths.
+simple model of sampling marbles. Numerous probabilists and statistical
+geneticists have tackled this using probability theory and stochastic processes
+(Donnelly 1983; Huff et al., 2011; Thomas et al., 1994).  Some of the
+mathematical details are rather complex (leading to fun conceptualizations like
+"a random walk on a hypercube"), but the underlying model can be simplified
+considerably.
 
 <aside><sup>4</sup> These shared blocks are due to recent ancestry; over long
 periods of time the genome is eventually broken up into pieces that reflect
@@ -177,9 +176,9 @@ figure). Mathematically, tracking these alternate segments is a bit tricky, so
 we can approximate the process by imaging that each of the segments is passed
 on to the next generation with probability ½—a flip of a fair coin.  Since we
 don't actually know how many breakpoints have occurred, we model them as a
-random process. In our case, we use the Poisson distribution<sup>5</sup> to assign a
-probability to the event that some number of breakpoints $B=b$ occurs.  This
-idea of using the Poisson distribution to model recombination has a long
+random process. In our case, we use the Poisson distribution<sup>5</sup> to
+assign a probability to the event that some number of breakpoints $B=b$ occurs.
+This idea of using the Poisson distribution to model recombination has a long
 history in genetics, going back to Haldane (1919). If we then imagine that this
 same process across all of the $k$ individuals that connect you and one of your
 ancestors in the <em>k<sup>th</sup></em> generation, the total number of
@@ -201,12 +200,23 @@ $$\mathbb{E}[N] = \frac{1}{2^k}(22 + 33k)$$
 
 where 33 is the total genetic length of the human autosomes in Morgans, a unit
 defined as the average number of recombinations that occur (and is named after
-the Morgan that created the figure above). Since our approximation is a Poisson
-process, we can do more than just find an expression for the *average* number
-of segments you share with an ancestor, but calculate probabilities of sharing
-zero segments (such that your genealogical ancestor is not a genetic ancestor)
-and calculate the distribution of segment lengths. Additionally, these models
-can be easily extended to handle the segments shared between cousins.
+the Morgan that created the figure above). The formula above can give us a good
+intuition about what's going on—the number of segments created by recombination
+grows linearly with how far back we go ($22 + 33k$), but the survival
+probability decreases exponentially (<em>½<sup>k</sup></em>). Using the Poisson
+distribution<sup>6</sup>, we can do more than just find an expression for the
+*average* number of segments you share with an ancestor, like calculate
+probabilities of sharing zero segments (such that your genealogical ancestor is
+not a genetic ancestor) and calculate the distribution of segment lengths.
+Additionally, these models can be easily extended to handle the segments shared
+between cousins.
+
+<aside> <sup>6</sup> In our paper, we end up finding a model closely related to
+the thinned Poisson process is more accurate. We call this the Poisson-Binomial
+model; to keep this blog post simple, I don't discuss in detail here.
+Essentially, it's identical to the Poisson model, but the probability $N$
+segments survive given $b+22$ trials is Binomially distributed with probability
+<em>½<sup>k</sup></em>.</aside>
 
 What's fascinating about this is that your may not share genetic material with
 your genealogical ancestors. If you play around with the equation above with
@@ -270,6 +280,7 @@ one). This sequence crops up throughout
 [nature](https://en.wikipedia.org/wiki/Fibonacci_number#In_nature) and
 [mathematics](https://en.wikipedia.org/wiki/Fibonacci_number#Use_in_mathematics).
 
+
 ## Models for X chromosome recent genetic ancestry
 
 Another feature of X genealogies is that unlike the autosomes, where
@@ -295,6 +306,14 @@ that the number of lineages to an X ancestor $k$ generations back with $r$
 recombinational meioses is:
 
 $${ r + 1 \choose k-r}$$
+
+We can intuitively understand this by looking at an X genealogy; X genealogies
+enumerate every possible way to arrange males and females such that no two
+males are adjacent (since fathers don't pass an X to their sons). Thus, the
+number of lineages $k$ generations in the past with with $r$ females can be
+thought of as the number of ways of ordering $r$ red balls and $k-r$ white
+balls such that no to white balls are adjacent. The number of ways of ordering
+red and balls this way is given by the binomial coefficient above.
 
 Since one has $\mathcal{F}_{k+2}$ X ancestors $k$ generations back, the
 probability of $r$ recombinational meioses occurring is:
@@ -328,6 +347,17 @@ contribution to the present-day individual. Gray arcs are genealogical
 ancestors that are not X ancestors. Hover over an ancestor to highlight it and
 find how much X genetic material it has contributed to the present-day
 female.</figcaption> 
+
+To get a sense of how one's X genealogical ancestry grows back in time, we've
+plotted it below (Figure A) compared to one's autosomal ancestry, and the
+growth of both one's genetic X and autosomal ancestry back through the
+generations. Using probability models we work through in the next section, we
+also show (Figure B) the probability of sharing some autosomal genetic ancestry
+(<em>P(N<sub>auto</sub> > 0)</em>) and X genetic ancestry (<em>P(N<sub>X</sub>
+> 0</em>), conditional and unconditional on both being an X genealogical
+ancestor ("X ancestor" and "ancestor", respectively).
+
+![A: a present-day female’s number of genealogical and genetic ancestors, for X chromosomes and autosomes. B: the probability of genealogical and genetic ancestry for a variety of cases](/images/num-ancestors.png)
 
 Similarly, we extend these models to model the number of X chromosome segments
 shared between half- and full-cousins and explore other properties of X
@@ -404,6 +434,9 @@ genealogical relationships connecting us all.
     },
     'genlen': 5,
   }
+
+
+  function activate() {
     d3.json("/static/js/x.json", function(data) {
       var config = single_chrom;
       config.genlen = data.genlen;
@@ -419,4 +452,5 @@ genealogical relationships connecting us all.
         .datum(data.sims[0])
         .call(drawShared);
     });
+  }
 </script>
