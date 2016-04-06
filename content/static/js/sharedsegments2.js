@@ -15,7 +15,7 @@ function log2(x) {
 
 function segmentsTree(config) {
   var maxanc = config.nancestors(config.maxgen);
-  var width = 760, // default 960
+  var width = 780, // default 960
       height = 260,  // default 360
       bottom = 40,  // bottom margin
       //chrom_width = 90,
@@ -68,7 +68,7 @@ function segmentsTree(config) {
              .data(sims)
              .enter()
              .append("line")
-             .filter(function(d) { return d.gen > 0 && d.gen <= 4; })
+             .filter(function(d) { return d.gen > 0 && d.gen <=MAXGEN-1 ; })
              .attr({
                  x1: chromXPosition,
                  y1: chromYPosition,

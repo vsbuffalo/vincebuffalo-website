@@ -5,6 +5,10 @@
  - Pelican: `pip install pelican`
  - beautifulsoup4: `pip install beautifulsoup4`
 
+Pelican plugins are also needed: install with
+
+    $ git clone --recursive https://github.com/getpelican/pelican-plugins
+
 ## Theme
 
 All theme-related files (CSS, etc.) are in `theme/`.

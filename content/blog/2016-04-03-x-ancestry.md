@@ -47,6 +47,11 @@ Image: /images/morgan-crossover.svg
   }
 </style>
 
+<div id="xshared"></div><figcaption>An example of a present-day female's X
+material being broken up across her X ancestors in her X genealogy back through
+the generations.</figcaption>
+
+
 Graham Coop, Steve Mount, and my preprint *[A Genealogical Look at Shared
 Ancestry on the X Chromosome
 ](http://biorxiv.org/content/early/2016/04/03/046912)* has been recently been
@@ -295,10 +300,6 @@ length in females, the specific lineage to an X ancestor impacts how quickly
 genetic relatedness breaks down. In our paper, we sought to characterize this
 lineage-specific rate and see how it affects genetic relatedness. 
 
-<div id="xshared"></div><figcaption>A example of a present-day female's X
-material being broken up across her X ancestors in her X genealogy back through
-the generations.</figcaption>
-
 Our models are similar to the autosomal models described earlier, except given
 that we don't know the particular lineage to an X ancestor, we need to average
 over the number of possible recombinational meiosis that could occur. We found
@@ -436,7 +437,6 @@ genealogical relationships connecting us all.
   }
 
 
-  function activate() {
     d3.json("/static/js/x.json", function(data) {
       var config = single_chrom;
       config.genlen = data.genlen;
@@ -444,7 +444,7 @@ genealogical relationships connecting us all.
         config = human_x;
         //config.tight = true;
       }
-      config.animate = false;
+      config.animate = true;
       // maxgen: also change in sharedsegments2.js, filter()
       config.maxgen = 4; //d3.max(data.sims[0].map(function(d) { return d.gen; }));
       var drawShared = segmentsTree(config);
@@ -452,5 +452,4 @@ genealogical relationships connecting us all.
         .datum(data.sims[0])
         .call(drawShared);
     });
-  }
 </script>
