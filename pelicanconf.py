@@ -44,8 +44,8 @@ DEFAULT_PAGINATION = False
 
 STATIC_PATHS = ['images', 'static']
 
-PLUGIN_PATHS = ['plugins/']
-PLUGINS = ['pandoc_reader', 'representative_image', 'gravatar']
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['pandoc_reader', 'representative_image']
 
 # Pandoc settings
 PANDOC_ARGS = ['--mathjax',

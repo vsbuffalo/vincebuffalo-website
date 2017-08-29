@@ -15,7 +15,7 @@ FTP_TARGET_DIR=/
 SSH_HOST=vincebuffalo.org
 SSH_PORT=22
 SSH_USER=vinceb
-SSH_TARGET_DIR=webapps/vincebuffalo/ver2/
+SSH_TARGET_DIR=webapps/vincebuffalo/
 
 S3_BUCKET=my_s3_bucket
 
