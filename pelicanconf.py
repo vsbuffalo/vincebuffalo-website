@@ -42,14 +42,13 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = False
 
-STATIC_PATHS = ['images', 'static']
+STATIC_PATHS = ['images', 'static', '.htaaccess']
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['pandoc_reader', 'representative_image']
 
 # Pandoc settings
 PANDOC_ARGS = ['--mathjax',
-               '--smart',
                '--no-highlight']
 #               '-F pandoc-citeproc']
 

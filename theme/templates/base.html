@@ -7,9 +7,9 @@
 
     <title>{% block title %} | {{ SITENAME }}{%endblock%}</title>  
 
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-    <link href="{{ SITEURL }}/theme/css/style.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
@@ -40,7 +40,8 @@
       });
     </script>
 
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+
   </head>
   <body>
 
@@ -70,8 +71,8 @@
             <!-- <li><a href="{{ SITEURL }}/photos">photos</a></li> -->
             <li {% if active_page == "publications" %}class="active"{% endif %}><a href="{{ SITEURL }}/publications">publications</a></li>
             <li  {% if active_page == "about" %}class="active"{% endif %}><a href="{{ SITEURL }}/about">about</a></li>
-            <li><a href="http://twitter.com/vsbuffalo" title="Vince Buffalo's twitter"><i class="fa fa-twitter fa-nav"></i></a></li>
-            <li><a href="http://github.com/vsbuffalo" title="Vince Buffalo's Github"><i class="fa fa-github fa-nav"></i></a></li>
+            <li><a href="http://twitter.com/vsbuffalo" title="Vince Buffalo's twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="http://github.com/vsbuffalo" title="Vince Buffalo's Github"><i class="fab fa-github"></i></a></li>
           </ul>
         </div><!-- navbar-collapse -->
       </div><!-- container-fluid -->
@@ -82,10 +83,10 @@
     <footer class="footer">
       <div class="container">
           <p class="text-muted">
-              <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">rss feed <i class="fa fa-rss"></i></a><br/>
-              copyright <i class="fa fa-copyright"></i> 2012-2016 Vince Buffalo <br/>
+              <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate">rss feed <i class="fas fa-rss"></i></a><br/>
+              copyright <i class="far fa-copyright"></i> 2012-2016 Vince Buffalo <br/>
           some content licensed under
-          <i class="fa fa-creative-commons"></i>
+          <i class="fab fa-creative-commons"></i>
           <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA</a>
         </p>
       </div>
@@ -94,9 +95,6 @@
     <!-- necessary for bootstrap -->
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-
-
-    <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
 
     <!-- highlighting -->
     <script src="{{ SITEURL }}/theme/js/highlight.pack.js"></script>

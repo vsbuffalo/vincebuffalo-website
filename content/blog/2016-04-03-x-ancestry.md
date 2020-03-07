@@ -52,14 +52,13 @@ material being broken up across her X ancestors in her X genealogy back through
 the generations.</figcaption>
 
 
-Graham Coop, Steve Mount, and my preprint *[A Genealogical Look at Shared
-Ancestry on the X Chromosome
-](http://biorxiv.org/content/early/2016/04/03/046912)* has been recently been
-posted on bioRxiv. In the spirit of both outreach and continuing Graham's
-terrific series of blog posts<sup>1</sup> on genetic genealogy, I'm writing
-about our paper on X chromosome genealogy and recent ancestry. Before diving
-into the details of X chromosome ancestry work, I'll review the concepts of
-genealogies and ancestry. Then, in the next section we'll look at how one's
+My article with Steve Mount and Graham Coop, *[A Genealogical Look at Shared
+Ancestry on the X Chromosome ](https://www.genetics.org/content/204/1/57)* has
+been published in *Genetics*. In the spirit of both outreach and continuing
+Graham's terrific series of blog posts<sup>1</sup> on genetic genealogy, I'm
+writing about our paper on X chromosome genealogy and recent ancestry. Before
+diving into the details of X chromosome ancestry work, I'll review the concepts
+of genealogies and ancestry.  Then, in the next section we'll look at how one's
 genetic ancestors —the subset of ancestors that you share genetic material
 with— vary back through the generations. With these concepts reviewed, we'll
 look at the genealogy that includes all of our *X ancestors*, which due to the
@@ -326,7 +325,7 @@ number and length of segments shared identically by descent on the X. It turns
 out the Poisson thinning approximation described earlier doesn't work as well
 as another model we call the Poisson-Binomial model. I won't cover the detailed
 derivation here (see the
-[preprint](http://biorxiv.org/content/early/2016/04/03/046912) if you're
+[paper](https://www.genetics.org/content/204/1/57) if you're
 interested), but we find the distribution of X segment number to be well
 approximated by:
 
@@ -366,7 +365,7 @@ cousins. These models get a bit tricky mathematically, as the sex of the
 cousins' shared ancestor impacts the number of segments shared between cousins,
 so we incorporate the probability of the sex of the shared ancestor in our
 models (see Section 3 of our
-[preprint](http://biorxiv.org/content/early/2016/04/03/046912) for more
+[paper](https://www.genetics.org/content/204/1/57) for more
 details).
 
 ## What recent ancestry on the X can tell us

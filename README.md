@@ -65,6 +65,15 @@ styling. Newlines are interpreted, so in some cases code should be formatted as:
     # stuff
     return sim</code></pre>
 
+### HTAccess
+
+In `/home/vinceb/webapps/vb_redirect_https`,
+
+```
+RewriteEngine On
+RewriteRule ^(.*)$ https://vincebuffalo.com%{REQUEST_URI} [R=301,L]
+```
+
 ### Asides
 
 Inspired by [Edward Tufte](http://www.edwardtufte.com/tufte/)'s terrific books,

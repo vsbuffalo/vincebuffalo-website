@@ -14,11 +14,159 @@
          <div class="col-md-8">
           <article>
 
-           <p> <em>I've finished up my Population Biology core examinations and
-               teaching requirements and am beginning my research. Below are
-               some projects I've recently finished or am currently working
-               on.</em> </p>
+           <h2>Detecting Polygenic Adaptation From Temporal Genomic Data</h2>
 
+           <figure>
+             <img src="/images/rapidadapt_examples.png" width="640" class="img-responsive"/>
+             <figcaption>
+
+               Two motivating examples of rapid phenotypic adaptation from the literature.
+               Left, PC1 of beak size in Darwin's finches shifts rapidly and
+               unpredictably due to selection responding to changing
+               environments, from <a
+               href="https://science.sciencemag.org/content/296/5568/707">Grant
+               and Grant (2002)</a>. Right, a rapid shift in flowering time in <em>Brassica rapa</em> after a multiyear drought across wet and dry sites, from <a href="https://www.pnas.org/content/104/4/1278">Franks, Sim, and Weis (2007)</a>. A central aim of my research is detecting
+             the signal of such rapid phenotypic shifts in genomic data, and understanding
+             how it impacts genetic variation in the genome.
+
+             </figcaption>
+           </figure>
+
+           <aside> <sup>1</sup>A trait, or phenotype is said to be
+             <em>polygenic</em> when more than one one gene (and anywhere from
+             tens to thousands of genes) affect the trait's value. Numerous
+             polygenic traits impact fitness, such as body size in animals or
+             flowering time in plants.  </aside>
+ 
+           <p>During my PhD, I became fascinated by the problem of detecting
+           rapid polygenic<sup>1</sup> adaptation. We have seen extensive
+           examples of rapid polygenic adaptation in natural populations, where
+           over short "ecological" timescales a population's trait average
+           changes due to an environmental change or other stimulus. However,
+           detecting such adaptation at a genomic level is challenging, since
+           the effects of selection are distributed across all of the many
+           sites contributing to the trait, and the subtle allele frequency
+           changes can be mistaken for random genetic drift. This leaves us in
+           an unfortunate place: while ecologists and evolutionary biologists
+           can observe rapid phenotypic changes in natural populations,
+           detecting these adaptive events in genomic data that is now widely
+           available is incredibly difficult. Yet, we need to understand how
+           rapid phenotypic adaptation affects genome-wide variation to have a
+             complete view of how evolution is working in populations.
+             <strong>Connecting evolutionary quantitative genetics with
+               population genomic data is a central theme in my
+               research.</strong></p>
+
+           <p> In my PhD work, Graham Coop and I show that temporal genomic
+           data (allele frequencies sampled from a population over many
+           generations) provides a way to detect polygenic adaptation over very
+           short timescales. The signal we use is that a neutral allele (i.e.
+           an allele that does not directly affect fitness) behaves differently
+           through time when selection is present. In particular, the
+           allele frequency changes each generation (e.g. \(\Delta p_0 = p_1 -
+           p_0, \Delta p_1 = p_2 - p_0, \) etc.) under drift are
+           independent, and consequently the covariance between allele
+           frequency changes (e.g. \(\text{cov}(\Delta p_t, \Delta p_s)\)) is expected to be
+           zero. However, when heritable fitness variation exists in the
+           population, this creates covariances in allele frequency changes
+           that we can directly measure from genomic data. We call this
+           <strong>temporal autocovariance</strong>. In our <em>Genetics</em> paper, <em><a
+             href="https://www.genetics.org/content/213/3/1007">The Linked
+             Selection Signature of Rapid Adaptation in Temporal Genomic
+             Data</a></em> we work out
+           mathematical expressions for its strength and show how we can
+           estimate additive genetic variance for fitness using measured levels 
+           of temporal autocovariance.</p>
+
+           <figure>
+             <img src="/images/sim-pred-covs-varyl-alt.png" width="700" class="img-responsive"/>
+             <figcaption>
+
+               Simulation results (points) show that our mathematical
+               expressions for temporal autocovariance (lines) match closely.
+               Additionally, the level of temporal autocovariance is a function
+               of the total additive genetic variance in a region, and is
+               invariant with respect to the number of loci (different colors).
+               Since we currently lack mathematical models of the additive
+               variance through time, we have used the different measures of
+               this variation over time from the simulations to predict the
+               level of temporal autocovariance (these are the different
+               lines); more detail can be found in our manuscript.
+
+           </figure>
+ 
+           
+           <p>In addition to allowing us to detect polygenic adaptation from
+           temporal genomic data, temporal autocovariance also allows us to
+           address a long standing issue in evolutionary genetics: how can we
+           quantify the effects of selection and drift on genome-wide allele
+           frequency changes? This is a long-standing problem in evolutionary
+           genetics, going back to the vitriolic debates between R.A. Fisher
+           and Sewall Wright in the 1940s. For the first time, we can directly
+           partition how much of the variance in allele frequency change is
+           directly caused by linked selection. In our <em>Genetics</em> paper,
+           we have developed an estimator, <strong>G</strong>, which quantifies
+           the proportion of the total variance in allele frequency change that
+           is due to linked selection<sup>2</sup>.
+           </p>
+           <aside><sup>2</sup> 
+             This is defined as the sum of the covariances terms (only non-zero in
+             the presence of linked selection) divided by the total variance:
+             \[G = \frac{\sum_{i \ne j} \text{cov}(\Delta p_i, \Delta p_j)}{\text{Var}(p_t - p_0)}\]
+           </aside>
+
+           <p>
+             In a second paper, currently a <a
+               href="https://www.biorxiv.org/content/10.1101/798595v1">bioRxiv
+               preprint</a>, we apply these ideas to three published temporal genomic datasets.
+            
+             We find extensive evidence in all three studies that
+             linked selection effects genome-wide allele frequencies over short
+             timescales. Overall we estimate that at least 17% to 37% of allele
+             frequency change is driven by selection in these experiments
+             (using our measure <strong>G</strong> mentioned earlier). Results
+             from a reanalysis of one of these studies is shown below: 
+           </p>
+
+            <figure>
+             <img src="/images/figure-1.png" width="700" class="img-responsive"/>
+  
+             <figcaption>
+               In one study we re-analyzed, <a
+                 href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000128">Barghi
+                 et al. (2019)</a>, 
+               
+               we find that temporal autocovariances decay through time as our
+               theory predicts (due to the effect of decreasing associated
+               fitness variation and recombination shuffling genetic
+               backgrounds), shown here in Figure A, which plots the rows of
+               the temporal variance-covariance matrix (shown on the right). In
+               Figure B, we show our measure <strong>G</strong>,
+               the cumulative effects of linked selection on the proportion of total 
+               variation due to linked selection (schematic shown on bottom right).
+           </figure>
+
+           <p>Finally, we also find evidence of reversals in the direction of
+           selection in the Barghi et al. (2019) data, indicated by negative
+           temporal covariances over long periods of time. A huge benefit of our 
+           approach is that we can tease out a signal of these more complicated 
+           selection dynamics with genome-wide data that may not be evident by 
+           analyzing individual allele frequency trajectories.
+           </p>
+          <p>
+
+          Overall, this work begins to address two long-standing problems in
+          evolutionary biology: how can we detect polygenic adaptation over
+          short timescales, and how can we quantify the effects of drift versus
+          selection on genome-wide variation? As more temporal datasets
+          continue to be created, we can also begin to reconcile our short-term
+          estimates of the genome-wide impact of selection with estimates of
+          how selection shapes genomic diversity over longer periods, from
+          single contemporaneous samples. Furthermore, I hope to quantify the
+          extent to which fluctuating selection acting over short timescales
+          are occurring in natural populations, and the impact they have on
+          genetic variation.  </p>
+ 
            <h2>X Chromosome Genealogies</h2>
 
            <figure>
@@ -96,7 +244,7 @@
                href="http://gcbias.org/2013/12/02/how-many-genomic-blocks-do-you-share-with-a-cousin/">how
                of my genome do I share with a particular cousin</a>?  </p>
 
-           <h2>Demographic and Geographic Summaries of Pairwise Coalescent Time Distributions</h2>
+           <!--<h2>Demographic and Geographic Summaries of Pairwise Coalescent Time Distributions</h2>
 
            <figure>
              <img src="/images/grfp-image.png" width="380" class="img-responsive"/>
@@ -158,6 +306,7 @@
               href="https://github.com/ybrandvain/GRFP">successful GRFP
               applications</a>.
           </p>
+           -->
 
         </article>
         </div><!-- col-md-8-->

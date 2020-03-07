@@ -10,24 +10,27 @@
         <img src="images/me2.png" width="220" alt="photo of Vince Buffalo" class="img-responsive"/>
       </div>
       <p>
+          I'm Vince Buffalo, a postdoc studying evolutionary genetics in the <a
+             href="https://ie2.uoregon.edu/people/kern/">Kern</a> and <a
+             href="https://pages.uoregon.edu/plr/">Ralph</a> labs at the
+           University of Oregon.
 
-        I'm Vince Buffalo, a Ph.D. candidate in <a
-          href="http://gcbias.org/">Graham Coop</a>'s lab studying evolutionary
-        and population genetics at UC Davis in the <a
-          href="http://www.cpb.ucdavis.edu/">Center for Population Biology</a>.
-        Previously, I worked as a bioinformatician at the <a
-          href="http://genomecenter.ucdavis.edu/">UC Davis Genome Center</a>
-        and in the <a href="http://dubcovskylab.ucdavis.edu">Dubcovsky</a> and
-        <a href="http://www.rilab.org/">Ross-Ibarra</a> labs. I wrote <a
-          href="{{ SITEURL }}/book/">Bioinformatics Data Skills</a> published
-        by O'Reilly Media in July 2015. I use statistics, probability, and
-        computers to learn about evolution.  » <a href="{{ SITEURL
-          }}/about">read more</a>
+              I did my PhD with <a href="http://gcbias.org/">Graham Coop</a>, in
+            the <a href="https://cpb.ucdavis.edu/"> Population Biology
+              Graduate Group</a> at UC Davis. Before graduate school, I worked
+            as a bioinformatician, and I wrote the O'Reilly book <a
+                   href="/book/">Bioinformatics Data Skills</a> sharing the
+                 skills I learned. I use statistics,
+                 probability, and computers to learn about evolution.  » <a
+                 href="{{ SITEURL }}/about">read more</a>
 
+          </p>
+
+ 
         <p>
 
-          On this website, you can read my blog <a href="{{ SITEURL
-            }}/blog">the blind play of genes</a>, read about my <a href="{{
+          On this website, you can read my <a href="{{ SITEURL
+            }}/blog">blog</a>, read about my <a href="{{
             SITEURL }}/research">research</a>, or explore my digital <a
             href="{{ SITEURL }}/notes">notes</a>.
 
@@ -60,7 +63,7 @@
     <div class="rows">
       {% if loop.length > 1 %}
       <div class="col-md-6 archive">
-        <h2 class="index-article">Recent Blog Posts</h2>
+        <h2 class="index-article">Blog Posts</h2>
         <ul>
           {% endif %}
           {% elif loop.index < 7 %}
@@ -76,7 +79,7 @@
 
 
       <div class="col-md-6 archive">
-        <h2>Recent Notes</h2>
+        <h2>Notes</h2>
         {% for article in articles if article.category.name == "notes" %}
         {% if loop.length > 0 %}
         <ul>
