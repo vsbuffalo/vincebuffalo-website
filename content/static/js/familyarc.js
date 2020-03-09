@@ -95,6 +95,7 @@ var genXArcWithData = function(data, blockfun) {
     var ind_angle  = π/nancestors;
     var last_angle =  -π/2;
     for (var j = 0; j < nXancestors; j++) {
+      if (data.inds[i][j] == undefined) continue;
       if (i > 1) {
         last_angle = child_angles[data.inds[i][j].child] + 
                       data.inds[i][j].sex*ind_angle;
@@ -238,6 +239,7 @@ var plotFamilyArc = function(data, genlen, type, width, height, svg_element, des
 d3.json("/static/js/x.json", function(error, data) {
    if (error) throw error;
    var dt = processSims(data.sims[0]);
+   console.log(dt);
    var arc_fun = {"x": genXArcWithData,
                   "single": genAutoArcWithData,
                   "auto": genAutoArcWithData}[data.type];
