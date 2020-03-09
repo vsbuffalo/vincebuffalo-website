@@ -11,7 +11,7 @@ Image: /images/snake_small.svg
 <figure>
 ![](/images/snake_small.svg)
 <figcaption>
-Heraldic snake [from Flickr](https://www.flickr.com/photos/thevintagecollective/4077358044/) (CC Licensed).
+Heraldic snake from Flickr (CC Licensed).
 </figcaption>
 </figure>
 
@@ -248,7 +248,7 @@ those common in bioinformatics. You can install Snakemake with Conda
 ([instructions
 here](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)).
 Much like Make, running the command line program `snakemake` looks for a
-Snakefile, named `snakefile` in the directory. And much like Make, the format
+Snakefile, named `Snakefile` in the directory. And much like Make, the format
 of the Snakefile has rules defined by targets (known in Snakemake as
 **outputs**), dependencies (Snakemake calls these **inputs**), and rules (and a
 lot more is possible here with Snakemake, as we'll see). Let's translate our
