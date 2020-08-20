@@ -1,6 +1,5 @@
 Title: The Problem of Detecting Polygenic Selection from Temporal Data
 Image: 
-Status: draft
 
 *The last chapter of my dissertation with Graham Coop was recently published in
 PNAS
@@ -10,7 +9,7 @@ effort to communicate my research to a broader audience, I have written two
 blog posts on our work.
 The first post, below, is meant to introduce the historical context and
 concepts like linked selection and polygenic adaptation to a non-scientist, and
-the [second post](XXX) describes our work on temporal covariance as a signature
+the [second post](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html) describes our work on temporal covariance as a signature
 of polygenic linked selection and its application to four evolve-and-reseqeunce
 data set.*
 
@@ -72,7 +71,7 @@ survival and family size due to drift are not *genetic*, but *random*;
 consequently they are not inherited by the next generation.  Another major
 source of randomness is Mendelian segregation: if you carry two different
 copies of a gene (one you inherited from your father, one you inherited from
-your mother), the copy you pass to your child is determined essentially a
+your mother), the copy you pass to your child is determined essentially by a
 biological coin flip. 
 
 <aside>
@@ -255,4 +254,4 @@ to discern what fraction of allele frequency changes are due to drift, and what
 fraction are due to selection. These are the problems my work with Graham Coop
 is working to address.
 
-[Continue to Part II](XXX)
+[Continue to Part II](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html)

@@ -1,13 +1,12 @@
 Title: The Genome-wide Signal of Linked Selection in Temporal Data
 Image: /images/buffalo_coop_fig1.png
-Status: draft
 
 *The last chapter of my dissertation with Graham Coop was recently published in
 PNAS
 ([pdf](https://www.pnas.org/content/pnas/early/2020/08/07/1919039117.full.pdf),
 [bioRxiv](https://www.biorxiv.org/content/10.1101/798595v3)) last week. In an
 effort to communicate my research to a broader audience, I have written two
-blog posts on our work. The <a href="">first post</a>, is meant to introduce
+blog posts on our work. The <a href="/blog/2020/08/20/the-problem-of-detecting-polygenic-selection-from-temporal-data.html">first post</a>, is meant to introduce
 the historical context and concepts like linked selection and polygenic
 adaptation to a non-scientist, and the second post, below, describes our work
 on temporal covariance as a signature of polygenic linked selection and its
@@ -60,6 +59,7 @@ F.H.W. Morley discussing selection in Australian sheep for merino wool:
 tend to be most inbred. As a corollary, selection increases the approach to
 homozygosity, not only at loci carrying genes determining the character in
 question but at all loci." ([1954](https://www.publish.csiro.au/cp/AR9540305)).
+(*image source: [Wikipedia](https://commons.wikimedia.org/wiki/File:Macarthur_stamp_sheep_1934.jpg)*)
 </figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ covariance.  While the classic linked selection work (i.e. hitchhiking and
 background selection, which I explain in [the first post](XXX)) describes how a
 neutral allele behaves when it is a close neighbor of a new mutation that
 affects fitness, the quantitative genetics view of linked selection often seeks
-to understand how a neutral allele behaves when it is a much more distant
+to understand how a neutral allele behaves when it is much more distant
 ---perhaps even on a different chromosome--- from the genetic variation that is
 selected upon.  Furthermore, this view supposes the genetic variation that
 determines fitness is polygenic, and results from *standing variation*, meaning
@@ -253,7 +253,7 @@ Second, how can we detect a signal of linked polygenic selection when the
 effect at each site is so weak? Drift and sampling variance introduce
 considerable noise that can swamp the signal of temporal covariance, as well as
 create spurious covariances. However, these sources of noise do *not* share
-randomly change in the same direction, whereas temporal covariances do, leading
+random change in the same direction, whereas temporal covariances do, leading
 to a signal that can be readily distinguished from random drift.
 
 ## Convergent Correlations
