@@ -1,5 +1,13 @@
 Title: The Genome-wide Signal of Linked Selection in Temporal Data
 Image: /images/buffalo_coop_fig1.png
+Summary: The last chapter of my dissertation with Graham Coop was recently published in <a href="https://www.pnas.org/content/pnas/early/2020/08/07/1919039117.full.pdf">PNAS</a> last week. In an effort to communicate my research to a broader audience, I have written two blog posts on our work. The <a href="/blog/2020/08/20/the-problem-of-detecting-polygenic-selection-from-temporal-data.html">first post</a>, is meant to introduce the historical context and concepts like linked selection and polygenic adaptation to a non-scientist, and the second post, below, describes our work on temporal covariance as a signature of polygenic linked selection and its application to four evolve-and-reseqeunce data sets. <br/>
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@vsbuffalo" />
+<meta name="twitter:title" content="The Genome-wide Signal of Linked Selection in Temporal Data" />
+<meta name="twitter:description" content="An overview of Buffalo and Coop (2020)." />
+<meta name="twitter:image" content="http://vincebuffalo.org/images/buffalo_coop_fig1.png" />
+
 
 *The last chapter of my dissertation with Graham Coop was recently published in
 PNAS
@@ -10,18 +18,20 @@ blog posts on our work. The <a href="/blog/2020/08/20/the-problem-of-detecting-p
 the historical context and concepts like linked selection and polygenic
 adaptation to a non-scientist, and the second post, below, describes our work
 on temporal covariance as a signature of polygenic linked selection and its
-application to four evolve-and-reseqeunce data set.*
+application to four evolve-and-reseqeunce data sets.*
 
-In the [last post](XXX), I explained two longstanding problems in the field of
-evolutionary genetics. The first is detecting adaptation on polygenic traits
-from temporal genomic data. Temporal data is gathered by sampling a population
-through the generations and sequencing these samples, and provides us with a
-immense amount of information about the evolutionary process over short
-timescales. Yet even with this amount of data, distinguishing allele frequency
-changes caused by polygenic selection from that random genetic drift is a
-challenge. A population could be adapting over short timescales ---we might
-even observe drastic changes in a trait over a few generations--- yet it could
-be impossible to see the signature of such strong selection at the DNA level.
+In the [last
+post](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html),
+I explained two longstanding problems in the field of evolutionary genetics.
+The first is detecting adaptation on polygenic traits from temporal genomic
+data. Temporal data is gathered by sampling a population through the
+generations and sequencing these samples, and provides us with a immense amount
+of information about the evolutionary process over short timescales. Yet even
+with this amount of data, distinguishing allele frequency changes caused by
+polygenic selection from that random genetic drift is a challenge. A population
+could be adapting over short timescales ---we might even observe drastic
+changes in a trait over a few generations--- yet it could be impossible to see
+the signature of such strong selection at the DNA level.
 
 The second related problem is how we quantify the roles of drift and linked
 selection in determining genome-wide allele frequency changes. Since the

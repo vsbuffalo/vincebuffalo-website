@@ -1,6 +1,15 @@
 Title: The Problem of Detecting Polygenic Selection from Temporal Data
 Image: 
 
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@vsbuffalo" />
+<meta name="twitter:title" content="The Problem of Detecting Polygenic Selection from Temporal Data" />
+<meta name="twitter:description" content="Why is detecting polygenic selection from temporal data difficult?" />
+<meta name="twitter:image" content="https://vincebuffalo.com/images/ford_fisher.png" />
+
+
+
 *The last chapter of my dissertation with Graham Coop was recently published in
 PNAS
 ([pdf](https://www.pnas.org/content/pnas/early/2020/08/07/1919039117.full.pdf),
@@ -11,7 +20,7 @@ The first post, below, is meant to introduce the historical context and
 concepts like linked selection and polygenic adaptation to a non-scientist, and
 the [second post](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html) describes our work on temporal covariance as a signature
 of polygenic linked selection and its application to four evolve-and-reseqeunce
-data set.*
+data sets.*
 
 ## Natural Selection is Rapid
 
