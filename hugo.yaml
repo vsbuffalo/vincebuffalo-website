@@ -1,0 +1,132 @@
+baseURL: "https://vincebuffalo.org/"
+title: "Vince Buffalo"
+theme: "hextra"
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+defaultContentLanguage: "en"
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  page: ["HTML"]
+  section: ["HTML", "RSS"]
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.87.0"
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+
+enableInlineShortcodes: true
+
+pagination:
+  pagerSize: 100
+
+imaging:
+  anchor: 'Center'
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  author: "authors"
+  series: "series"
+
+sitemap:
+  changefreq: 'daily'
+  filename: 'sitemap.xml'
+  priority: 0.5
+
+related:
+  threshold: 0
+  toLower: false
+  indices:
+    - name: "tags"
+      weight: 100
+    - name: "categories"
+      weight: 100
+    - name: "series"
+      weight: 50
+    - name: "authors"
+      weight: 20
+    - name: "date"
+      weight: 10
+    - applyFilter: false
+      name: 'fragmentrefs'
+      type: 'fragments'
+      weight: 10
+
+menu:
+  main:
+    - name: "Blog"
+      pageRef: "/blog"
+      weight: 1
+    - name: "Research"
+      pageRef: "/research"
+      weight: 2
+    - name: "About"
+      pageRef: "/about"
+      weight: 3
+    - name: "Search"
+      weight: 4
+      params:
+        type: search
+
+params:
+  description: "The personal blog of Vince Buffalo."
+  
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: wide
+  
+  page:
+    width: wide
+  
+  theme:
+    default: system
+    displayToggle: true
+  
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+  
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+  
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+  
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+    article:
+      displayPagination: true
+  
+  toc:
+    displayTags: true
+  
+  highlight:
+    copy:
+      enable: true
+      display: hover

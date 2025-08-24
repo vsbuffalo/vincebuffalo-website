@@ -1,0 +1,23 @@
+{% if article.category.name == "notes" %}
+  {% set subsitename = 'vince buffalo' %} 
+  {% set active_page = 'notes' %} 
+{% else %}
+  {% set subsitename = 'vince buffalo' %} 
+  {% set active_page = 'blog' %} 
+{% endif %}
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }} | {{ SITENAME }}{% endblock %}
+{% block content %}
+<div class="container">
+  <article>
+    <div class="col-md-9 page-header">
+      <h1>{{ article.title }}</h1>
+    </div>
+    <div class="col-md-9" style="padding: 0;">
+      {{ article.content }}
+    </div>
+  </article>
+</div><!-- container-fluid -->
+{% endblock %}
+
+

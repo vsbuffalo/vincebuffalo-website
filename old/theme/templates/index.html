@@ -1,0 +1,111 @@
+{% set subsitename = 'vince buffalo' %} 
+{% extends "base.html" %}
+{% block title %} {{ SITENAME }}{% endblock %}
+{% block content %}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@vsbuffalo" />
+<meta name="twitter:title" content="Vince Buffalo" />
+<meta name="twitter:description" content="I'm Vince Buffalo, an evolutionary geneticist. I use computers, probability theory, and statistics to understand how evolution works." />
+<meta name="twitter:image" content="https://vincebuffalo.com/images/me2.png" />
+
+
+
+<div class="container-fluid index-container">
+  <div class="row">
+    <div id="bio" class="col-md-3">
+      <div id="bio-image">
+        <!-- <img src="images/me.png" width="180" alt="photo of Vince Buffalo"/> -->
+        <img src="images/me2.png" width="220" alt="photo of Vince Buffalo" class="img-responsive"/>
+      </div>
+      <p>
+          I'm Vince Buffalo, a postdoc studying evolutionary genetics in the <a
+             href="https://ie2.uoregon.edu/people/kern/">Kern</a> and <a
+             href="https://pages.uoregon.edu/plr/">Ralph</a> labs at the
+           University of Oregon.
+
+              I did my PhD with <a href="http://gcbias.org/">Graham Coop</a>, in
+            the <a href="https://cpb.ucdavis.edu/"> Population Biology
+              Graduate Group</a> at UC Davis. Before graduate school, I worked
+            as a bioinformatician, and I wrote the O'Reilly book <a
+                   href="/book/">Bioinformatics Data Skills</a> sharing the
+                 skills I learned. I use statistics,
+                 probability, and computers to learn about evolution.  » <a
+                 href="{{ SITEURL }}/about">read more</a>
+
+          </p>
+
+ 
+        <p>
+
+          On this website, you can read my <a href="{{ SITEURL
+            }}/blog">blog</a>, read about my <a href="{{
+            SITEURL }}/research">research</a>, or explore my digital <a
+            href="{{ SITEURL }}/notes">notes</a>.
+
+        </p>
+    </div><!-- col-md-3 -->
+
+    <div class="col-md-8 article-preview">
+      {% for article in articles if article.category.name != 'notes' %}
+      {% if loop.index == 1 %}
+      <div><div class="latest-blog">latest blog post</div><div class='h2-summary'><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></div>
+      <div class="article-summary">
+        <div class="row">
+
+          <div class="col-md-6">
+            {{ article.summary }}
+            <a class="btn" href="{{ SITEURL }}/{{ article.url }}">continue reading→</a>
+          </div>
+
+          <div class="col-md-5 featured-image">
+            {% if  article.featured_image %}
+            <img src="{{ article.featured_image }}" class="img-responsive" alt="thumbnail of {{ article.title }}'s featured image" />
+            {% endif %}
+          </div>
+ 
+       </div><!-- article-summary -->
+      </div><!-- article-preview -->
+
+    </div>
+
+    <div class="rows">
+      {% if loop.length > 1 %}
+      <div class="col-md-6 archive">
+        <h2 class="index-article">Blog Posts</h2>
+        <ul>
+          {% endif %}
+          {% elif loop.index < 7 %}
+          <li>
+            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags}}">{{ article.title }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        <!-- <p><a href="{{ SITEURL }}/archives.html">Blog Archive</a></p> -->
+      </div> <!-- col-md-6 -->
+
+
+      <div class="col-md-6 archive">
+        <h2>Notes</h2>
+        {% for article in articles if article.category.name == "notes" %}
+        {% if loop.length > 0 %}
+        <ul>
+          <li>
+            <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b') }} {{ article.date.day }}, {{ article.date.year }}</time>
+            <a href="{{ SITEURL}}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></li>
+        </ul>
+        {% endif %}
+        {% endfor %}
+      </div><!-- col-md-6 -->
+
+    </div><!-- rows -->
+
+    </div>
+
+  </div><!-- rows -->
+</div>
+{% endblock content %}
+
+
