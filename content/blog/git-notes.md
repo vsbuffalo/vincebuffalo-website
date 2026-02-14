@@ -7,6 +7,7 @@ categories: ["notes"]
 aliases:
   - /blog/2012/03/11/git-notes.html
   - /notes/2012/03/11/git-notes.html
+summary: "Notes on Git internals and workflows, covering remote tracking branches, the relationship between fetch and pull, and common use cases with illustrative examples."
 ---
 
 # Git Notes

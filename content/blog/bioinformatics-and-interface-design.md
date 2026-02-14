@@ -6,6 +6,7 @@ tags: ["bioinformatics", "software-design", "interfaces", "programming"]
 categories: ["computational-biology"]
 aliases:
   - /blog/2013/01/26/bioinfo-interfaces.html
+summary: "Bioinformatics involves a tremendous amount of interfacing between programs, yet this receives surprisingly little design attention. Better interfaces—through foreign function interfaces, shared libraries, and cleaner design patterns—could save us from the current mess of file parsing and system calls."
 ---
 
 Day to day bioinformatics involves interfacing and executing many

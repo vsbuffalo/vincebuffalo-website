@@ -4,8 +4,10 @@ date: 2012-03-07
 draft: false
 tags: ["julia", "r", "programming-languages", "statistics"]
 categories: ["computational-biology"]
+images: ["/images/julia_speed.png"]
 aliases:
   - /blog/2012/03/07/thoughts-on-julia.html
+summary: "Julia is a fast, promising new language for technical computing. But challenging R means replicating not just the language, but the entire ecosystem of CRAN and Bioconductor packages—a massive undertaking."
 ---
 
 ## Hello, Julia

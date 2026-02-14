@@ -1,11 +1,11 @@
 ---
 title: "Bioinformatics Data Skills"
-date: 2015-12-04
 aliases:
   - /book/
 ---
 
-<img src="/images/cover_bds.png" alt="cover of Bioinformatics Data Skills" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 200px; border: 1px solid #ccc;">
+<div class="book-page">
+<div class="book-content">
 
 During my time as a bioinformatician at the UC Davis Genome Center and in the Dubcovsky and Ross-Ibarra labs, I found very few books taught the data skills I relied on most in my day-to-day bioinformatics work. Furthermore, texts didn't emphasize scientific computing best practices alongside teaching technical skills.
 
@@ -15,15 +15,18 @@ You can purchase *Bioinformatics Data Skills* directly from [O'Reilly](http://sh
 
 ## Praise
 
-Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [O'Reilly's site](http://shop.oreilly.com/product/0636920030157.do) (4.8/5 stars), [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.30/5 stars), and [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.4 stars). You can also read the review written by the [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog.
+Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [O'Reilly's site](http://shop.oreilly.com/product/0636920030157.do) (4.8/5 stars, 14 reviews), [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.30/5 stars, 44 ratings), and [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.4 stars, 47 reviews). You can also read the review written by the terrific [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog.
 
-> "I wish this book was available two years ago when I first started my graduate studies - It literally could have saved me a year."
+> I wish this book was available two years ago when I first started my graduate studies - It literally could have saved me a year.
+>
 > — Gur, *review on O'Reilly.com*
 
-> "Superb book for those looking to develop bioinformatics skills. Covers loads of the supporting skills that are generally learnt through years of experience and aren't obvious in other texts/courses. Should be required reading for any PhD students or lab scientist working with data."
+> Superb book for those looking to develop bioinformatics skills. Covers loads of the supporting skills that are generally learnt through years of experience and aren't obvious in other texts/courses. Should be required reading for any PhD students or lab scientist working with data.
+>
 > — Simon B, *review on O'Reilly.com*
 
-> "I have been programming in a UNIX environment for 26 years, and a leader in bioinformatics since I entered the field in 1998, and was surprised to find that I was able to learn useful tips and tricks in nearly every chapter."
+> I have been programming in a UNIX environment for 26 years, and a leader in bioinformatics since I entered the field in 1998, and was surprised to find that I was able to learn useful tips and tricks in nearly every chapter.
+>
 > — KATS, *review on O'Reilly.com*
 
 ## Audience
@@ -38,4 +41,9 @@ Below are some quotes from reviews of *Bioinformatics Data Skills*. Other review
 
 Readers can submit and view errata for *Bioinformatics Data Skills* on [O'Reilly's website](http://www.oreilly.com/catalog/errata.csp?isbn=0636920030157). I've also posted some important corrections on the book's [Github repository](https://github.com/vsbuffalo/bds-files/blob/master/errata.md).
 
-<img src="/images/bds_japanese.jpg" alt="cover of Japanese translation of Bioinformatics Data Skills" style="width: 150px; border: 1px solid #ccc;">
+</div>
+<aside class="book-covers">
+<img src="/images/cover_bds.png" alt="Bioinformatics Data Skills">
+<img src="/images/bds_japanese.jpg" alt="Bioinformatics Data Skills (Japanese edition)">
+</aside>
+</div>

@@ -7,6 +7,7 @@ categories: ["research"]
 images: ["/images/ford_fisher.png"]
 aliases:
   - /blog/2020/08/20/problem-detecting.html
+summary: "Darwin thought natural selection was slow, but we now know it can act rapidly. The challenge is detecting this selection at the DNA level—especially when adaptation involves many genes of small effect acting in concert."
 --- 
 
 
@@ -155,11 +156,9 @@ first arose.
 <figure>
 <img src="/images/nash_coop.png" alt="Selective sweep in malaria showing drug resistance" />
 <figcaption>
-A selective sweep in malaria, *Plasmodium falciparum*, conferring drug
-resistance. <br/>Data from Nash *et al.* (2005), figure produced by Graham Coop in
-his <a
-href="https://github.com/cooplab/popgen-notes/blob/master/release_popgen_notes.pdf">population
-genetics notes</a>.
+A selective sweep in malaria, <em>Plasmodium falciparum</em>, conferring drug
+resistance. Data from Nash <em>et al.</em> (2005), figure produced by Graham Coop in
+his <a href="https://github.com/cooplab/popgen-notes/blob/master/release_popgen_notes.pdf">population genetics notes</a>.
 </figcaption>
 </figure>
 
@@ -185,8 +184,7 @@ pairwise diversity, a common measure of genetic variability.
 <img src="/images/begun_aquadro.png" alt="Correlation between diversity and recombination in Drosophila" />
 <figcaption>
 The correlation between pairwise diversity (a measure of genetic variability)
-and recombination rate <br/>in *Drosophila melanogaster*, from [Begun and
-Aquadro (1992)](https://www.nature.com/articles/356519a0).
+and recombination rate in <em>Drosophila melanogaster</em>, from <a href="https://www.nature.com/articles/356519a0">Begun and Aquadro (1992)</a>.
 </figcaption>
 </figure>
 
@@ -208,8 +206,7 @@ debates that Fisher and Ford were having over seventy years ago.
 <img src="/images/height.png" alt="Distribution of human heights showing continuous trait" />
 <figcaption>
 The distribution of human heights, a continuous trait, among 143
-University of Connecticut students. <br/> Image from [Schilling *et al.*
-(2012)](https://amstat.tandfonline.com/doi/abs/10.1198/00031300265).
+University of Connecticut students. Image from <a href="https://amstat.tandfonline.com/doi/abs/10.1198/00031300265">Schilling <em>et al.</em> (2012)</a>.
 </figcaption>
 </figure>
   

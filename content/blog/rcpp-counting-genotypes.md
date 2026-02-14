@@ -2,10 +2,11 @@
 title: "Using Rcpp and C++ to Count Genotypes"
 date: 2015-12-05
 draft: false
-tags: ["r", "rcpp", "c++", "bioinformatics", "performance"]
-categories: ["notes"]
+tags: ["r", "rcpp", "c++", "bioinformatics", "performance", "note"]
 aliases:
   - /notes/2015/12/05/simple-rcpp-code-for-counting-genotypes.html
+  - /notes/rcpp-counting-genotypes/
+summary: "R's apply and table functions are flexible but slow for counting genotypes in large matrices. A simple Rcpp function provides a 10x speedup by specializing for the 0/1/2/NA genotype encoding."
 ---
 
 I had a matrix (88662 loci x 2060 genotypes) of maize chromosome 1 genotypes, encoded as 0, 1, 2 (e.g. the number of alternate alleles). I needed genotype counts per row, which at first glance is quite easy to solve: just use `apply` and `table`:

@@ -4,8 +4,10 @@ date: 2012-03-08
 draft: false
 tags: ["bioconductor", "reproducible-research", "bioinformatics", "r"]
 categories: ["computational-biology"]
+images: ["/images/big-data-breakpoint.png"]
 aliases:
   - /blog/2012/03/08/the-beauty-of-bioconductor.html
+summary: "Bioconductor solves several hard problems in reproducible bioinformatics: versioned software, packaged data, and strict coding standards. As genomics data grows, these problems will only get worse—Bioconductor offers a way forward."
 ---
 
 In talking with bioinformaticians, biologists, and other researchers,

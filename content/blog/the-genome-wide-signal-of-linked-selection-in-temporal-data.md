@@ -97,14 +97,13 @@ new mutations of the classic linked selection work).
 <figure>
 <img src="/images/wright_ne.png" alt="Wright population dynamics figure" />
 <figcaption>
-**Figure 2**
-Wright's ([1940](https://www.jstor.org/stable/2457575?seq=1)) figure of
-extinction and recolonization in a population.  Population lineages are
+<strong>Figure 2</strong>
+Wright's (<a href="https://www.jstor.org/stable/2457575?seq=1">1940</a>) figure of
+extinction and recolonization in a population. Population lineages are
 expanding through time from left to right and space (top to bottom), with
 groups going extinct and re-establishing. The genetic drift in a population with
 such a complex breeding process can be represented by standard population
-genetic models with a rescaled *effective* population size.
-
+genetic models with a rescaled <em>effective</em> population size.
 </figcaption>
 </figure>
 
@@ -222,13 +221,13 @@ neutral sites and fitness variation decay through time.
 <figure>
 <img src="/images/buffalo_coop_fig1.png" alt="Temporal covariance results from Buffalo and Coop" />
 <figcaption>
-**Figure 4**
-(A\) Temporal covariance in the Barghi *et al*. (2019) data set, averaged over
+<strong>Figure 4</strong>
+(A) Temporal covariance in the Barghi <em>et al.</em> (2019) data set, averaged over
 all ten replicate populations. Each line depicts the covariances between some
 initial allele frequency change, and later frequency change through time (which
-represents the rows of the covariance matrix, *right*).
-(B\) A lower-bound on the proportion of total variance in allele frequency
-change due to drift, $G$.
+represents the rows of the covariance matrix, <em>right</em>).
+(B) A lower-bound on the proportion of total variance in allele frequency
+change due to drift, \(G\).
 </figcaption>
 </figure>
 
@@ -291,9 +290,9 @@ like we do temporal covariance.
 <figure>
 <img src="/images/barghi_rep.png" alt="Convergence correlations in Barghi et al. data" />
 <figcaption>
-**Figure 5**
-A measure of between-replicate covariance, *convergence correlations*,
-calculated on the ten replicates of the Barghi *et al.* data. Each line
+<strong>Figure 5</strong>
+A measure of between-replicate covariance, <em>convergence correlations</em>,
+calculated on the ten replicates of the Barghi <em>et al.</em> data. Each line
 represents a row in the correlation matrix pictured on the right, showing how
 the convergence correlation averages across all pairwise comparisons between
 replicates changes through time.

@@ -4,11 +4,11 @@ aliases:
   - /about/
 ---
 
-<img src="/images/tidepooling_selfie.png" alt="Vince Buffalo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 200px; border-radius: 8px;">
+<img src="/images/tidepooling_selfie.png" alt="Vince Buffalo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 250px; border-radius: 8px;">
 
-I'm Vince Buffalo, a postdoc studying evolutionary genetics in the [Kern](https://ie2.uoregon.edu/people/kern/) and [Ralph](https://pages.uoregon.edu/plr/) labs at the University of Oregon.
+I'm Vince Buffalo, a Senior Research Scientist at the [Institute for Disease Modeling](https://www.idmod.org/) at the Gates Foundation. I work in computational epidemiology and scientific software engineering. Previously, I worked in evolutionary genetics developing statistical and computational methods to detect natural selection.
 
-I did my PhD with [Graham Coop](http://gcbias.org/), in the [Population Biology Graduate Group](https://cpb.ucdavis.edu/) at UC Davis. Before graduate school, I worked as a bioinformatician, and I wrote the O'Reilly book [Bioinformatics Data Skills](/book/) teaching the skills I learned. I use statistics, probability, and computers to learn about evolution.
+I did postdocs at UC Berkeley with [Rasmus Nielsen](https://nielsenlab.org/) and at the University of Oregon with [Andrew Kern](https://ie2.uoregon.edu/people/kern/), and my PhD in population genetics with [Graham Coop](http://gcbias.org/) at UC Davis. Before graduate school, I worked as a bioinformatician and wrote the O'Reilly book [Bioinformatics Data Skills](/book/).
 
 ## Contact
 
@@ -18,12 +18,12 @@ You can also find me on [Twitter](http://twitter.com/vsbuffalo) and [Github](htt
 
 ## Curriculum Vitae
 
-**Postdoctoral Scholar** in Kern and Ralph Labs, University of Oregon, 2019-2020
-
-**Ph.D. in Population Genetics** with Graham Coop, UC Davis, 2019
-
-**B.A. in Economics and Political Science**, UC Davis, 2009
-Minor in Statistics. Graduated with Highest Honors, Phi Beta Kappa, Dean's List, Departmental Citation in Economics.
+**Senior Research Scientist**, Institute for Disease Modeling, Gates Foundation, 2024–present<br>
+**Postdoctoral Scholar**, Nielsen Lab, UC Berkeley, 2022–2024<br>
+**Postdoctoral Scholar**, Kern and Ralph Labs, University of Oregon, 2019–2022<br>
+**Ph.D. in Population Genetics** with Graham Coop, UC Davis, 2019<br>
+**B.A. in Economics and Political Science**, UC Davis, 2009<br>
+<span style="margin-left: 1em; font-size: 0.9em;">Minor in Statistics. Graduated with Highest Honors, Phi Beta Kappa, Dean's List, Departmental Citation in Economics.</span>
 
 ### Book
 
