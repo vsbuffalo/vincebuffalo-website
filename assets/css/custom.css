@@ -1,0 +1,154 @@
+/* 
+ * Custom CSS for Vince Buffalo's Hugo Site
+ * Using Hextra theme with Tufte-inspired aside styling
+ */
+
+/* Position TOC between content and right margin for better aside positioning */
+.hextra-toc {
+  order: 1 !important; /* Move after content but before order-last elements */
+}
+
+/* Make main content wider to accommodate long headings and better use of space */
+.container,
+.max-w-screen-xl,
+.mx-auto {
+  max-width: 90rem !important; /* Increase from default */
+}
+
+/* Ensure responsive behavior */
+@media (min-width: 1280px) {
+  .container,
+  .max-w-screen-xl,
+  .mx-auto {
+    max-width: 95rem !important;
+  }
+}
+
+
+/* 
+ * Tufte-inspired Aside Styling for Hextra Theme
+ * Safe positioning that avoids TOC conflicts
+ */
+
+/* Base aside styling */
+.content aside {
+  font-family: inherit;
+  line-height: 1.5;
+  color: #9ca3af; /* text-gray-400 - lighter */
+}
+
+/* Aside links - gray and underlined */
+.content aside a {
+  color: #9ca3af !important; /* Same gray as aside text */
+  text-decoration: underline !important;
+  transition: color 0.2s ease !important;
+}
+
+.content aside a:hover {
+  color: #6b7280 !important; /* Slightly darker on hover */
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .content aside {
+    color: #6b7280; /* dark:text-gray-500 - lighter for dark mode */
+  }
+  
+  /* Dark mode aside links */
+  .content aside a {
+    color: #6b7280 !important; /* Same gray as dark mode aside text */
+  }
+  
+  .content aside a:hover {
+    color: #9ca3af !important; /* Slightly brighter on hover */
+  }
+}
+
+/* Desktop: Tufte-style margin positioning (XL breakpoint and up) */
+@media (min-width: 1280px) {
+  .content {
+    position: relative;
+    /* Ensure content area allows for absolute positioning */
+  }
+  
+  .content aside {
+    position: absolute;
+    left: -280px; /* Position in left margin */
+    width: 250px;
+    font-size: 0.85rem;
+    margin-top: 0;
+    padding: 0.5rem 0; /* Minimal padding */
+    /* Remove all background, border, shadow effects for subtlety */
+  }
+  
+  /* Dark mode desktop - no additional styling needed, inherits base */
+  
+  /* Footnote-style asides (with superscript numbers) */
+  .content aside sup {
+    font-weight: 400; /* Lighter weight */
+    color: #9ca3af; /* text-gray-400 - light gray */
+    margin-right: 0.25rem;
+  }
+}
+
+/* Tablet and Mobile: Inline callout-style (below XL breakpoint) */
+@media (max-width: 1279px) {
+  .content aside {
+    border-left: 2px solid #d1d5db; /* Subtle gray border */
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem; /* Less padding */
+    font-size: 0.9rem;
+    position: relative;
+    /* Remove background and heavy styling */
+  }
+  
+  /* Dark mode mobile/tablet */
+  @media (prefers-color-scheme: dark) {
+    .content aside {
+      border-left-color: #4b5563; /* Subtle gray border for dark mode */
+    }
+  }
+  
+  /* Subtle indicator for footnote asides */
+  .content aside sup {
+    color: #9ca3af; /* Light gray, same as desktop */
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 0.5rem;
+    /* Remove background and heavy styling */
+  }
+}
+
+/* Ensure asides don't interfere with figures */
+.content figure + aside,
+.content aside + figure {
+  margin-top: 2rem;
+}
+
+/* Special handling for asides immediately following paragraphs */
+.content p + aside {
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments for very large screens */
+@media (min-width: 1536px) {
+  .content aside {
+    left: -300px;
+    width: 270px;
+  }
+}
+
+/* Print styles - inline asides for print */
+@media print {
+  .content aside {
+    position: static !important;
+    width: auto !important;
+    margin: 1rem 0 !important;
+    padding: 0.75rem !important;
+    background: #f9fafb !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.8rem !important;
+    box-shadow: none !important;
+  }
+}

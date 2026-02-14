@@ -5,6 +5,8 @@ draft: false
 tags: ["bioinformatics", "python", "snakemake", "workflow", "automation"]
 categories: ["computational-biology"]
 images: ["/images/snake_small.svg"]
+aliases:
+  - /blog/2020/03/04/snakefile-tutorial.html
 ---
 Image: /images/snake_small.svg
 

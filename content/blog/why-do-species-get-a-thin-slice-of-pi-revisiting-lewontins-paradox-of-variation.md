@@ -6,6 +6,8 @@ tags: ["population-genetics", "genetic-diversity", "evolution", "research"]
 categories: ["research"]
 images: ["/images/diversity_popsize_full.png"]
 summary: "The Great Obsession of population geneticists, to borrow John Gillespie's words, is genetic variation. As an evolutionary biologist, it's rather hard to not be obsessed with genetic variation, for it's the ultimate source of the two most striking features of life on earth: the mind-boggling diversity of species, and adaptations so utterly clever they look as though they were assembled by a designer. Both life's dizzying diversity and cunning adaptations are the result of evolutionary processes like natural selection and numerous historical accidents, overlaid on one another..."
+aliases:
+  - /blog/2021/09/01/why-do-species-get-a-thin-slice-of-pi-revisiting-lewontins-paradox-of-variation.html
 --- 
 
 <meta name="twitter:card" content="summary" />
@@ -127,7 +129,7 @@ processes are compatible with the observed levels of genetic variation?
 
 <aside>
 <sup>1</sup> This is how Lewontin himself sets up the problem in his 
-book *The Genetic Basis of Evolutionary Change*.
+book <em>The Genetic Basis of Evolutionary Change</em>.
 <br/>
 <sup>2</sup> 
 If this view sounds almost vaguely political, you're in good company. Lewontin,
@@ -296,8 +298,8 @@ adaptive storytelling fostered the conviction that *every* genetic variant must
 have *some* adaptive benefit.<sup>6</sup> As Maynard Smith described,
 
 <aside>
- <sup>6</sup> Marek Kohn's book [*A Reason for
- Everything*](https://www.abebooks.com/Reason-Everything-Marek-Kohn-Faber/30463535450/bd) 
+ <sup>6</sup> Marek Kohn's book [<em>A Reason for
+ Everything</em>](https://www.abebooks.com/Reason-Everything-Marek-Kohn-Faber/30463535450/bd) 
  is a lovely history of evolutionary biology and the British tradition of 
  naturalism.
 </aside>

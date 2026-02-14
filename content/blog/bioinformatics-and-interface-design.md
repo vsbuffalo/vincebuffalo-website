@@ -4,6 +4,8 @@ date: 2013-01-26
 draft: false
 tags: ["bioinformatics", "software-design", "interfaces", "programming"]
 categories: ["computational-biology"]
+aliases:
+  - /blog/2013/01/26/bioinfo-interfaces.html
 ---
 
 Day to day bioinformatics involves interfacing and executing many

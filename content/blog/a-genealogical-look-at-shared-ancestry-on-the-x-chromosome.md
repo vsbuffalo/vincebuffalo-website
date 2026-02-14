@@ -5,6 +5,9 @@ draft: false
 tags: ["genealogy", "x-chromosome", "genetics", "data-visualization"]
 categories: ["computational-biology"]
 images: ["/images/morgan-crossover.svg"]
+aliases:
+  - /blog/2016/04/03/x-ancestry.html
+  - /blog/2016/04/03/a-genealogical-look-at-shared-ancestry-on-the-x-chromosome.html
 ---
 
 <style type="text/css" media="screen">

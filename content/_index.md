@@ -1,18 +1,11 @@
 ---
-date: 2025-06-15
+title: "Vince Buffalo"
 ---
 
-<div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
-  <div style="flex: 1;">
-    <p>Welcome to my personal website. I'm a computational biologist working on evolutionary genetics and bioinformatics. Here you'll find my thoughts on population genetics, statistical methods, and computational approaches to understanding evolution.</p>
-  </div>
-  <div style="flex-shrink: 0;">
-    <img src="/images/profile.png" alt="Vince Buffalo" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-</div>
+<img src="/images/tidepooling_selfie.png" alt="Vince Buffalo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 180px; border-radius: 8px;">
 
-## Recent Posts
+I'm Vince Buffalo, a postdoc studying evolutionary genetics in the [Kern](https://ie2.uoregon.edu/people/kern/) and [Ralph](https://pages.uoregon.edu/plr/) labs at the University of Oregon.
 
-- [Computational Methods in Population Genetics: A Comprehensive Analysis](/blog/comprehensive-test-post/) *June 14, 2025*
-- [First Post](/blog/first-post/) *June 14, 2025*
+I did my PhD with [Graham Coop](http://gcbias.org/), in the [Population Biology Graduate Group](https://cpb.ucdavis.edu/) at UC Davis. Before graduate school, I worked as a bioinformatician, and I wrote the O'Reilly book [Bioinformatics Data Skills](/book/) teaching the skills I learned. I use statistics, probability, and computers to learn about evolution.
 
+[Read more about me →](/about/)

@@ -4,6 +4,8 @@ date: 2012-03-08
 draft: false
 tags: ["bioconductor", "reproducible-research", "bioinformatics", "r"]
 categories: ["computational-biology"]
+aliases:
+  - /blog/2012/03/08/the-beauty-of-bioconductor.html
 ---
 
 In talking with bioinformaticians, biologists, and other researchers,

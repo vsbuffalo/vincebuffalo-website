@@ -4,6 +4,8 @@ date: 2012-02-21
 draft: false
 tags: ["open-source", "community", "software-development"]
 categories: ["research"]
+aliases:
+  - /blog/2012/02/21/dont-be-a-dick.html
 ---
 
 

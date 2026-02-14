@@ -2,11 +2,4 @@
 title: "Blog"
 ---
 
-Blog posts about computational biology, bioinformatics, and evolutionary genetics.
-
-<div style="text-align: center; margin-top: 1em;">
-{{< hextra/hero-badge link="index.xml" >}}
-  <span>RSS Feed</span>
-  {{< icon name="rss" attributes="height=14" >}}
-{{< /hextra/hero-badge >}}
-</div>
+Posts about computational biology, evolutionary genetics, and bioinformatics.

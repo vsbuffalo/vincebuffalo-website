@@ -4,6 +4,8 @@ date: 2012-03-12
 draft: false
 tags: ["bioconductor", "23andme", "gwas", "genomics", "r"]
 categories: ["computational-biology"]
+aliases:
+  - /blog/2012/03/12/23andme-gwascat.html
 ---
 
 Bioconductor is one of the open source projects of which I am most
