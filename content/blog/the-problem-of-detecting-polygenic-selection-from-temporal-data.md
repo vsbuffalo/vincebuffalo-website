@@ -4,6 +4,9 @@ date: 2020-08-20
 draft: false
 tags: ["evolution", "population-genetics", "polygenic-selection", "research"]
 categories: ["research"]
+images: ["/images/ford_fisher.png"]
+aliases:
+  - /blog/2020/08/20/problem-detecting.html
 --- 
 
 
@@ -23,7 +26,7 @@ effort to communicate my research to a broader audience, I have written two
 blog posts on our work.
 The first post, below, is meant to introduce the historical context and
 concepts like linked selection and polygenic adaptation to a non-scientist, and
-the [second post](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html) describes our work on temporal covariance as a signature
+the [second post](/blog/the-genome-wide-signal-of-linked-selection-in-temporal-data/) describes our work on temporal covariance as a signature
 of polygenic linked selection and its application to four evolve-and-reseqeunce
 data sets.*
 
@@ -53,11 +56,11 @@ lizards<sup>3</sup>, soapberry bugs<sup>4</sup>, guppies<sup>5</sup>, and field
 mustard<sup>6</sup>.
 
 <aside>
-<sup>2</sup> [Lescak *et al.* (2015)](https://www.pnas.org/content/112/52/E7204). <br/>
-<sup>3</sup> [Stuart *et al.* (2014)](https://science.sciencemag.org/content/346/6208/463.abstract). <br/>
-<sup>4</sup> [Reznick *et al.* (1997)](https://science.sciencemag.org/content/275/5308/1934.full). <br/>
+<sup>2</sup> [Lescak <em>et al.</em> (2015)](https://www.pnas.org/content/112/52/E7204). <br/>
+<sup>3</sup> [Stuart <em>et al.</em> (2014)](https://science.sciencemag.org/content/346/6208/463.abstract). <br/>
+<sup>4</sup> [Reznick <em>et al.</em> (1997)](https://science.sciencemag.org/content/275/5308/1934.full). <br/>
 <sup>5</sup> [Carroll and Boyd (1992)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1992.tb00619.x). <br/>
-<sup>6</sup> [Franks *et al.* (2007)](https://www.pnas.org/content/104/4/1278).
+<sup>6</sup> [Franks <em>et al.</em> (2007)](https://www.pnas.org/content/104/4/1278).
 </aside>
 
 ## Natural Selection versus Drift
@@ -90,7 +93,7 @@ biological coin flip.
 
 <aside>
 <sup>7</sup> The genes we carry come in different alternative variants, which we refer to
-as *alleles*.
+as <em>alleles</em>.
 </aside>
 
 These random changes in allele frequency across families lead to a random
@@ -121,11 +124,11 @@ footprints left by natural selection in our DNA and the DNA of many other
 species, by the effect selection has on its *neighboring sites*. 
 
 <aside>
-<sup>8</sup>[Feder *et al.* (2014)](https://www.genetics.org/content/196/2/509.short) 
+<sup>8</sup>[Feder <em>et al.</em> (2014)](https://www.genetics.org/content/196/2/509.short) 
 </br>
 [Mathieson and McVean (2013)](https://www.genetics.org/content/193/3/973.short)
 </br>
-[Terhorst *et al.* (2015)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005069).
+[Terhorst <em>et al.</em> (2015)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005069).
 </aside>
 
 When a new beneficial mutation arises in a population, its comparative
@@ -226,7 +229,7 @@ looks normally distributed (i.e. having a bell curve shape, such as the
 distribution of heights pictured above).
 
 <aside>
-<sup>10</sup> [*The Modern Synethesis*](https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)) was
+<sup>10</sup> [<em>The Modern Synethesis</em>](https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)) was
 the synthesis of Charles Darwin and Alfred Russel Wallace's theory of evolution
 with Gregor Mendel's genetic theory of inheritance. The mathematical part of
 the synthesis was worked out primarily by R.A. Fisher, Sewall Wright, and J.B.S.
@@ -268,4 +271,4 @@ to discern what fraction of allele frequency changes are due to drift, and what
 fraction are due to selection. These are the problems my work with Graham Coop
 is working to address.
 
-[Continue to Part II](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html)
+[Continue to Part II](/blog/the-genome-wide-signal-of-linked-selection-in-temporal-data/)

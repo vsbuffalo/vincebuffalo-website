@@ -4,6 +4,8 @@ date: 2012-03-03
 draft: false
 tags: ["machine-learning", "domain-expertise", "data-science", "statistics"]
 categories: ["research"]
+aliases:
+  - /blog/2012/03/03/the-unbelievable-debate.html
 ---
 
 In between refactoring some `qrqc` code this morning and looking at

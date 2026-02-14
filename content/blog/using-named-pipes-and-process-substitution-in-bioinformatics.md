@@ -5,11 +5,13 @@ draft: false
 tags: ["unix", "bioinformatics", "pipes", "process-substitution"]
 categories: ["computational-biology"]
 images: ["/images/ps_benchmarks.png"]
+aliases:
+  - /blog/2013/08/08/the-mighty-named-pipe.html
 ---
 
 
 It's hard not to fall in love with Unix as a bioinformatician. In a
-[past post](/blog/2013/01/26/bioinformatics-and-interface-design.html)
+[past post](/blog/bioinformatics-and-interface-design/)
 I mentioned how Unix pipes are an extremely elegant way to interface
 bioinformatics programs (and do inter-process communication in
 general). In exploring other ways of interfacing programs in Unix,
@@ -51,7 +53,7 @@ But elegance alone won't earn a software abstraction the hearts of
 thousands of sysadmins, software engineers, and scientists: pipes are
 fast. There's little overheard between pipes, and they are certainly a
 lot more efficient than writing and reading from the disk. In a
-[past article](/blog/2013/01/26/bioinformatics-and-interface-design.html)
+[past article](/blog/bioinformatics-and-interface-design/)
 I included the classic [Samtools](http://samtools.sourceforge.net/)
 pipe for SNP calling. It's no coincidence that other excellent SNP
 callers like [FreeBayes](https://github.com/ekg/freebayes) make use of

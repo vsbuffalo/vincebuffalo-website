@@ -6,6 +6,8 @@ tags: ["evolution", "population-genetics", "linked-selection", "research"]
 categories: ["research"]
 images: ["/images/buffalo_coop_fig1.png"]
 summary: "The last chapter of my dissertation with Graham Coop was recently published in PNAS last week. In an effort to communicate my research to a broader audience, I have written two blog posts on our work. The first post, is meant to introduce the historical context and concepts like linked selection and polygenic adaptation to a non-scientist, and the second post, below, describes our work on temporal covariance as a signature of polygenic linked selection and its application to four evolve-and-reseqeunce data sets."
+aliases:
+  - /blog/2020/08/20/genome-wide-signal-of-linked-sel.html
 ---
 
 <meta name="twitter:card" content="summary" />
@@ -20,14 +22,14 @@ PNAS
 ([pdf](https://www.pnas.org/content/pnas/early/2020/08/07/1919039117.full.pdf),
 [bioRxiv](https://www.biorxiv.org/content/10.1101/798595v3)) last week. In an
 effort to communicate my research to a broader audience, I have written two
-blog posts on our work. The <a href="/blog/2020/08/20/the-problem-of-detecting-polygenic-selection-from-temporal-data.html">first post</a>, is meant to introduce
+blog posts on our work. The <a href="/blog/the-problem-of-detecting-polygenic-selection-from-temporal-data/">first post</a>, is meant to introduce
 the historical context and concepts like linked selection and polygenic
 adaptation to a non-scientist, and the second post, below, describes our work
 on temporal covariance as a signature of polygenic linked selection and its
 application to four evolve-and-reseqeunce data sets.*
 
 In the [last
-post](/blog/2020/08/20/the-genome-wide-signal-of-linked-selection-in-temporal-data.html),
+post](/blog/the-problem-of-detecting-polygenic-selection-from-temporal-data/),
 I explained two longstanding problems in the field of evolutionary genetics.
 The first is detecting adaptation on polygenic traits from temporal genomic
 data. Temporal data is gathered by sampling a population through the

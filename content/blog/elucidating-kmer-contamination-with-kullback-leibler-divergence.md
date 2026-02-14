@@ -4,6 +4,8 @@ date: 2012-03-01
 draft: false
 tags: ["bioinformatics", "sequencing", "quality-control", "information-theory"]
 categories: ["computational-biology"]
+aliases:
+  - /blog/2012/03/01/kmer-kl.html
 ---
 
 Recently a coworker showed me a FASTQ file from an Illumina HiSeq run

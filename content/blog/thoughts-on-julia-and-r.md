@@ -4,6 +4,8 @@ date: 2012-03-07
 draft: false
 tags: ["julia", "r", "programming-languages", "statistics"]
 categories: ["computational-biology"]
+aliases:
+  - /blog/2012/03/07/thoughts-on-julia.html
 ---
 
 ## Hello, Julia
