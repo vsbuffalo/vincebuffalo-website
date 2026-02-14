@@ -6,6 +6,7 @@ tags: ["open-science", "open-source", "open-data", "science"]
 categories: ["research"]
 aliases:
   - /blog/2013/01/13/21st-century-science.html
+summary: "Science is increasingly data-driven, yet there's a troubling asymmetry in how we're taught to handle data versus how we actually should. The rise of open data offers tremendous opportunities, but realizing its potential requires rethinking how we train scientists."
 ---
 
 *Note: I've been writing this essay in my head for a few months, but I

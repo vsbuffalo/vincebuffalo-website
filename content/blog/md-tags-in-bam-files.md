@@ -2,10 +2,11 @@
 title: "MD Tags in BAM Files"
 date: 2014-01-17
 draft: false
-tags: ["bioinformatics", "bam", "sam", "file-formats"]
-categories: ["notes"]
+tags: ["bioinformatics", "bam", "sam", "file-formats", "note"]
 aliases:
   - /notes/2014/01/17/the-md-tag-in-bam-files.html
+  - /notes/md-tags-in-bam-files/
+summary: "The MD tag in BAM files encodes information about the reference sequence at aligned positions, allowing SNP and indel calling without the reference. These notes work through several examples of how MD tags interact with CIGAR strings."
 ---
 
 I needed to work with the MD tag in BAM/SAM files for a recent project. There's

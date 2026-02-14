@@ -8,6 +8,7 @@ images: ["/images/morgan-crossover.svg"]
 aliases:
   - /blog/2016/04/03/x-ancestry.html
   - /blog/2016/04/03/a-genealogical-look-at-shared-ancestry-on-the-x-chromosome.html
+summary: "The X chromosome has a peculiar inheritance pattern: it's passed from mothers to all children, but fathers only pass it to daughters. This creates an embedded genealogy of X ancestors that affects how segments of DNA are shared between relatives."
 ---
 
 <style type="text/css" media="screen">
@@ -425,9 +426,9 @@ genealogical relationships connecting us all.
 
 
 <!-- requisite JS below -->
-<script src="/static/js/d3.v3.min.js" charset="utf-8"></script>
-<script src="/static/js/familyarc.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/js/sharedsegments2.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/d3.v3.min.js" charset="utf-8"></script>
+<script src="/js/familyarc.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/sharedsegments2.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   
   var human_x = {
@@ -445,7 +446,7 @@ genealogical relationships connecting us all.
   }
 
 
-    d3.json("/static/js/x.json", function(data) {
+    d3.json("/js/x.json", function(data) {
       var config = single_chrom;
       config.genlen = data.genlen;
       if (data.type == 'x') {

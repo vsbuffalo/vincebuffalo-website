@@ -4,8 +4,10 @@ date: 2012-03-12
 draft: false
 tags: ["bioconductor", "23andme", "gwas", "genomics", "r"]
 categories: ["computational-biology"]
+images: ["/images/23andme_chrom_dist.png"]
 aliases:
   - /blog/2012/03/12/23andme-gwascat.html
+summary: "A tutorial on loading 23andme genotype data into R and using Bioconductor's gwascat and GenomicRanges packages to explore GWAS associations, find SNPs in genes like APOE, and visualize risk alleles."
 ---
 
 Bioconductor is one of the open source projects of which I am most

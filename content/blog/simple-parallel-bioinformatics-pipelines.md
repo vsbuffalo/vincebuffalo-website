@@ -7,6 +7,7 @@ categories: ["notes"]
 aliases:
   - /blog/2012/10/08/find-xargs-basename.html
   - /notes/2012/10/08/find-xargs-basename.html
+summary: "A practical design pattern for parallelizing bioinformatics file processing using find, basename, and xargs. This approach scales well for data-parallel tasks across multiple cores on a single server."
 ---
 
 # Simple Parallel Bioinformatics Pipelines with find, basename, and xargs

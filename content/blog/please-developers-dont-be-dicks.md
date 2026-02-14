@@ -6,6 +6,7 @@ tags: ["open-source", "community", "software-development"]
 categories: ["research"]
 aliases:
   - /blog/2012/02/21/dont-be-a-dick.html
+summary: "Open source software benefits from a large, diverse user base, but this growth brings growing pains. Being rude to users doesn't help anyone—it hurts OSS adoption, poisons collaboration, and ultimately damages science."
 ---
 
 

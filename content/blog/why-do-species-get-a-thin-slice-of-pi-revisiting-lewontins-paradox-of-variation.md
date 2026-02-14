@@ -52,9 +52,9 @@ variability.
 
 <figure>
 <img src="/images/lewontin_book.jpg" width="260" class="img-responsive"/>
-  <figcaption> 
-  Richard Lewontin's seminal 1974 book, *The Genetic Basis of Evolutionary
-  Change*. Source: [Wikipedia](https://upload.wikimedia.org/wikipedia/en/e/e2/The_Genetic_Basis_of_Evolutionary_Change.jpg).
+  <figcaption>
+  Richard Lewontin's seminal 1974 book, <em>The Genetic Basis of Evolutionary
+  Change</em>. Source: <a href="https://upload.wikimedia.org/wikipedia/en/e/e2/The_Genetic_Basis_of_Evolutionary_Change.jpg">Wikipedia</a>.
   </figcaption>
 </figure>
 
@@ -92,10 +92,10 @@ created by free mating in a sexually-reproducing species.
 <figure>
 <img src="/images/hubby_lewontin.png" width="460" class="img-responsive"/>
   <figcaption>
-    The gel electrophoresis of the esterase-5 gene in *Drosophila pseudoobscura*.
+    The gel electrophoresis of the esterase-5 gene in <em>Drosophila pseudoobscura</em>.
     Each bar is where a sample's protein ended up after being drawn through a thick
-    gel with electrical current. The different bars represent different samples, 
-    and their varying positions reflect the different protein variants, which due to 
+    gel with electrical current. The different bars represent different samples,
+    and their varying positions reflect the different protein variants, which due to
     their different shapes and charges, move through the gel at different speeds.
   </figcaption>
 </figure>
@@ -235,14 +235,14 @@ narrow. Lewontin lays out why this is a problem visually in his book:
 <figure>
 <img src="/images/lewontin_1974.jpg" width="460" class="img-responsive"/>
   <figcaption>
-  A figure from Lewontin's 1974 book *The Genetic Basis of Evolutionary Change*
+  A figure from Lewontin's 1974 book <em>The Genetic Basis of Evolutionary Change</em>
   on the "Paradox of Variation" (p. 209). The curved line is the hypothetical
-  heterozygosity (another term for genetic variability) given by $\pi = 4N\mu /
-  (1 + 4N\mu)$. The range of variation observed in early studies ranges
-  between $\pi \approx 6\%$ to $\pi \approx 20\%$, suggesting the product $N\mu$
-  is between 0.015 and 0.06. For a gene mutation rate of $\mu = 10^{-6}$, this
-  suggests that $N$ ranges from 3,750 to 15,000 --- a minuscule factor of
-  four difference.  
+  heterozygosity (another term for genetic variability) given by \(\pi = 4N\mu /
+  (1 + 4N\mu)\). The range of variation observed in early studies ranges
+  between \(\pi \approx 6\%\) to \(\pi \approx 20\%\), suggesting the product \(N\mu\)
+  is between 0.015 and 0.06. For a gene mutation rate of \(\mu = 10^{-6}\), this
+  suggests that \(N\) ranges from 3,750 to 15,000 --- a minuscule factor of
+  four difference.
   </figcaption>
 </figure>
 
@@ -280,8 +280,8 @@ and colleagues published a survey of estimates of protein heterozygosities for
 <figure>
 <img src="/images/nevo.png" width="460" class="img-responsive"/>
   <figcaption>
-  Figure 2c from Nevo et al. *The Evolutionary Significance of Genetic
-  Diversity: Ecological, Demographic and Life History Correlates* (1984).
+  Figure 2c from Nevo et al. <em>The Evolutionary Significance of Genetic
+  Diversity: Ecological, Demographic and Life History Correlates</em> (1984).
   </figcaption>
 </figure>
 
@@ -369,8 +369,7 @@ recombination region across the *Drosophila melanogaster* genome:
 <img src="/images/begun_aquadro.png" alt="Correlation between diversity and recombination in Drosophila" />
 <figcaption>
 The correlation between pairwise diversity (a measure of genetic variability)
-and recombination rate <br/>in *Drosophila melanogaster*, from [Begun and
-Aquadro (1992)](https://www.nature.com/articles/356519a0).
+and recombination rate in <em>Drosophila melanogaster</em>, from <a href="https://www.nature.com/articles/356519a0">Begun and Aquadro (1992)</a>.
 </figcaption>
 </figure>
 
@@ -550,10 +549,9 @@ early protein heterozygosity data:
 
 <figure>
 <img src="/images/frankham_soule_nei_graur.png" width="660" class="img-responsive"/>
-  <figcaption> 
-  \(A) Frankham (1996) using the data of Soulé (1976), and (B) Nei and Graur
-  (1984). <br/>The solid line is neutral expectation if the mutation rate is $\mu =
-  10^{-7}$.
+  <figcaption>
+  (A) Frankham (1996) using the data of Soulé (1976), and (B) Nei and Graur
+  (1984). The solid line is neutral expectation if the mutation rate is \(\mu = 10^{-7}\).
   </figcaption>
 </figure>
 
@@ -602,14 +600,13 @@ data.
 <img src="/images/apis_mellifera.png" width="660" class="img-responsive"/>
   <figcaption>
   The GBIF occurrence data (red points) and inferred range (green polygons) of
-  the common honeybee (*Apis mellifera*). This shows some of the limitation of
+  the common honeybee (<em>Apis mellifera</em>). This shows some of the limitation of
   this course-grained approach: there is some uncertainty whether the some
   regions have sparse observations and the algorithm is properly filling in the
   range, or whether these are aberrant observations in regions where honeybees
   don't normally live. Still, for Lewontin's Paradox, we do not need precise
-  estimates, but rather a rough look. Compare the range of the honeybee [to
-  that of](images/apis_cerana.png) *Apis cerana*, which lives only in South
-  Asia.
+  estimates, but rather a rough look. Compare the range of the honeybee <a href="images/apis_cerana.png">to
+  that of</a> <em>Apis cerana</em>, which lives only in South Asia.
   </figcaption>
 </figure>
 
@@ -646,20 +643,18 @@ size:
 <figure id="figure-2">
 <img src="/images/diversity_popsize_full.png" width="860" class="img-responsive"/>
   <figcaption>
-
-  The relationship between genetic diversity ($\pi$) and approximate population
-  size ($N_c$) for 172 animal species. Note that genetic diversity varies just
+  The relationship between genetic diversity (\(\pi\)) and approximate population
+  size (\(N_c\)) for 172 animal species. Note that genetic diversity varies just
   over three orders of magnitude, while census sizes vary over 12 orders of
   magnitude. The gray ribbon indicate the expected neutral diversity for a
-  range of mutation rates ($10^{-9} \lt \mu \lt 10^{-8}$) were the diversity to
+  range of mutation rates (\(10^{-9} \lt \mu \lt 10^{-8}\)) were the diversity to
   be determined entirely by census size under the neutral model. Lewontin's
   Paradox wouldn't be a paradox if the diversity estimates fell in this thin
   gray area; instead they do not scale with population size, and are mostly
   constrained to within three orders of magnitude. The eLife article has
   numerous supplementary figures relevant to this figure
-  [here](https://elifesciences.org/articles/67509#fig2).
-
-</figcaption>
+  <a href="https://elifesciences.org/articles/67509#fig2">here</a>.
+  </figcaption>
 </figure>
 
 What this relationship tells us is that population size appears to impact
@@ -674,10 +669,9 @@ population sizes and neutral evolution determined genetic diversity.
 <figure>
 <img src="/images/darwin_i_think.png" width="560" class="img-responsive"/>
   <figcaption>
-  Darwin's sketch of a phylogenetic tree in his *First Notebook on
-  Transmutation of Species*, 1837. Source: [Wikimedia
-  commons](https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png).
-</figcaption>
+  Darwin's sketch of a phylogenetic tree in his <em>First Notebook on
+  Transmutation of Species</em>, 1837. Source: <a href="https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png">Wikimedia commons</a>.
+  </figcaption>
 </figure>
 
 We might look at the relationship above and conclude that there is a
@@ -878,10 +872,10 @@ disciplines.
 <figure>
 <img src="/images/lewontin_chalkboard.jpeg" width="560" class="img-responsive"/>
   <figcaption>
-  Richard Lewontin at the chalkboard. It looks like he's explaining 
-  the interaction <br/>---and inseparability--- of genotype and environment.
-  Source: [Why Evolution is True](https://whyevolutionistrue.com/2021/07/05/dick-lewontin-1929-2021/).
-</figcaption>
+  Richard Lewontin at the chalkboard. It looks like he's explaining
+  the interaction---and inseparability---of genotype and environment.
+  Source: <a href="https://whyevolutionistrue.com/2021/07/05/dick-lewontin-1929-2021/">Why Evolution is True</a>.
+  </figcaption>
 </figure>
 
 <aside> <sup>11</sup> I should note that it's a funny coincidence that Lewontin

@@ -73,33 +73,31 @@ menu:
     - name: "Blog"
       pageRef: "/blog"
       weight: 1
-    - name: "Research"
-      pageRef: "/research"
-      weight: 2
-    - name: "Publications"
-      pageRef: "/publications"
-      weight: 3
     - name: "Book"
       pageRef: "/book"
-      weight: 4
-    - name: "Notes"
-      pageRef: "/notes"
-      weight: 5
+      weight: 2
+    - name: "Pubs"
+      pageRef: "/pubs"
+      weight: 3
     - name: "About"
       pageRef: "/about"
-      weight: 6
-    - name: "Search"
-      weight: 7
-      params:
-        type: search
+      weight: 4
 
 params:
   description: "The personal blog of Vince Buffalo."
-  
+
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      width: 64
+      height: 64
     width: wide
+    links:
+      - name: GitHub
+        icon: github
+        url: https://github.com/vsbuffalo
   
   page:
     width: full
@@ -110,8 +108,8 @@ params:
   
   footer:
     enable: true
-    displayCopyright: true
-    displayPoweredBy: true
+    displayCopyright: false
+    displayPoweredBy: false
     width: normal
   
   displayUpdatedDate: true

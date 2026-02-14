@@ -4,8 +4,10 @@ date: 2012-11-14
 draft: false
 tags: ["visualization", "scientific-computing", "ggplot2", "data-analysis"]
 categories: ["research"]
+images: ["/images/parallel-sets-titanic.png"]
 aliases:
   - /blog/2012/11/14/learn-visualization.html
+summary: "If you can visualize data quickly, problems look different. Learning to make plots without friction means you'll use visualization as a debugging tool, catch confounders early, and notice mistakes that would otherwise go undetected."
 ---
 
 Scientists are learning programming at an unprecedented rate. I've

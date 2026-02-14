@@ -1,154 +1,596 @@
-/* 
- * Custom CSS for Vince Buffalo's Hugo Site
- * Using Hextra theme with Tufte-inspired aside styling
+/*
+ * Vince Buffalo's Site
+ * Clean, reading-focused design with Tufte-style sidenotes
  */
 
-/* Position TOC between content and right margin for better aside positioning */
-.hextra-toc {
-  order: 1 !important; /* Move after content but before order-last elements */
+/* ============================================
+   FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ============================================
+   RESET HEXTRA UI
+   ============================================ */
+.hextra-sidebar-container,
+nav.hextra-sidebar,
+.hextra-sidebar-placeholder,
+nav[aria-label="Breadcrumb"],
+[class*="breadcrumb"] {
+  display: none !important;
 }
 
-/* Make main content wider to accommodate long headings and better use of space */
-.container,
-.max-w-screen-xl,
-.mx-auto {
-  max-width: 90rem !important; /* Increase from default */
+/* ============================================
+   BASE
+   ============================================ */
+:root {
+  --text: #333;
+  --text-muted: #666;
+  --text-light: #999;
+  --bg: #fcfcfc;
+  --bg-code: #f4f4f4;
+  --border: #e0e0e0;
+  --link: #1a73a7;
+  --link-hover: #0d4a6f;
+  --accent: #b33;
 }
 
-/* Ensure responsive behavior */
-@media (min-width: 1280px) {
-  .container,
-  .max-w-screen-xl,
-  .mx-auto {
-    max-width: 95rem !important;
-  }
-}
-
-
-/* 
- * Tufte-inspired Aside Styling for Hextra Theme
- * Safe positioning that avoids TOC conflicts
- */
-
-/* Base aside styling */
-.content aside {
-  font-family: inherit;
-  line-height: 1.5;
-  color: #9ca3af; /* text-gray-400 - lighter */
-}
-
-/* Aside links - gray and underlined */
-.content aside a {
-  color: #9ca3af !important; /* Same gray as aside text */
-  text-decoration: underline !important;
-  transition: color 0.2s ease !important;
-}
-
-.content aside a:hover {
-  color: #6b7280 !important; /* Slightly darker on hover */
-}
-
-/* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .content aside {
-    color: #6b7280; /* dark:text-gray-500 - lighter for dark mode */
-  }
-  
-  /* Dark mode aside links */
-  .content aside a {
-    color: #6b7280 !important; /* Same gray as dark mode aside text */
-  }
-  
-  .content aside a:hover {
-    color: #9ca3af !important; /* Slightly brighter on hover */
-  }
-}
-
-/* Desktop: Tufte-style margin positioning (XL breakpoint and up) */
-@media (min-width: 1280px) {
-  .content {
-    position: relative;
-    /* Ensure content area allows for absolute positioning */
-  }
-  
-  .content aside {
-    position: absolute;
-    left: -280px; /* Position in left margin */
-    width: 250px;
-    font-size: 0.85rem;
-    margin-top: 0;
-    padding: 0.5rem 0; /* Minimal padding */
-    /* Remove all background, border, shadow effects for subtlety */
-  }
-  
-  /* Dark mode desktop - no additional styling needed, inherits base */
-  
-  /* Footnote-style asides (with superscript numbers) */
-  .content aside sup {
-    font-weight: 400; /* Lighter weight */
-    color: #9ca3af; /* text-gray-400 - light gray */
-    margin-right: 0.25rem;
+  :root {
+    --text: #d8d8d8;
+    --text-muted: #a0a0a0;
+    --text-light: #777;
+    --bg: #181818;
+    --bg-code: #252525;
+    --border: #333;
+    --link: #6db3d0;
+    --link-hover: #8ccae8;
+    --accent: #c66;
   }
 }
 
-/* Tablet and Mobile: Inline callout-style (below XL breakpoint) */
-@media (max-width: 1279px) {
-  .content aside {
-    border-left: 2px solid #d1d5db; /* Subtle gray border */
-    margin: 1.5rem 0;
-    padding: 0.75rem 1rem; /* Less padding */
-    font-size: 0.9rem;
-    position: relative;
-    /* Remove background and heavy styling */
+body {
+  font-family: 'Alegreya Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.homepage {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.blog-archive,
+.post,
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Wider layout for about and pubs pages */
+.page-about .page-content,
+.page-pubs .page-content {
+  max-width: 800px;
+}
+
+/* Page styling */
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.page-about,
+.page-pubs {
+  max-width: 800px;
+}
+
+article.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+article.page .page-header {
+  margin-bottom: 1rem;
+}
+
+article.page .page-title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+article.page .page-content {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   BOOK PAGE
+   ============================================ */
+.book-page {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.book-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-covers {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 5rem;
+}
+
+.book-covers img {
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.page-book {
+  max-width: 900px;
+}
+
+@media (max-width: 800px) {
+  .book-page {
+    flex-direction: column;
   }
-  
-  /* Dark mode mobile/tablet */
-  @media (prefers-color-scheme: dark) {
-    .content aside {
-      border-left-color: #4b5563; /* Subtle gray border for dark mode */
-    }
+
+  .book-covers {
+    flex-direction: row;
+    position: static;
+    justify-content: center;
+    order: -1;
+    margin-bottom: 1.5rem;
   }
-  
-  /* Subtle indicator for footnote asides */
-  .content aside sup {
-    color: #9ca3af; /* Light gray, same as desktop */
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-right: 0.5rem;
-    /* Remove background and heavy styling */
+
+  .book-covers img {
+    width: 150px;
   }
 }
 
-/* Ensure asides don't interfere with figures */
-.content figure + aside,
-.content aside + figure {
-  margin-top: 2rem;
-}
-
-/* Special handling for asides immediately following paragraphs */
-.content p + aside {
-  margin-top: 0.5rem;
-}
-
-/* Responsive adjustments for very large screens */
-@media (min-width: 1536px) {
-  .content aside {
-    left: -300px;
-    width: 270px;
+@media (min-width: 1100px) {
+  .post,
+  article .content {
+    max-width: 680px;
+    margin-left: calc(50% - 340px - 120px);
+    padding-right: 0;
   }
 }
 
-/* Print styles - inline asides for print */
-@media print {
-  .content aside {
-    position: static !important;
-    width: auto !important;
-    margin: 1rem 0 !important;
-    padding: 0.75rem !important;
-    background: #f9fafb !important;
-    border: 1px solid #d1d5db !important;
-    border-radius: 0.25rem !important;
-    font-size: 0.8rem !important;
-    box-shadow: none !important;
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 2em 0 0.5em;
+}
+
+h1 { font-size: 1.8rem; margin-top: 0; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 1.2em; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+a:hover {
+  border-bottom-color: var(--link);
+}
+
+/* ============================================
+   CODE
+   ============================================ */
+code, pre {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.88em;
+}
+
+code {
+  background: var(--bg-code);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--bg-code);
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.5;
+  margin: 1.5em 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ============================================
+   SIDENOTES (Tufte-style)
+   ============================================ */
+article {
+  counter-reset: sidenote-counter;
+}
+
+aside {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+aside sup {
+  font-weight: 600;
+  color: var(--accent);
+  margin-right: 0.3em;
+}
+
+aside a {
+  color: var(--text-muted);
+  border-bottom-color: var(--border);
+}
+
+/* Desktop: margin positioning */
+@media (min-width: 1100px) {
+  aside {
+    float: right;
+    clear: right;
+    width: 220px;
+    margin-right: -260px;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+}
+
+/* Mobile: inline block */
+@media (max-width: 1099px) {
+  aside {
+    display: block;
+    margin: 1.5em 0;
+    padding: 0.75em 1em;
+    background: var(--bg-code);
+    border-left: 3px solid var(--border);
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+/* ============================================
+   HOMEPAGE
+   ============================================ */
+.homepage {
+  padding-top: 3rem;
+}
+
+.bio {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.bio-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.bio-text p {
+  margin: 0 0 0.8em;
+}
+
+.bio-links {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.bio-links a {
+  color: var(--text-muted);
+}
+
+.recent-posts h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.35em;
+  line-height: 1.3;
+}
+
+.post-list time {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  min-width: 4.5rem;
+  flex-shrink: 0;
+}
+
+.more-link {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   BLOG ARCHIVE
+   ============================================ */
+.blog-archive h1 {
+  margin-bottom: 0.5em;
+}
+
+.archive-description {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.year-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.post-image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-info time {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.post-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.2em 0 0.3em;
+  line-height: 1.3;
+}
+
+.post-info h3 a {
+  color: var(--text);
+}
+
+.post-excerpt {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   POST PAGE
+   ============================================ */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.post-meta time {
+  color: var(--text-light);
+}
+
+.post-tags a {
+  color: var(--text-light);
+  margin-left: 0.5em;
+}
+
+.post-content {
+  position: relative;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.post-nav a {
+  color: var(--text-muted);
+}
+
+/* ============================================
+   FIGURES & IMAGES
+   ============================================ */
+figure {
+  margin: 2em 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+figure.fullwidth {
+  max-width: none;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* ============================================
+   MISC
+   ============================================ */
+blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+  border-left: 3px solid var(--border);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* Navbar tweaks */
+.nav-container,
+.nav-container-blur {
+  background: var(--bg) !important;
+}
+
+/* Navbar link styling - only target visible links */
+nav.hextra-max-navbar-width > a:not([href="/"]) {
+  font-size: 1.1rem !important;
+}
+
+/* Logo and site title */
+nav.hextra-max-navbar-width > a[href="/"] span {
+  font-size: 1.3rem !important;
+}
+
+/* Taller navbar for logo */
+nav.hextra-max-navbar-width {
+  height: 4.5rem !important;
+  gap: 1.5rem !important;
+}
+
+/* Current page indicator in navbar */
+.hextra-max-navbar-width a.hx\:font-medium {
+  font-weight: 500 !important;
+  border-bottom: 2px solid var(--link);
+}
+
+/* Footer */
+footer {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.hextra-custom-footer,
+footer > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-footer-copyright {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+
+  .bio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .post-card {
+    flex-direction: column;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 160px;
   }
 }

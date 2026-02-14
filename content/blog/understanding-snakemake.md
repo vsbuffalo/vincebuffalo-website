@@ -7,6 +7,7 @@ categories: ["computational-biology"]
 images: ["/images/snake_small.svg"]
 aliases:
   - /blog/2020/03/04/snakefile-tutorial.html
+summary: "Snakemake automates the tedious task of re-running data processing pipelines when upstream files change. This tutorial explains how Snakemake works by first covering its predecessor, Make, and the core idea of dependency graphs."
 ---
 Image: /images/snake_small.svg
 

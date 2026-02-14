@@ -7,6 +7,7 @@ categories: ["computational-biology"]
 images: ["/images/ps_benchmarks.png"]
 aliases:
   - /blog/2013/08/08/the-mighty-named-pipe.html
+summary: "Unix pipes are elegant, but they don't work when programs have multiple inputs or outputs. Named pipes and process substitution solve this problem, and the performance gains over writing intermediate files to disk are substantial."
 ---
 
 

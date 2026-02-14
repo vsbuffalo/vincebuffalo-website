@@ -4,8 +4,10 @@ date: 2012-03-01
 draft: false
 tags: ["bioinformatics", "sequencing", "quality-control", "information-theory"]
 categories: ["computational-biology"]
+images: ["/images/tiny_facet_kl.png"]
 aliases:
   - /blog/2012/03/01/kmer-kl.html
+summary: "When sequencing data is severely contaminated, finding the culprit can be tricky. Using k-mer frequency analysis and Kullback-Leibler divergence, we can identify contamination patterns that would otherwise be invisible."
 ---
 
 Recently a coworker showed me a FASTQ file from an Illumina HiSeq run

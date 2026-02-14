@@ -6,6 +6,7 @@ tags: ["machine-learning", "domain-expertise", "data-science", "statistics"]
 categories: ["research"]
 aliases:
   - /blog/2012/03/03/the-unbelievable-debate.html
+summary: "Machine learning is powerful, but it's easy to let its pattern-finding abilities bias our understanding of complex systems. Coming from the social sciences, where data mining was frowned upon, I've had to recalibrate—but the old caution about confusing prediction with understanding still holds."
 ---
 
 In between refactoring some `qrqc` code this morning and looking at
