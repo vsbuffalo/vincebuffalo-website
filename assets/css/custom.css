@@ -684,6 +684,15 @@ nav.hextra-max-navbar-width > a:first-child span {
   font-size: 1.3rem !important;
 }
 
+/* No underline on logo/site title link */
+nav.hextra-max-navbar-width > a:first-child {
+  border-bottom: none !important;
+}
+
+nav.hextra-max-navbar-width > a:first-child:hover {
+  border-bottom: none !important;
+}
+
 /* Taller navbar for logo */
 nav.hextra-max-navbar-width {
   height: 4.5rem !important;

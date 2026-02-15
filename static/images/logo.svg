@@ -1,27 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Vince Buffalo logo - lambda version -->
-<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
-  <defs>
-    <clipPath id="cut-off-1">
-      <rect x="2" y="100" width="340" height="400" transform="rotate(-5)" id="svg_1"/>
+
+<svg
+   width="62"
+   height="62"
+   viewBox="0 0 400 400"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="18.72"
+     inkscape:cx="31.009615"
+     inkscape:cy="30.982906"
+     inkscape:window-width="2560"
+     inkscape:window-height="1387"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="cut-off-1">
+      <rect
+         x="2"
+         y="100"
+         width="340"
+         height="400"
+         transform="rotate(-5)"
+         id="svg_1" />
     </clipPath>
-    <clipPath id="cut-off-2">
-      <rect x="10" y="-200" width="380" height="400" transform="rotate(-5)" id="svg_2"/>
+    <clipPath
+       id="cut-off-2">
+      <rect
+         x="10"
+         y="-200"
+         width="380"
+         height="400"
+         transform="rotate(-5)"
+         id="svg_2" />
     </clipPath>
-    <clipPath id="cut-off-3">
-      <rect x="10" y="-100" width="380" height="400" transform="rotate(-5)" id="svg_3"/>
+    <clipPath
+       id="cut-off-3">
+      <rect
+         x="10"
+         y="-100"
+         width="380"
+         height="400"
+         transform="rotate(-5)"
+         id="svg_3" />
     </clipPath>
-    <clipPath id="cut-off-4">
-      <rect x="4" y="-300" width="340" height="400" transform="rotate(-5)" id="svg_4"/>
+    <clipPath
+       id="cut-off-4">
+      <rect
+         x="4"
+         y="-300"
+         width="340"
+         height="400"
+         transform="rotate(-5)"
+         id="svg_4" />
     </clipPath>
   </defs>
-  <g>
-    <title>Background</title>
-    <circle id="bg-0" r="171" cy="191" cx="199" stroke-width="0" fill="#084594" clip-path="url(#cut-off-1)"/>
-    <circle id="bg-1" r="171" cy="191" cx="199" stroke-width="0" fill="#2171b5" clip-path="url(#cut-off-3)"/>
-    <circle id="bg-2" r="171" cy="191" cx="199" stroke-width="0" fill="#4292c6" clip-path="url(#cut-off-2)"/>
-    <circle id="bg-3" r="171" cy="191" cx="199" stroke-width="0" fill="#c6dbef" clip-path="url(#cut-off-4)"/>
-    <!-- lambda -->
-    <text x="199" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="260" font-weight="400" fill="#ffffff">λ</text>
-  </g>
-  <circle id="ring" r="172" cy="191" cx="199" stroke-width="1" stroke="#ccc" fill="none"/>
+  <circle
+     id="bg-0"
+     r="171"
+     cy="191"
+     cx="199"
+     stroke-width="0"
+     fill="#084594"
+     clip-path="url(#cut-off-1)"
+     style="fill:#1f5084;fill-opacity:1" />
+  <circle
+     id="bg-1"
+     r="171"
+     cy="191"
+     cx="199"
+     stroke-width="0"
+     fill="#2171b5"
+     clip-path="url(#cut-off-3)"
+     style="fill:#2178b5;fill-opacity:1" />
+  <circle
+     id="bg-2"
+     r="171"
+     cy="191"
+     cx="199"
+     stroke-width="0"
+     fill="#4292c6"
+     clip-path="url(#cut-off-2)"
+     style="fill:#5daece;fill-opacity:1" />
+  <circle
+     id="bg-3"
+     r="171"
+     cy="191"
+     cx="199"
+     stroke-width="0"
+     fill="#c6dbef"
+     clip-path="url(#cut-off-4)"
+     style="fill:#a2e5e5;fill-opacity:1" />
+  <path
+     d="m 178.06536,109.38804 c -2.92813,-0.27451 -6.31377,-0.41177 -10.15693,-0.41177 -3.75166,0 -6.40527,-0.0457 -7.96084,-0.13725 -4.57519,-0.18301 -8.09809,-1.83009 -10.5687,-4.94122 -2.47061,-3.20263 -3.70591,-6.496772 -3.70591,-9.882417 0,-4.117676 1.60132,-7.823584 4.80395,-11.117725 3.20264,-3.294141 7.77784,-4.941211 13.72559,-4.941211 7.41181,0 13.72558,2.33335 18.94131,7.000049 5.21572,4.666699 10.38868,11.755256 14.14034,22.644224 9.03754,24.16093 17.32738,48.58358 25.80111,72.94699 5.39873,15.09815 10.43145,31.0502 15.09815,44.40977 4.7582,13.26807 8.87588,24.15703 12.35303,32.66689 3.66015,8.96739 6.72553,14.86939 9.19614,17.70601 2.56211,2.74511 6.95429,4.11767 13.17656,4.11767 h 6.17652 v 8.78438 c -4.5752,1.37256 -8.69288,2.56211 -12.35303,3.56865 -3.56865,1.09805 -7.41182,1.64707 -11.52949,1.64707 -3.84317,0 -7.00005,-0.73203 -9.47066,-2.19609 -2.3791,-1.46407 -4.48369,-3.56866 -6.31377,-6.31377 -1.73857,-2.65361 -3.24839,-5.99351 -4.52944,-10.01968 -1.28105,-4.02617 -2.4706,-7.86934 -3.56865,-11.52949 -2.2876,-7.59483 -5.12422,-18.07203 -8.50987,-31.4316 -3.29414,-13.45107 -7.59482,-29.05249 -12.90205,-46.80424 -3.21954,6.34298 -37.21935,74.81379 -46.8256,99.26619 l -32.09352,2.83718 66.42884,-132.16241 c -3.72462,-12.70754 -15.93714,-40.32609 -19.35308,-45.7062 z"
+     id="text1"
+     style="font-size:281.1px;font-family:Georgia, serif;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4.95484;stroke-dasharray:none;stroke-opacity:1"
+     aria-label="λ"
+     sodipodi:nodetypes="csccsssscccccscccsccsccccccc" />
+  <ellipse
+     id="ring"
+     cy="191"
+     cx="199"
+     stroke-width="1"
+     stroke="#cccccc"
+     fill="none"
+     rx="171.54742"
+     ry="171.09288" />
 </svg>
