@@ -44,27 +44,9 @@ nav[aria-label="Breadcrumb"],
 
 /* ============================================
    DARK MODE
-   Supports both prefers-color-scheme AND Hextra's .dark class toggle
+   Uses Hextra's .dark class toggle (handles system preference via JS)
    ============================================ */
 
-/* Dark mode variables - for prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --text: #d4d4d4;
-    --text-muted: #999;
-    --text-light: #777;
-    --bg: #181818;
-    --bg-code: #222;
-    --border: #333;
-    --link: #7eb8da;
-    --link-hover: #a0d0f0;
-    --accent: #d88;
-    --heading: #e8e8e8;
-    --blockquote-text: #aaa;
-  }
-}
-
-/* Dark mode variables - for Hextra's .dark class */
 html.dark {
   --text: #d4d4d4;
   --text-muted: #999;
@@ -79,95 +61,48 @@ html.dark {
   --blockquote-text: #aaa;
 }
 
-/* Dark mode element overrides */
-@media (prefers-color-scheme: dark) {
-  html:not(.light),
-  html:not(.light) body {
-    background-color: #181818 !important;
-    color: #d4d4d4 !important;
-  }
-}
-
 html.dark,
 html.dark body {
   background-color: #181818 !important;
   color: #d4d4d4 !important;
 }
 
-/* Main content area */
 html.dark main,
 html.dark .hextra-content,
 html.dark article {
   background-color: #181818 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) main,
-  html:not(.light) .hextra-content,
-  html:not(.light) article {
-    background-color: #181818 !important;
-  }
+html.dark .nav-container {
+  background: #181818 !important;
+  border-bottom: 1px solid #333 !important;
 }
 
-/* Navbar background */
-html.dark .nav-container,
-html.dark .nav-container-blur,
+html.dark .nav-container-blur {
+  background: #181818 !important;
+  box-shadow: none !important;
+}
+
 html.dark nav {
   background: #181818 !important;
-  border-bottom-color: #333 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) .nav-container,
-  html:not(.light) .nav-container-blur,
-  html:not(.light) nav {
-    background: #181818 !important;
-    border-bottom-color: #333 !important;
-  }
-}
-
-/* Footer - match page background exactly */
 html.dark footer,
 html.dark .hextra-custom-footer {
   background: #181818 !important;
   border-top: 1px solid #333 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) footer,
-  html:not(.light) .hextra-custom-footer {
-    background: #181818 !important;
-    border-top: 1px solid #333 !important;
-  }
-}
-
-/* Headings */
 html.dark h1, html.dark h2, html.dark h3,
 html.dark h4, html.dark h5, html.dark h6 {
   color: #e8e8e8 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) h1, html:not(.light) h2, html:not(.light) h3,
-  html:not(.light) h4, html:not(.light) h5, html:not(.light) h6 {
-    color: #e8e8e8 !important;
-  }
-}
-
-/* Blockquotes */
 html.dark blockquote {
   color: #aaa !important;
   border-left-color: #444 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) blockquote {
-    color: #aaa !important;
-    border-left-color: #444 !important;
-  }
-}
-
-/* Publication thumbnails - soften contrast */
 html.dark .pub-thumb {
   border: 1px solid #444 !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -177,18 +112,6 @@ html.dark .post-image {
   border-color: #444 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) .pub-thumb {
-    border: 1px solid #444 !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  }
-
-  html:not(.light) .post-image {
-    border-color: #444 !important;
-  }
-}
-
-/* Links */
 html.dark a {
   color: #7eb8da;
 }
@@ -197,17 +120,6 @@ html.dark a:hover {
   color: #a0d0f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) a {
-    color: #7eb8da;
-  }
-
-  html:not(.light) a:hover {
-    color: #a0d0f0;
-  }
-}
-
-/* Code blocks */
 html.dark code {
   background: #252525 !important;
   color: #d4d4d4 !important;
@@ -224,26 +136,6 @@ html.dark pre code {
 
 html.dark :not(pre) > code {
   background: #2a2a2a !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  html:not(.light) code {
-    background: #252525 !important;
-    color: #d4d4d4 !important;
-  }
-
-  html:not(.light) pre {
-    background: #1e1e1e !important;
-    border: 1px solid #333;
-  }
-
-  html:not(.light) pre code {
-    background: transparent !important;
-  }
-
-  html:not(.light) :not(pre) > code {
-    background: #2a2a2a !important;
-  }
 }
 
 body {
@@ -735,13 +627,13 @@ hr {
   background: var(--bg) !important;
 }
 
-/* Navbar link styling - only target visible links */
-nav.hextra-max-navbar-width > a:not([href="/"]) {
+/* Navbar link styling */
+nav.hextra-max-navbar-width > a {
   font-size: 1.1rem !important;
 }
 
-/* Logo and site title */
-nav.hextra-max-navbar-width > a[href="/"] span {
+/* Logo and site title - first link in navbar */
+nav.hextra-max-navbar-width > a:first-child span {
   font-size: 1.3rem !important;
 }
 
@@ -794,6 +686,20 @@ footer > div {
   opacity: 1;
   color: var(--link);
   border-bottom: none;
+}
+
+.footer-divider {
+  color: var(--border);
+  margin: 0 0.25rem;
+}
+
+.footer-icons .theme-toggle {
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.footer-icons .theme-toggle:hover {
+  opacity: 1;
 }
 
 /* ============================================
