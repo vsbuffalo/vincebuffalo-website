@@ -119,11 +119,7 @@ params:
   dateFormat: "January 2, 2006"
   
   search:
-    enable: true
-    type: flexsearch
-    flexsearch:
-      index: content
-      tokenize: forward
+    enable: false
   
   blog:
     list:

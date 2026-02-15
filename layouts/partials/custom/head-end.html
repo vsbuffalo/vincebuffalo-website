@@ -1,40 +1,22 @@
-<script>
-// Global theme functions
-window.setDarkTheme = () => {
-  document.documentElement.classList.add("dark");
-  document.documentElement.style.colorScheme = "dark";
-};
-window.setLightTheme = () => {
-  document.documentElement.classList.remove("dark");
-  document.documentElement.style.colorScheme = "light";
-};
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+<!-- Dummy element to prevent Hextra's main.js from crashing -->
+<div class="sidebar-container" style="display:none"></div>
+
+<script>
 document.addEventListener('DOMContentLoaded', function() {
   // Nav highlighting
   const path = window.location.pathname.replace(/\/$/, '');
   const navLinks = document.querySelectorAll('nav.hextra-max-navbar-width a[href]');
   navLinks.forEach(link => {
     const href = link.getAttribute('href').replace(/\/$/, '');
-    if (path === href || (path.startsWith(href) && href !== '')) {
+    if (href && (path === href || (path.startsWith(href) && href !== ''))) {
       link.style.fontWeight = '600';
       link.style.borderBottom = '2px solid var(--link)';
     }
-  });
-
-  // Theme toggle - custom handler
-  document.querySelectorAll('.theme-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.contains('dark');
-      if (isDark) {
-        window.setLightTheme();
-        localStorage.setItem('color-theme', 'light');
-        btn.dataset.theme = 'light';
-      } else {
-        window.setDarkTheme();
-        localStorage.setItem('color-theme', 'dark');
-        btn.dataset.theme = 'dark';
-      }
-    });
   });
 });
 </script>
