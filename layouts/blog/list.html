@@ -19,7 +19,7 @@
       {{- with .Params.images }}
         {{- $img := index . 0 }}
         <a href="{{ $post.RelPermalink }}" class="post-image">
-          <img src="{{ $img }}" alt="{{ $post.Title }}" loading="lazy">
+          <img src="{{ (strings.TrimPrefix "/" $img) | relURL }}" alt="{{ $post.Title }}" loading="lazy">
         </a>
       {{- end }}
       <div class="post-info">

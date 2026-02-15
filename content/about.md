@@ -4,7 +4,7 @@ aliases:
   - /about/
 ---
 
-<img src="/images/tidepooling_selfie.png" alt="Vince Buffalo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 250px; border-radius: 8px;">
+<img src="/new/images/tidepooling_selfie.png" alt="Vince Buffalo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 250px; border-radius: 8px;">
 
 I'm Vince Buffalo, a Senior Research Scientist at the [Institute for Disease Modeling](https://www.idmod.org/) at the Gates Foundation, where I work on computational epidemiology, infectious disease modeling, and scientific software.
 

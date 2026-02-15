@@ -67,7 +67,7 @@ mustard<sup>6</sup>.
 ## Natural Selection versus Drift
 
 <figure>
-<img src="/images/ford_fisher.png" alt="Ford and Fisher moth wing color frequency data" />
+<img src="/new/images/ford_fisher.png" alt="Ford and Fisher moth wing color frequency data" />
 <figcaption>
 The frequency trajectory of the medionigra wing color variant in <em>Panaxia
 dominula</em>, scarlet tiger moth, <br/>observed in Oxford by Fisher and Ford (1947).
@@ -154,7 +154,7 @@ first arose.
 
 
 <figure>
-<img src="/images/nash_coop.png" alt="Selective sweep in malaria showing drug resistance" />
+<img src="/new/images/nash_coop.png" alt="Selective sweep in malaria showing drug resistance" />
 <figcaption>
 A selective sweep in malaria, <em>Plasmodium falciparum</em>, conferring drug
 resistance. Data from Nash <em>et al.</em> (2005), figure produced by Graham Coop in
@@ -181,7 +181,7 @@ find a strong correlation between the amount of recombination and the level of
 pairwise diversity, a common measure of genetic variability.
 
 <figure>
-<img src="/images/begun_aquadro.png" alt="Correlation between diversity and recombination in Drosophila" />
+<img src="/new/images/begun_aquadro.png" alt="Correlation between diversity and recombination in Drosophila" />
 <figcaption>
 The correlation between pairwise diversity (a measure of genetic variability)
 and recombination rate in <em>Drosophila melanogaster</em>, from <a href="https://www.nature.com/articles/356519a0">Begun and Aquadro (1992)</a>.
@@ -203,7 +203,7 @@ debates that Fisher and Ford were having over seventy years ago.
 ## The Problem of Polygenic Selection
 
 <figure>
-<img src="/images/height.png" alt="Distribution of human heights showing continuous trait" />
+<img src="/new/images/height.png" alt="Distribution of human heights showing continuous trait" />
 <figcaption>
 The distribution of human heights, a continuous trait, among 143
 University of Connecticut students. Image from <a href="https://amstat.tandfonline.com/doi/abs/10.1198/00031300265">Schilling <em>et al.</em> (2012)</a>.

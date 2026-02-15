@@ -1,4 +1,4 @@
-baseURL: "https://vincebuffalo.org/"
+baseURL: "https://vincebuffalo.com/new/"
 title: "Vince Buffalo"
 theme: "hextra"
 
@@ -85,6 +85,9 @@ menu:
 
 params:
   description: "The personal blog of Vince Buffalo."
+
+  math:
+    engine: mathjax
 
   navbar:
     displayTitle: true

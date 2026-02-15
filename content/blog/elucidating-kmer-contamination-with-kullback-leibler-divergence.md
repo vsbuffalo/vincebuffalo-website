@@ -16,7 +16,7 @@ Recently a coworker showed me a FASTQ file from an Illumina HiSeq run
 that was severely contaminated. Below is the file in `less` with a
 string highlighted:
 
-![A severely contaminated file in less, with many contaminants highlighted](/images/less_contams.png)
+![A severely contaminated file in less, with many contaminants highlighted](/new/images/less_contams.png)
 
 Holy contamination, Batman! There are a few approaches to handling
 this level of contamination. The program
@@ -47,7 +47,7 @@ Looking at raw k-mer counts is somewhat useful, but I've been
 exploring some information theoretical approaches to analyzing this
 data. One useful graphic is entropy of k-mers by position:
 
-![k-mer entropy increasing by position in read](/images/kmer_entropy.png)
+![k-mer entropy increasing by position in read](/new/images/kmer_entropy.png)
 
 These are 6-mers, so there are 4,096 possible k-mers (excluding N). If
 the k-mer distribution were uniform, 12 bits would be needed to encode
@@ -88,7 +88,7 @@ subset, the K-L total (indicated by bar height) **is wrong**, but the
 graphical interpretation is easier. Now, the enrichment by position is
 clear:
 
-![Kullback-Leibler divergence of k-mers](/images/kl_kmer.png)
+![Kullback-Leibler divergence of k-mers](/new/images/kl_kmer.png)
 
 This messy dataset has repeat primer contamination. Note that because
 we're plotting a *subset* of k-mers, there is negative total K-L (not
@@ -104,7 +104,7 @@ I've added faceting of multiple `SequenceSummary` objects' KL/k-mer
 diagnostics. Combined with a random data file, this really illustrated
 contamination:
 
-<a href="/images/large_facet_kl.png"><img src="/images/tiny_facet_kl.png"/></a>
+<a href="/new/images/large_facet_kl.png"><img src="/new/images/tiny_facet_kl.png"/></a>
 
 This is still in development; follow the code on
 [Github](http://github.com/vsbuffalo/qrqc) and feel free to contact me

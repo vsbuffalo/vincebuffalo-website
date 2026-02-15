@@ -16,7 +16,7 @@ summary: "Julia is a fast, promising new language for technical computing. But c
 language. It's still in its infancy, but it's fast (see below), and
 already does a lot.
 
-![Comparison of Julia to other languages](/images/julia_speed.png)
+![Comparison of Julia to other languages](/new/images/julia_speed.png)
 
 
 There's been some excitement on Twitter about Julia. Excitement
