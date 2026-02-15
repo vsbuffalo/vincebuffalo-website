@@ -1,8 +1,17 @@
 <div class="custom-footer-copyright">
   &copy; 2012&ndash;{{ now.Year }} Vince Buffalo
-  &nbsp;·&nbsp;
-  <a href="https://github.com/vsbuffalo">GitHub</a> ·
-  <a href="https://scholar.google.com/citations?user=7w_tyXUAAAAJ">Scholar</a> ·
-  <a href="https://bsky.app/profile/vsbuffalo.bsky.social">Bluesky</a> ·
-  <a href="{{ "index.xml" | relURL }}">RSS</a>
+  <div class="footer-icons">
+    <a href="https://github.com/vsbuffalo" title="GitHub">
+      {{ partial "utils/icon.html" (dict "name" "github" "attributes" "height=20") }}
+    </a>
+    <a href="https://scholar.google.com/citations?user=7w_tyXUAAAAJ" title="Google Scholar">
+      {{ partial "utils/icon.html" (dict "name" "google-scholar" "attributes" "height=20") }}
+    </a>
+    <a href="https://bsky.app/profile/vsbuffalo.bsky.social" title="Bluesky">
+      {{ partial "utils/icon.html" (dict "name" "bluesky" "attributes" "height=20") }}
+    </a>
+    <a href="{{ "index.xml" | relURL }}" title="RSS">
+      {{ partial "utils/icon.html" (dict "name" "rss" "attributes" "height=20") }}
+    </a>
+  </div>
 </div>

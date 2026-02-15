@@ -11,9 +11,15 @@
 /* ============================================
    RESET HEXTRA UI
    ============================================ */
-.hextra-sidebar-container,
-nav.hextra-sidebar,
-.hextra-sidebar-placeholder,
+/* Hide sidebar only on desktop - allow mobile menu to work */
+@media (min-width: 768px) {
+  .hextra-sidebar-container,
+  nav.hextra-sidebar,
+  .hextra-sidebar-placeholder {
+    display: none !important;
+  }
+}
+
 nav[aria-label="Breadcrumb"],
 [class*="breadcrumb"] {
   display: none !important;
@@ -767,6 +773,27 @@ footer > div {
   font-size: 0.85rem;
   color: var(--text-muted);
   width: 100%;
+}
+
+/* Footer social icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.footer-icons a {
+  color: var(--text-muted);
+  opacity: 0.7;
+  transition: opacity 0.15s, color 0.15s;
+  border-bottom: none;
+}
+
+.footer-icons a:hover {
+  opacity: 1;
+  color: var(--link);
+  border-bottom: none;
 }
 
 /* ============================================
