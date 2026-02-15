@@ -1,28 +1,57 @@
 /*
  * Vince Buffalo's Site
  * Clean, reading-focused design with Tufte-style sidenotes
+ * Fonts loaded via <link> in head-end.html
  */
-
-/* ============================================
-   FONTS
-   ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ============================================
    RESET HEXTRA UI
    ============================================ */
-/* Hide sidebar only on desktop - allow mobile menu to work */
-@media (min-width: 768px) {
-  .hextra-sidebar-container,
-  nav.hextra-sidebar,
-  .hextra-sidebar-placeholder {
-    display: none !important;
-  }
+/* Hide theme's sidebar elements */
+.hextra-sidebar-container,
+nav.hextra-sidebar,
+.hextra-sidebar-placeholder {
+  display: none !important;
 }
 
 nav[aria-label="Breadcrumb"],
 [class*="breadcrumb"] {
   display: none !important;
+}
+
+/* ============================================
+   MOBILE NAV - No hamburger, just hide title
+   ============================================ */
+/* Hide mobile menu element entirely - not needed */
+.mobile-menu {
+  display: none !important;
+}
+
+/* Hide hamburger button - not needed */
+.hamburger-menu {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  /* Hide site title text on mobile, keep logo */
+  nav.hextra-max-navbar-width > a:first-child span {
+    display: none !important;
+  }
+
+  /* Force nav links to show on mobile (override Hextra's hx:hidden) */
+  nav.hextra-max-navbar-width > a {
+    display: inline-block !important;
+  }
+
+  /* Smaller nav text on mobile */
+  nav.hextra-max-navbar-width {
+    gap: 0.5rem !important;
+  }
+
+  nav.hextra-max-navbar-width > a {
+    font-size: 0.9rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
 }
 
 /* ============================================
@@ -178,8 +207,18 @@ body {
 }
 
 .page-about,
-.page-pubs {
+.page-pubs,
+.page-papers {
   max-width: 800px;
+}
+
+/* Book page needs to be wide for side-by-side layout */
+article.page-book {
+  max-width: 1100px !important;
+}
+
+article.page-book .page-content {
+  max-width: none !important;
 }
 
 article.page {
@@ -209,8 +248,10 @@ article.page .page-content {
    ============================================ */
 .book-page {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
   align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .book-content {
@@ -228,13 +269,9 @@ article.page .page-content {
 }
 
 .book-covers img {
-  width: 200px;
+  width: 250px;
   border-radius: 4px;
   border: 1px solid var(--border);
-}
-
-.page-book {
-  max-width: 900px;
 }
 
 @media (max-width: 800px) {
@@ -251,7 +288,7 @@ article.page .page-content {
   }
 
   .book-covers img {
-    width: 150px;
+    width: 180px;
   }
 }
 
@@ -326,26 +363,27 @@ article {
   counter-reset: sidenote-counter;
 }
 
-aside {
+/* Sidenotes - exclude sidebar-container and book-covers from these styles */
+aside:not(.sidebar-container):not(.book-covers) {
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--text-muted);
 }
 
-aside sup {
+aside:not(.sidebar-container):not(.book-covers) sup {
   font-weight: 600;
   color: var(--accent);
   margin-right: 0.3em;
 }
 
-aside a {
+aside:not(.sidebar-container):not(.book-covers) a {
   color: var(--text-muted);
   border-bottom-color: var(--border);
 }
 
-/* Desktop: margin positioning */
+/* Desktop: margin positioning for sidenotes */
 @media (min-width: 1100px) {
-  aside {
+  aside:not(.sidebar-container):not(.book-covers) {
     float: right;
     clear: right;
     width: 220px;
@@ -356,9 +394,9 @@ aside a {
   }
 }
 
-/* Mobile: inline block */
+/* Mobile: inline block for sidenotes */
 @media (max-width: 1099px) {
-  aside {
+  aside:not(.sidebar-container):not(.book-covers) {
     display: block;
     margin: 1.5em 0;
     padding: 0.75em 1em;
