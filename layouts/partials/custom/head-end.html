@@ -1,0 +1,13 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const path = window.location.pathname.replace(/\/$/, '');
+  const navLinks = document.querySelectorAll('nav.hextra-max-navbar-width a[href]');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href').replace(/\/$/, '');
+    if (path === href || (path.startsWith(href) && href !== '')) {
+      link.style.fontWeight = '600';
+      link.style.borderBottom = '2px solid var(--link)';
+    }
+  });
+});
+</script>
