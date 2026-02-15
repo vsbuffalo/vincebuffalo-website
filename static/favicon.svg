@@ -1,0 +1,27 @@
+<!-- Vince Buffalo logo - lambda version -->
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="cut-off-1">
+      <rect x="2" y="100" width="340" height="400" transform="rotate(-5)" id="svg_1"/>
+    </clipPath>
+    <clipPath id="cut-off-2">
+      <rect x="10" y="-200" width="380" height="400" transform="rotate(-5)" id="svg_2"/>
+    </clipPath>
+    <clipPath id="cut-off-3">
+      <rect x="10" y="-100" width="380" height="400" transform="rotate(-5)" id="svg_3"/>
+    </clipPath>
+    <clipPath id="cut-off-4">
+      <rect x="4" y="-300" width="340" height="400" transform="rotate(-5)" id="svg_4"/>
+    </clipPath>
+  </defs>
+  <g>
+    <title>Background</title>
+    <circle id="bg-0" r="171" cy="191" cx="199" stroke-width="0" fill="#084594" clip-path="url(#cut-off-1)"/>
+    <circle id="bg-1" r="171" cy="191" cx="199" stroke-width="0" fill="#2171b5" clip-path="url(#cut-off-3)"/>
+    <circle id="bg-2" r="171" cy="191" cx="199" stroke-width="0" fill="#4292c6" clip-path="url(#cut-off-2)"/>
+    <circle id="bg-3" r="171" cy="191" cx="199" stroke-width="0" fill="#c6dbef" clip-path="url(#cut-off-4)"/>
+    <!-- lambda -->
+    <text x="199" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="260" font-weight="400" fill="#ffffff">λ</text>
+  </g>
+  <circle id="ring" r="172" cy="191" cx="199" stroke-width="1" stroke="#ccc" fill="none"/>
+</svg>

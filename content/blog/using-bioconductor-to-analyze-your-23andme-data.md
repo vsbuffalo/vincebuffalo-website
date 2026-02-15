@@ -90,7 +90,7 @@ package, we can look at the distribution of SNPs by chromosome:
 ggplot(d) + geom_bar(aes(chrom))
 ```
 
-![distribution of SNPs by chromosome](/new/images/23andme_chrom_dist.png)
+![distribution of SNPs by chromosome](/images/23andme_chrom_dist.png)
 
 This isn't providing information on SNP density as much as it is
 chromosome length (except X). We'll take a more detailed look a bit

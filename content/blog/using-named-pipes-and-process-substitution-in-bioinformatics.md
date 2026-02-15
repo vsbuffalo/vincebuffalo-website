@@ -38,7 +38,7 @@ Bernhardt also has this great slide, and I'm convinced there's no
 better way to describe how most Unix users feel about pipes
 (especially bioinformaticians):
 
-![For love of Unix pipes](/new/images/pipes.png)
+![For love of Unix pipes](/images/pipes.png)
 
 Pipes are fantastic. Any two (well-written) programs can talk to each
 other in Unix. All of the nastiness and the difficulty of
@@ -208,7 +208,7 @@ also compress the files via `>(gzip > )` in those tests, but don't
 compress the others. Despite my conservative benchmark, the difference
 is striking:
 
-![Real time difference: process substitution = 55m43.274s, writing to file = 96m5.422s](/new/images/ps_benchmarks.png)
+![Real time difference: process substitution = 55m43.274s, writing to file = 96m5.422s](/images/ps_benchmarks.png)
 
 Additionally, with the `>(gzip > )` bit, our sequences had a
 compression ratio of about 3.46% — not bad. With most good tools

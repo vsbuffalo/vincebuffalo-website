@@ -558,6 +558,15 @@ aside a {
   position: relative;
 }
 
+/* Center images in blog posts */
+article img,
+.post-content img,
+.hextra-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .post-footer {
   margin-top: 3rem;
   padding-top: 1.5rem;

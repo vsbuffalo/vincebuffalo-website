@@ -1,7 +1,8 @@
 ---
-title: "Publications"
+title: "Papers"
 aliases:
   - /publications/
+  - /pubs/
 ---
 
 *See also my [Google Scholar profile](https://scholar.google.com/citations?user=7w_tyXUAAAAJ&hl=en).*

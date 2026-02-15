@@ -76,8 +76,8 @@ menu:
     - name: "Book"
       pageRef: "/book"
       weight: 2
-    - name: "Pubs"
-      pageRef: "/pubs"
+    - name: "Papers"
+      pageRef: "/papers"
       weight: 3
     - name: "About"
       pageRef: "/about"

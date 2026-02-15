@@ -97,7 +97,7 @@ great-great grandparents, and $k$ generations back have $2^k$
 great<sup>$(k-2)$</sup> grandparents, and in general $2^k$ ancestors $k$
 generations back. An example genealogy back five generations is shown below:
 
-![A genealogy back five generations. <em>k</em> generations back, one has <em>2<sup>k</sup></em> ancestors. Circles indicate females, and squares males. The shaded individual is a present-day female.](/new/images/genealogy.png)
+![A genealogy back five generations. <em>k</em> generations back, one has <em>2<sup>k</sup></em> ancestors. Circles indicate females, and squares males. The shaded individual is a present-day female.](/images/genealogy.png)
 
 Of course, these genealogical ancestors are not necessarily all *distinct*
 individuals; as you go further back through the generations, some of these
@@ -133,7 +133,7 @@ past. Since the number of crossovers per chromosome is limited, close relatives
 are likely to share large contiguous segments of their genetic material; a
 beautiful visualization of this is Morgan's 1916 illustration of crossing over:
 
-![Thomas Hunt Morgan's 1916 illustration of crossing over.](/new/images/morgan-crossover.svg)
+![Thomas Hunt Morgan's 1916 illustration of crossing over.](/images/morgan-crossover.svg)
 
 When we look at how much DNA two relatives share, we see it occurs in large
 blocks like the black and white segments above. For example, using
@@ -283,7 +283,7 @@ includes a subset of one's total ancestors, and is embedded inside of one's
 total genealogy. Below is a genealogy for a present-day female, with her X
 genealogy shaded in:
 
-![An X genealogy going back five generations, with females drawn as circles and males as squares. Shaded individuals are X ancestors, while unshaded individuals are not X ancestors. The numbers indicate the number of recombinational meioses to that ancestor.](/new/images/xtree.png)
+![An X genealogy going back five generations, with females drawn as circles and males as squares. Shaded individuals are X ancestors, while unshaded individuals are not X ancestors. The numbers indicate the number of recombinational meioses to that ancestor.](/images/xtree.png)
 
 Note the number of X ancestors of a present-day female has back through the
 generations, 2, 3, 5, 8, etc. This sequence is the famous [Fibonacci
@@ -367,7 +367,7 @@ also show (Figure B) the probability of sharing some autosomal genetic ancestry
 > 0</em>), conditional and unconditional on both being an X genealogical
 ancestor ("X ancestor" and "ancestor", respectively).
 
-![A: a present-day female’s number of genealogical and genetic ancestors, for X chromosomes and autosomes. B: the probability of genealogical and genetic ancestry for a variety of cases](/new/images/num-ancestors.png)
+![A: a present-day female’s number of genealogical and genetic ancestors, for X chromosomes and autosomes. B: the probability of genealogical and genetic ancestry for a variety of cases](/images/num-ancestors.png)
 
 Similarly, we extend these models to model the number of X chromosome segments
 shared between half- and full-cousins and explore other properties of X
@@ -408,7 +408,7 @@ recombinational meioses (and thus number of females) between two half-cousins
 and $N$ is the observed number of X segments shared between the cousins. These
 posterior distributions are:
 
-![The posterior distribution for R across different generations (each panel). Each line is the number of observed segments between X half-cousins. The prior distribution is the gray dashed line.](/new/images/rm-posterior.png)
+![The posterior distribution for R across different generations (each panel). Each line is the number of observed segments between X half-cousins. The prior distribution is the gray dashed line.](/images/rm-posterior.png)
 
 For example, the top right panel shows the posterior distributions for the
 number of females in the lineage connecting two 3<sup>rd</sup> degree
@@ -446,7 +446,7 @@ genealogical relationships connecting us all.
   }
 
 
-    d3.json("/js/x.json", function(data) {
+    d3.json("/new/js/x.json", function(data) {
       var config = single_chrom;
       config.genlen = data.genlen;
       if (data.type == 'x') {
