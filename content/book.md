@@ -43,7 +43,7 @@ Readers can submit and view errata for *Bioinformatics Data Skills* on [O'Reilly
 
 </div>
 <aside class="book-covers">
-<img src="/images/cover_bds.png" alt="Bioinformatics Data Skills">
-<img src="/images/bds_japanese.jpg" alt="Bioinformatics Data Skills (Japanese edition)">
+<img src="/new/images/cover_bds.png" alt="Bioinformatics Data Skills">
+<img src="/new/images/bds_japanese.jpg" alt="Bioinformatics Data Skills (Japanese edition)">
 </aside>
 </div>

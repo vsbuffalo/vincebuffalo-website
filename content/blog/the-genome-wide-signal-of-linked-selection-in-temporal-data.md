@@ -68,7 +68,7 @@ see [Barton (2000)](https://royalsocietypublishing.org/doi/10.1098/rstb.2000.071
 </aside>
 
 <figure>
-<img src="/images/morley_sheep.png" alt="Morley sheep breeding figure" />
+<img src="/new/images/morley_sheep.png" alt="Morley sheep breeding figure" />
 <figcaption>
 **Figure 1** 
 The first discussion of linked selection in a quantitative genetics context was
@@ -95,7 +95,7 @@ it is present at appreciable frequencies in the population (i.e. not the rare
 new mutations of the classic linked selection work).
 
 <figure>
-<img src="/images/wright_ne.png" alt="Wright population dynamics figure" />
+<img src="/new/images/wright_ne.png" alt="Wright population dynamics figure" />
 <figcaption>
 <strong>Figure 2</strong>
 Wright's (<a href="https://www.jstor.org/stable/2457575?seq=1">1940</a>) figure of
@@ -156,7 +156,7 @@ generation, as long as it remains associated with a fraction of genes
 well-suited for this environment.
 
 <figure>
-<img src="/images/tempcov.png" alt="Temporal covariance illustration" />
+<img src="/new/images/tempcov.png" alt="Temporal covariance illustration" />
 <figcaption>
 **Figure 3**
 Whether a neutral allele finds itself on a beneficial background (blue) or
@@ -219,7 +219,7 @@ expected, since the temporal covariances weaken as the associations between
 neutral sites and fitness variation decay through time. 
 
 <figure>
-<img src="/images/buffalo_coop_fig1.png" alt="Temporal covariance results from Buffalo and Coop" />
+<img src="/new/images/buffalo_coop_fig1.png" alt="Temporal covariance results from Buffalo and Coop" />
 <figcaption>
 <strong>Figure 4</strong>
 (A) Temporal covariance in the Barghi <em>et al.</em> (2019) data set, averaged over
@@ -288,7 +288,7 @@ creates what we call between-replicate covariance, and we can measure this much
 like we do temporal covariance.
 
 <figure>
-<img src="/images/barghi_rep.png" alt="Convergence correlations in Barghi et al. data" />
+<img src="/new/images/barghi_rep.png" alt="Convergence correlations in Barghi et al. data" />
 <figcaption>
 <strong>Figure 5</strong>
 A measure of between-replicate covariance, <em>convergence correlations</em>,
@@ -313,7 +313,7 @@ while early on, the selection occurring across replicates is similar, each
   contribute to adaptation).
 
 <figure>
-<img src="/images/kelly_hughes.png" alt="Kelly and Hughes convergence correlations" />
+<img src="/new/images/kelly_hughes.png" alt="Kelly and Hughes convergence correlations" />
 <figcaption>
 **Figure 6**
 The convergence correlations between each pair of replicates (A, B, and C) of
@@ -359,7 +359,7 @@ generations of selection, tibiae length increased about five standard
 deviations. 
 
 <figure>
-<img src="/images/castro.png" alt="Longshanks mouse selection experiment results" />
+<img src="/new/images/castro.png" alt="Longshanks mouse selection experiment results" />
 <figcaption>
 **Figure 7**
 The convergence correlations between the two Longshanks selection lines (LS1
@@ -413,7 +413,7 @@ I've rounded the numbers here, which is why they don't quite add up to 32%
 ## Shifts in Temporal Covariance
 
 <figure>
-<img src="/images/neg_cov.png" alt="Negative temporal covariance illustration" />
+<img src="/new/images/neg_cov.png" alt="Negative temporal covariance illustration" />
 <figcaption>
 **Figure 8**
 In one environment, where a trait is beneficial if it is larger (blue
@@ -457,7 +457,7 @@ to our observed distribution.  Below, I show the distributions of the windowed
 temporal covariances between different time intervals: 
 
 <figure>
-<img src="/images/shift_density.png" alt="Windowed temporal covariance distributions" />
+<img src="/new/images/shift_density.png" alt="Windowed temporal covariance distributions" />
 <figcaption>
 **Figure 9**
 Each figure shows the observed distribution of windowed temporal covariances

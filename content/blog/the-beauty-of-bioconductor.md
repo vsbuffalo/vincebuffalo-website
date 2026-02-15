@@ -19,7 +19,7 @@ algorithmic or hardware limitations, but rather to the fact that
 scientific programmers simply do not have the same standards and
 practices that the software industry does.
 
-![How do we prevent a big data breaking point?](/images/big-data-breakpoint.png)
+![How do we prevent a big data breaking point?](/new/images/big-data-breakpoint.png)
 
 
 Three events are simultaneously occurring that could endanger the
@@ -234,7 +234,7 @@ quality. Used before and after the application of quality tools,
 `qrqc` can provide information not only on the state of the data, but
 also the effect of the tools.
 
-![sequencing data quality analysis with qrqc](/images/qrqc.png)
+![sequencing data quality analysis with qrqc](/new/images/qrqc.png)
 
 With existing Bioconductor packages, many useful statistics can be
 gathered on whole reads, BAM mapping results, VCF files, etc.

@@ -71,7 +71,7 @@ Now, consider [d3.js](http://www.d3js.org) [this parallel sets
 visualization](http://www.jasondavies.com/parallel-sets/) by Jason
 Davies:
 
-![Parallel sets visualization of Titanic survivors](/images/parallel-sets-titanic.png)
+![Parallel sets visualization of Titanic survivors](/new/images/parallel-sets-titanic.png)
 
 Immediately, parallel sets shows us the large numbers that perished in
 the Titanic's sinking. Width reveals not only the breakdown or
