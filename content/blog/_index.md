@@ -2,4 +2,4 @@
 title: "Blog"
 ---
 
-Posts about computational biology, evolutionary genetics, and bioinformatics.
+Notes on modeling, computation, and biology.
