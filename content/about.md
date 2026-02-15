@@ -17,21 +17,24 @@ genetics, and eventually fell in love with epidemiological modeling. Along the
 way I wrote an O'Reilly book ([Bioinformatics Data Skills](/book/)), did a PhD
 with [Graham Coop](http://gcbias.org/) at UC Davis studying linked selection
 and the structure of genetic variation, and postdocs with [Andrew
-Kern](https://ie2.uoregon.edu/people/kern/) at Oregon and [Rasmus
-Nielsen](https://nielsenlab.org/) at Berkeley.
+Kern](https://ie2.uoregon.edu/people/kern/) at University of Oregon and [Rasmus
+Nielsen](https://nielsenlab.org/) at UC Berkeley.
 
 I build models and tools for decision-making under uncertainty. These days I
 think a lot about decision theory and the value of information in global
-health, stochastic processes, causal reasoning in simulation models, and how to
-build robust scientific software. I'm especially drawn to functional
-programming and type theory (OCaml in particular) as tools for thinking clearly
-about complex models. A lot of my work sits at the boundary between modeling,
-inference, and scientific software design — getting the abstractions and
-architecture right upstream saves enormous confusion downstream, whether you're
-building an epidemiological model or reasoning through whether to place a bet
-(really the same thing). I still think about evolutionary genetics — linked
-selection, informational views of evolution, and why genetic diversity looks
-the way it does.
+health, infectious disease modeling, stochastic processes, causal reasoning in
+simulation models, and how to build robust scientific software. I'm especially
+drawn to functional programming and types (lately [OCaml](https://ocaml.org/)
+in particular, but [Rust](https://rust-lang.org/) was my gateway language) as
+tools for thinking clearly about rigorous data modeling. 
+
+A lot of my work sits at the boundary between modeling, inference, and
+scientific software design — getting the abstractions and architecture right
+upstream saves enormous confusion downstream, whether you're building an
+epidemiological model or reasoning through whether to place a bet ([really the
+same thing](https://en.wikipedia.org/wiki/Frank_P._Ramsey)!). I still think
+about evolutionary genetics — linked selection, informational views of
+evolution, and why genetic diversity looks the way it does.
 
 *Why the λ in the logo?* It's the Greek letter that's become a thread through
 many of my random interests: hazard rates in epi, the calculus behind
@@ -57,4 +60,7 @@ gmail</noscript>. You can also find me on [X](https://x.com/vsbuffalo) and
 **Postdoctoral Scholar**, Nielsen Lab, UC Berkeley, 2022–2024<br>
 **Postdoctoral Scholar**, Kern and Ralph Labs, University of Oregon, 2019–2022<br>
 **Ph.D. in Population Genetics**, UC Davis (with Graham Coop), 2019<br>
-**B.A. in Economics and Political Science**, UC Davis, 2009
+**Staff Computational Biologist**, Ross-Ibarra Lab, UC Davis, 2013–2014<br>
+**Bioinformatician**, Dubcovsky Lab, UC Davis, 2012–2013<br>
+**Lead Statistical Programmer**, Bioinformatics Core, UC Davis Genome Center, 2009–2012<br>
+**B.A. in Economics and Political Science** (minor in Statistics), UC Davis, 2009

@@ -7,6 +7,8 @@ enableGitInfo: true
 enableEmoji: true
 defaultContentLanguage: "en"
 
+disableKinds: ["taxonomy", "term"]
+
 outputs:
   home: ["HTML", "RSS", "JSON"]
   page: ["HTML"]
