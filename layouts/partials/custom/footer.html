@@ -7,11 +7,13 @@
     <a href="https://scholar.google.com/citations?user=7w_tyXUAAAAJ" title="Google Scholar">
       {{ partial "utils/icon.html" (dict "name" "google-scholar" "attributes" "height=20") }}
     </a>
-    <a href="https://bsky.app/profile/vsbuffalo.bsky.social" title="Bluesky">
-      {{ partial "utils/icon.html" (dict "name" "bluesky" "attributes" "height=20") }}
+    <a href="https://x.com/vsbuffalo" title="X">
+      {{ partial "utils/icon.html" (dict "name" "x-twitter" "attributes" "height=20") }}
     </a>
     <a href="{{ "index.xml" | relURL }}" title="RSS">
       {{ partial "utils/icon.html" (dict "name" "rss" "attributes" "height=20") }}
     </a>
+    <span class="footer-divider">|</span>
+    {{ partial "theme-toggle.html" }}
   </div>
 </div>

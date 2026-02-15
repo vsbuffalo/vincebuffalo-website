@@ -1,5 +1,16 @@
 <script>
+// Global theme functions
+window.setDarkTheme = () => {
+  document.documentElement.classList.add("dark");
+  document.documentElement.style.colorScheme = "dark";
+};
+window.setLightTheme = () => {
+  document.documentElement.classList.remove("dark");
+  document.documentElement.style.colorScheme = "light";
+};
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Nav highlighting
   const path = window.location.pathname.replace(/\/$/, '');
   const navLinks = document.querySelectorAll('nav.hextra-max-navbar-width a[href]');
   navLinks.forEach(link => {
@@ -8,6 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
       link.style.fontWeight = '600';
       link.style.borderBottom = '2px solid var(--link)';
     }
+  });
+
+  // Theme toggle - custom handler
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        window.setLightTheme();
+        localStorage.setItem('color-theme', 'light');
+        btn.dataset.theme = 'light';
+      } else {
+        window.setDarkTheme();
+        localStorage.setItem('color-theme', 'dark');
+        btn.dataset.theme = 'dark';
+      }
+    });
   });
 });
 </script>
