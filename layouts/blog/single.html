@@ -4,9 +4,9 @@
     <h1 class="post-title">{{ .Title }}</h1>
     <div class="post-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      {{- with .Params.tags }}
+      {{- with $.Site.Taxonomies.tags }}
         <span class="post-tags">
-          {{ range . }} <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>{{ end }}
+          {{ range $.Params.tags }}{{ with $.Site.GetPage (printf "/tags/%s" (. | urlize)) }}<a href="{{ .RelPermalink }}">#{{ .Title }}</a> {{ end }}{{ end }}
         </span>
       {{- end }}
     </div>
