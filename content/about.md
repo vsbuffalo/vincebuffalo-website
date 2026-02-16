@@ -4,7 +4,7 @@ aliases:
   - /about/
 ---
 
-<img src="/new/images/tidepooling_selfie.png" alt="Vince Buffalo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 250px; border-radius: 8px;">
+<img src="/new/images/tidepooling_selfie.png" alt="Vince Buffalo" class="about-photo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 300px; border-radius: 8px;">
 
 I'm Vince Buffalo, a Senior Research Scientist at the [Institute for Disease
 Modeling](https://www.idmod.org/) at the Gates Foundation, where I work on
@@ -56,7 +56,7 @@ gmail</noscript>. You can also find me on [X](https://x.com/vsbuffalo) and
 
 ## Positions
 
-**Senior Research Scientist**, Institute for Disease Modeling, Gates Foundation, 2024–present<br>
+**Senior Research Scientist**, Institute for Disease Modeling, Gates Foundation, 2025–present<br>
 **Postdoctoral Scholar**, Nielsen Lab, UC Berkeley, 2022–2024<br>
 **Postdoctoral Scholar**, Kern and Ralph Labs, University of Oregon, 2019–2022<br>
 **Staff Computational Biologist**, Ross-Ibarra Lab, UC Davis, 2013–2014<br>

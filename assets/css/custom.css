@@ -421,8 +421,8 @@ aside:not(.sidebar-container):not(.book-covers) a {
 }
 
 .bio-photo {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
@@ -761,6 +761,16 @@ footer > div {
 /* ============================================
    RESPONSIVE
    ============================================ */
+/* About page photo - no float on narrow screens */
+@media (max-width: 768px) {
+  .about-photo {
+    float: none !important;
+    display: block !important;
+    margin: 0 auto 1.5em !important;
+    width: 250px !important;
+  }
+}
+
 @media (max-width: 600px) {
   body { font-size: 17px; }
 
@@ -771,8 +781,8 @@ footer > div {
   }
 
   .bio-photo {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
   }
 
   .post-card {
