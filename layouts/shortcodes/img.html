@@ -1,0 +1,5 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $width := .Get "width" | default "" -}}
+<img src="{{ strings.TrimPrefix "/" $src | relURL }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }} />
