@@ -8,16 +8,7 @@ images: ["/images/ford_fisher.png"]
 aliases:
   - /blog/2020/08/20/problem-detecting.html
 summary: "Darwin thought natural selection was slow, but we now know it can act rapidly. The challenge is detecting this selection at the DNA level—especially when adaptation involves many genes of small effect acting in concert."
---- 
-
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@vsbuffalo" />
-<meta name="twitter:title" content="The Problem of Detecting Polygenic Selection from Temporal Data" />
-<meta name="twitter:description" content="Why is detecting polygenic selection from temporal data difficult?" />
-<meta name="twitter:image" content="https://vincebuffalo.com/images/ford_fisher.png" />
-
-
+---
 
 *The last chapter of my dissertation with Graham Coop was recently published in
 PNAS
@@ -42,10 +33,10 @@ aspect of natural selection: that it was slow acting. In the first edition of
 > past geological ages, that we only see that the forms of life are now
 > different from what they formerly were.
 
-<aside>
+{{< aside >}}
 <sup>1</sup> Artificial selection refers to selective breeding done by humans,
 usually to select a more desirable trait in a species. 
-</aside>
+{{< /aside >}}
 
 While Darwin knew artificial selection<sup>1</sup> could rapidly change an
 organism's traits, it was only until ecological geneticists E.B. Ford and
@@ -56,13 +47,13 @@ variety of species including sticklebacks<sup>2</sup>, *Anolis*
 lizards<sup>3</sup>, soapberry bugs<sup>4</sup>, guppies<sup>5</sup>, and field
 mustard<sup>6</sup>.
 
-<aside>
+{{< aside >}}
 <sup>2</sup> [Lescak <em>et al.</em> (2015)](https://www.pnas.org/content/112/52/E7204). <br/>
 <sup>3</sup> [Stuart <em>et al.</em> (2014)](https://science.sciencemag.org/content/346/6208/463.abstract). <br/>
 <sup>4</sup> [Reznick <em>et al.</em> (1997)](https://science.sciencemag.org/content/275/5308/1934.full). <br/>
 <sup>5</sup> [Carroll and Boyd (1992)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1992.tb00619.x). <br/>
 <sup>6</sup> [Franks <em>et al.</em> (2007)](https://www.pnas.org/content/104/4/1278).
-</aside>
+{{< /aside >}}
 
 ## Natural Selection versus Drift
 
@@ -92,10 +83,10 @@ copies of a gene (one you inherited from your father, one you inherited from
 your mother), the copy you pass to your child is determined essentially by a
 biological coin flip. 
 
-<aside>
+{{< aside >}}
 <sup>7</sup> The genes we carry come in different alternative variants, which we refer to
 as <em>alleles</em>.
-</aside>
+{{< /aside >}}
 
 These random changes in allele frequency across families lead to a random
 behavior of allele frequencies within a population, which could, purely by
@@ -124,13 +115,13 @@ drift<sup>8</sup>. Simultaneously, new statistical methods were discovering the
 footprints left by natural selection in our DNA and the DNA of many other
 species, by the effect selection has on its *neighboring sites*. 
 
-<aside>
+{{< aside >}}
 <sup>8</sup>[Feder <em>et al.</em> (2014)](https://www.genetics.org/content/196/2/509.short) 
 </br>
 [Mathieson and McVean (2013)](https://www.genetics.org/content/193/3/973.short)
 </br>
 [Terhorst <em>et al.</em> (2015)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005069).
-</aside>
+{{< /aside >}}
 
 When a new beneficial mutation arises in a population, its comparative
 advantage (either through increasing survival or in leaving more offspring)
@@ -148,9 +139,9 @@ variation in spots along the genome, since, in essence, everyone derives their
 ancestry in this region from the individual in which the beneficial mutation
 first arose. 
 
-<aside>
+{{< aside >}}
 <sup>9</sup> The first work on this "hitchhiking" effect was the seminal paper of [John Maynard Smith and John Haigh (1974)](https://www.cambridge.org/core/journals/genetics-research/article/hitchhiking-effect-of-a-favourable-gene/918291A3B62BD50E1AE5C1F22165EF1B).
-</aside>
+{{< /aside >}}
 
 
 <figure>
@@ -225,7 +216,7 @@ differences between individuals lead to a smooth distribution of traits that
 looks normally distributed (i.e. having a bell curve shape, such as the
 distribution of heights pictured above).
 
-<aside>
+{{< aside >}}
 <sup>10</sup> [<em>The Modern Synethesis</em>](https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)) was
 the synthesis of Charles Darwin and Alfred Russel Wallace's theory of evolution
 with Gregor Mendel's genetic theory of inheritance. The mathematical part of
@@ -233,7 +224,7 @@ the synthesis was worked out primarily by R.A. Fisher, Sewall Wright, and J.B.S.
 Haldane, and numerous other subdisciplines such as paleontology, systematics,
 and botany were shown to be consistent with the new synthesis of evolution
 and genetics.
-</aside>
+{{< /aside >}}
 
 Selection also acts on continuous traits, which has enabled humans to
 continually increase crop yields, breed cows that produce more milk, and so

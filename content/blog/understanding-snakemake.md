@@ -9,14 +9,6 @@ aliases:
   - /blog/2020/03/04/snakefile-tutorial.html
 summary: "Snakemake automates the tedious task of re-running data processing pipelines when upstream files change. This tutorial explains how Snakemake works by first covering its predecessor, Make, and the core idea of dependency graphs."
 ---
-Image: /images/snake_small.svg
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@vsbuffalo" />
-<meta name="twitter:title" content="Understanding Snakemake" />
-<meta name="twitter:description" content="Understanding how to use Snakemake (and make) to automate data processing tasks." />
-<meta name="twitter:image" content="https://vincebuffalo.com/images/snake.png" />
-
 
 <figure>
 <img src="/new/images/snake_small.svg" alt="Heraldic snake symbol" />
@@ -87,13 +79,13 @@ we run the `make` command<sup>1</sup>. In a Makefile, we specify the **rules** d
 the steps to run to turn input files into output files.  Specifically, a
 Makefile consists of:
 
-<aside> <sup>1</sup>
+{{< aside >}} <sup>1</sup>
 For clarity, I'll try to be consistent in how I stylize various words when
 describing Make and Snakemake.  Make is the name of the software and language,
 Makefiles are the files full of code describing what to do, `make` is Make's
 command line tool, and a file named `Makefile` is what the `make` tool looks
 for in a directory when its run.
-</aside>
+{{< /aside >}}
 
 1. A **target**, the thing to build with this rule. This is the output file.
 
@@ -122,7 +114,7 @@ create a file containing the lengths of all the sequences using
 [bioawk](https://github.com/lh3/bioawk). Here's what a Makefile running these
 steps looks like<sup>2</sup>:
 
-<aside>
+{{< aside >}}
 
  <sup>2</sup> All code for these examples is available in the [Github
 repository for this
@@ -130,7 +122,7 @@ tutorial](https://github.com/vsbuffalo/snakemake-tutorial/).  You can find the
 code for this example in
 [here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-01/Makefile).
 
-</aside>
+{{< /aside >}}
 
 ```Makefile
 all: Dmel_BDGP6.28_seqlens.tsv
@@ -214,10 +206,10 @@ The two I use most are `$@`, which is a placeholder for the filename of the
 target, and `$<`, the name of the *first* prerequisite. This would simplify our
 earlier `Makefile` like so<sup>3</sup>:
 
-<aside>
+{{< aside >}}
  <sup>3</sup>
    The code for this Makefile is [available here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-02/Makefile).
-</aside>
+{{< /aside >}}
 
 ```Makefile
 all: Dmel_BDGP6.28_seqlens.tsv
@@ -264,10 +256,10 @@ of the Snakefile has rules defined by targets (known in Snakemake as
 lot more is possible here with Snakemake, as we'll see). Let's translate our
 earlier `Makefile` to a `Snakefile`<sup>4</sup>:
 
-<aside>
+{{< aside >}}
  <sup>4</sup>
    The code for this Snakefile is [available here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-03/Snakefile).
-</aside>
+{{< /aside >}}
 
 
 ```Makefile
@@ -312,10 +304,10 @@ This is then executed much like a Makefile. Before executing it though, let's
 do a dry run with `snakemake --dryrun` or `snakemake -n`. This doesn't execute
 any steps, it just shows what Snakemake would do if run<sup>5</sup>:
 
-<aside>
+{{< aside >}}
  <sup>5</sup>
   Make does have a dry run option too, by the way; it's `make --dry-run` or `make -n`.
-</aside>
+{{< /aside >}}
 
 ```bash
 $ snakemake --dryrun
@@ -372,10 +364,10 @@ incrementally with a few Snakefiles, which because we can program in Python
 with Snakemake, allow us to see what's happening with `print()` statements.
 First consider this `Snakefile`<sup>6</sup>:
 
-<aside>
+{{< aside >}}
  <sup>6</sup>
    The code for this Snakefile is [available here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-04/Snakefile).
-</aside>
+{{< /aside >}}
 
 
 ```python
@@ -396,11 +388,11 @@ function. `expand()` builds a list of strings by replacing the string
 `{chrom}` in `chrom_filename` with each of the chromosome names in the `chroms`
 list. We use `print()` on the last line to look at the resulting list of filenames.
 
-<aside> <sup>7</sup> Note the consistent naming of these chromosome sequences
+{{< aside >}} <sup>7</sup> Note the consistent naming of these chromosome sequences
 (see the [FTP
 page](ftp://ftp.ensembl.org/pub/release-99/fasta/drosophila_melanogaster/dna/))
 is what makes automating this task possible.
-</aside>
+{{< /aside >}}
 
 While above we used `expand()` to build up `chrom_fa_files`, populating it with
 values from just the `chroms` list, it works with more than one input list too,
@@ -409,10 +401,10 @@ Product](https://en.wikipedia.org/wiki/Cartesian_product)) of the input values.
 This makes `expand()` exceedingly powerful because it can be used to build up
 all possible parameter combinations for a series of simulations. Consider<sup>8</sup>:
 
-<aside>
+{{< aside >}}
  <sup>8</sup>
    The code for this Snakefile is [available here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-05/Snakefile).
-</aside>
+{{< /aside >}}
 
 ```python
 import numpy as np
@@ -475,10 +467,10 @@ simulation example described above.
 
 Here's a simple example of wildcards<sup>9</sup>:
 
-<aside>
+{{< aside >}}
  <sup>9</sup>
    The code for this Snakefile is [available here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-06/Snakefile).
-</aside>
+{{< /aside >}}
 
 
 ```python
@@ -531,10 +523,10 @@ selection coefficients and the level of recombination. I also use Snakemake to
 generate a lot of independent replicate results. The Snakemake
 file<sup>10</sup> looks like:
 
-<aside>
+{{< aside >}}
  <sup>10</sup>
    The code for this Snakefile is [available here](https://github.com/vsbuffalo/snakemake-tutorial/blob/master/example-07/Snakefile).
-</aside>
+{{< /aside >}}
 
 
 ```python

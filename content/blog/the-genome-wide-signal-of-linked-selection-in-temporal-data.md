@@ -10,13 +10,6 @@ aliases:
   - /blog/2020/08/20/genome-wide-signal-of-linked-sel.html
 ---
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@vsbuffalo" />
-<meta name="twitter:title" content="The Genome-wide Signal of Linked Selection in Temporal Data" />
-<meta name="twitter:description" content="An overview of Buffalo and Coop (2020)." />
-<meta name="twitter:image" content="http://vincebuffalo.org/images/buffalo_coop_fig1.png" />
-
-
 *The last chapter of my dissertation with Graham Coop was recently published in
 PNAS
 ([pdf](https://www.pnas.org/content/pnas/early/2020/08/07/1919039117.full.pdf),
@@ -62,10 +55,10 @@ temporal genomic data is *temporal covariance*. Our work builds of many
 excellent papers but three in particular: Robertson (1961), and Santiago and
 Cabarello (1995, 1998)<sup>1</sup>.
 
-<aside>
+{{< aside >}}
 For a very nice review of this work, and linked selection more broadly, 
 see [Barton (2000)](https://royalsocietypublishing.org/doi/10.1098/rstb.2000.0716).
-</aside>
+{{< /aside >}}
 
 <figure>
 <img src="/new/images/morley_sheep.png" alt="Morley sheep breeding figure" />
@@ -107,7 +100,7 @@ genetic models with a rescaled <em>effective</em> population size.
 </figcaption>
 </figure>
 
-<aside>
+{{< aside >}}
 <sup>2</sup>
 It's worthwhile to note that there's a rich
 history of using the observed allele frequency changes through time to estimate
@@ -116,7 +109,7 @@ that effective population size $N_e$ is proportional to the reciprocal of the
 *variance* in allele frequency change over $t$ generations, $N_e \propto t/2
 \text{var}(p_t - p_0)$. With drift acting alone, the variance in allele frequency change serves
 as a measure of the rate of drift.
-</aside>
+{{< /aside >}}
 
 One of Sewall Wright's ingenious ideas was to recognize that many different
 breeding structures we might see in nature (e.g. organisms capable of
@@ -231,12 +224,12 @@ change due to drift, \(G\).
 </figcaption>
 </figure>
 
-<aside>
+{{< aside >}}
 <sup>2</sup> 
 This is defined as the sum of the covariances terms (only non-zero in
 the presence of linked selection) divided by the total variance:
 $G = \frac{\sum_{i \ne j} \text{cov}(\Delta p_i, \Delta p_j)}{\text{Var}(p_t - p_0)}$.
-</aside>
+{{< /aside >}}
 
 In Buffalo and Coop
 ([2019](https://www.pnas.org/content/early/2020/08/07/1919039117/)), we
@@ -337,7 +330,7 @@ found that at least 37% of the total variation in allele frequency change was
 *shared* between replicates, which is a pretty sizable proportion considering
 these lab populations are rather small and strongly affected by genetic drift.
 
-<aside> 
+{{< aside >}} 
 <sup>3</sup>
 While Buffalo and Coop (2019) provides us with a theoretic
 understanding of what determines the strength of temporal covariance, we have
@@ -347,7 +340,7 @@ of each replicate population and the genetic architecture of fitness both
 strongly affected the strength of the convergence correlation (see Section S8.3
 and Figure S12 in [the
 Appendix](http://pnas.org/content/pnas/suppl/2020/08/07/1919039117.DCSupplemental/pnas.1919039117.sapp.pdf)).
-</aside>
+{{< /aside >}}
 
 The second study is Longshanks selection experiment of Castro *et al.*
 ([2019](https://elifesciences.org/articles/42014), see also [Marchini *et al.*
@@ -405,10 +398,10 @@ shared selection pressures and the remaining 14% is due to unique selection
 pressures or associations unique to a particular replicate
 population<sup>3</sup>.
 
-<aside>
+{{< aside >}}
 <sup>3</sup>
 I've rounded the numbers here, which is why they don't quite add up to 32%
-</aside>
+{{< /aside >}}
 
 ## Shifts in Temporal Covariance
 

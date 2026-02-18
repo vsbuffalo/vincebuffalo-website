@@ -9,7 +9,7 @@ aliases:
 I'm Vince Buffalo, a Senior Research Scientist at the [Institute for Disease
 Modeling](https://www.idmod.org/) at the Gates Foundation, where I work on
 computational epidemiology, infectious disease modeling, and scientific
-software.
+software. *Views expressed here are my own.*
 
 My path here was circuitous: I started in economics, political science, and
 statistics, got pulled into bioinformatics, landed in population genetics, and

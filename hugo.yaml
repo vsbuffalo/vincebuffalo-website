@@ -132,7 +132,7 @@ params:
       displayPagination: true
   
   toc:
-    displayTags: true
+    displayTags: false
   
   highlight:
     copy:

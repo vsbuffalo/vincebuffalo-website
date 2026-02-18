@@ -8,13 +8,7 @@ images: ["/images/diversity_popsize_full.png"]
 summary: "The Great Obsession of population geneticists, to borrow John Gillespie's words, is genetic variation. As an evolutionary biologist, it's rather hard to not be obsessed with genetic variation, for it's the ultimate source of the two most striking features of life on earth: the mind-boggling diversity of species, and adaptations so utterly clever they look as though they were assembled by a designer. Both life's dizzying diversity and cunning adaptations are the result of evolutionary processes like natural selection and numerous historical accidents, overlaid on one another..."
 aliases:
   - /blog/2021/09/01/why-do-species-get-a-thin-slice-of-pi-revisiting-lewontins-paradox-of-variation.html
---- 
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@vsbuffalo" />
-<meta name="twitter:title" content="Why Do Species Get a Thin Slice of π? Revisiting Lewontin's Paradox of Variation" />
-<meta name="twitter:description" content="An overview of Buffalo (2021)." />
-<meta name="twitter:image" content="https://vincebuffalo.com/images/diversity_popsize_full.png" />
+---
 
 The Great Obsession of population geneticists, to borrow John Gillespie's
 words, is genetic variation. As an evolutionary biologist, it's rather hard to
@@ -127,7 +121,7 @@ processes are compatible with the observed levels of genetic variation?
 
 ## The Evolutionary Theories Killed by Measuring Genetic Variation
 
-<aside>
+{{< aside >}}
 <sup>1</sup> This is how Lewontin himself sets up the problem in his 
 book <em>The Genetic Basis of Evolutionary Change</em>.
 <br/>
@@ -144,7 +138,7 @@ problem when he attacked the concept of a wild type."
  <sup>3</sup> For example, one observation that was at odds with the balance
  theory was the observed rate of inbreeding depression was far too slow 
  if most fitness variation was maintained by overdominance.
-</aside>
+{{< /aside >}}
 
 Before I introduce Lewontin's Paradox of Variation and the neutral theory, it's
 worthwhile to set the stage with the theories of genetic variability that
@@ -224,10 +218,10 @@ $$
 \pi = \frac{4N\mu}{1 + 4 N \mu}
 $$
 
-<aside>
+{{< aside >}}
  <sup>4</sup> This looks a bit different than the equation $\pi \approx 4N\mu$ above
  but that's because $4N\mu$ is usually small, so $1 + 4N\mu \approx 1$.
-</aside>
+{{< /aside >}}
 
 However, the range of genetic variability across species was surprisingly
 narrow. Lewontin lays out why this is a problem visually in his book:
@@ -268,14 +262,14 @@ and colleagues published a survey of estimates of protein heterozygosities for
 1,111 different species, finding that heterozygosity ranges only from 0% to
 30%:<sup>5</sup>
 
-<aside>
+{{< aside >}}
  <sup>5</sup> 
   I first heard of this paper in 
   <a href="https://youtu.be/y0VjObP1lBA?t=1648">this nice lecture by Monty Slatkin</a>
   on the history of population genetics. Midway through, Monty shows the
   heterozygosity figure from Nevo et al. (1984) to introduce Lewontin's
   Paradox. This was the first time I'd heard of the Paradox of Variation.
-</aside>
+{{< /aside >}}
 
 <figure>
 <img src="/new/images/nevo.png" width="460" class="img-responsive"/>
@@ -297,12 +291,12 @@ but especially so in Britain, where a cultural that treasured naturalism and
 adaptive storytelling fostered the conviction that *every* genetic variant must
 have *some* adaptive benefit.<sup>6</sup> As Maynard Smith described,
 
-<aside>
+{{< aside >}}
  <sup>6</sup> Marek Kohn's book [<em>A Reason for
  Everything</em>](https://www.abebooks.com/Reason-Everything-Marek-Kohn-Faber/30463535450/bd) 
  is a lovely history of evolutionary biology and the British tradition of 
  naturalism.
-</aside>
+{{< /aside >}}
 
 > The whole tradition of British population biology had
 been, if you find a genetic variability, it must have some kind of selective
@@ -414,12 +408,12 @@ requires adjusting $N$; specifically, we use an effective population size
 $N_e$. In this case, it works out that the adjusted $N_e \approx
 4$.<sup>7</sup>
 
-<aside>
+{{< aside >}}
 <sup>7</sup>
 The equation for effective population size for different numbers of males and females
 is $N_e = 4N_m N_f / (N_m + N_f)$ where $N_f$ and $N_m$ are the number of  female and
 males respectively.
-</aside>
+{{< /aside >}}
 
 Importantly, effective population also depends on population bottlenecks. If
 instead of the male despot crab, the island goes 99 generations undisturbed,
@@ -523,14 +517,14 @@ observe.
 
 ## Estimating Census Population Sizes
 
-<aside>
+{{< aside >}}
 <sup>8</sup> I should point out here that my paper is entitled *Quantifying the
 relationship between genetic diversity and population size suggests natural
 selection cannot explain Lewontin’s Paradox*. eLife has some restrictions on
 titles that forced me to change it from the original [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.02.03.429633v1) title (I think the only
 clever title I've ever come up with): *Why do species get a thin slice of π?
 Revisiting Lewontin’s Paradox of Variation*.
-</aside>
+{{< /aside >}}
 
 
 This brings us to [my recent paper in
@@ -624,13 +618,13 @@ study of [Bar-On et al. (2018)](https://www.pnas.org/content/115/25/6506). I
 also do lots of other consistency checks in [*Appendix
 3*](https://elifesciences.org/articles/67509#appendix-3).<sup>9</sup>
 
-<aside>
+{{< aside >}}
 <sup>9</sup>
 I am especially thankful to reviewer Guy Sella, who suspected my early fruitfly population
 sizes were a tad too large; indeed, after lots of sleuthing, I found that
 macroecologists like Damuth (1987) apply a correction to animals that do not
 regulate their body temperature that I did not apply in earlier versions.
-</aside>
+{{< /aside >}}
 
 ## The Relationship Between Genetic Diversity and Population Size
 
@@ -723,7 +717,7 @@ of this shared ancestry. In his 1991 book, he has the following figure:
   </figcaption>
 </figure>
 
-<aside>
+{{< aside >}}
   <sup>10</sup> I should note here that Phylogenetic Comparative Methods were far
   outside my area of expertise at the onset of this project, and I'm eternally
   grateful to a few folks for helping me. [Josef
@@ -734,7 +728,7 @@ of this shared ancestry. In his 1991 book, he has the following figure:
   Pennell](https://mwpennell.ca/) reviewed my article and provided helpful
   feedback on these methods and how best to present them. My paper is much
   stronger thanks to their help.
-</aside>
+{{< /aside >}}
 
 While some previous work has addressed this statistical quandary in clever
 ways, it's been limited by the difficulty of building big species phylogenetic
@@ -878,13 +872,13 @@ disciplines.
   </figcaption>
 </figure>
 
-<aside> <sup>11</sup> I should note that it's a funny coincidence that Lewontin
+{{< aside >}} <sup>11</sup> I should note that it's a funny coincidence that Lewontin
 was particularly opposed to putting his name on his student's or postdoc's
 papers unless he had a substantial role, as Jerry Coyne points out in his
 article.  I did this work at UO thanks to the encouragement of my advisor [Andy
 Kern](https://kr-colab.github.io/), who, perhaps channeling  Lewontin,
 supported me during this independent work and let me publish it alone. I owe a
-debt of gratitude to Andy for this!  </aside>
+debt of gratitude to Andy for this!  {{< /aside >}}
 
 
 

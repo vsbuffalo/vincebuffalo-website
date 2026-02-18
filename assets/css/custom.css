@@ -163,6 +163,22 @@ html.dark pre code {
   background: transparent !important;
 }
 
+/* TOC styling */
+.hextra-toc,
+.hextra-toc * {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.hextra-toc {
+  background: var(--bg) !important;
+}
+
+html.dark .hextra-toc {
+  background: #181818 !important;
+}
+
 html.dark :not(pre) > code {
   background: #2a2a2a !important;
 }
@@ -584,6 +600,10 @@ aside:not(.sidebar-container):not(.book-covers) a {
 }
 
 .post-meta time {
+  color: var(--text-light);
+}
+
+.reading-time {
   color: var(--text-light);
 }
 
