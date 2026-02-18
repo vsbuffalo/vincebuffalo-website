@@ -9,13 +9,13 @@ aliases:
 
 During my time as a bioinformatician at the UC Davis Genome Center and in the Dubcovsky and Ross-Ibarra labs, I found very few books taught the data skills I relied on most in my day-to-day bioinformatics work. Furthermore, texts didn't emphasize scientific computing best practices alongside teaching technical skills.
 
-*Bioinformatics Data Skills* (published by O'Reilly Media in July 2015) is my book that seeks to fill this role.
+*Bioinformatics Data Skills* (published by O'Reilly Media in July 2015 and now one of the most popular books in the field) is my book that seeks to fill this role.
 
-You can purchase *Bioinformatics Data Skills* directly from [O'Reilly](http://shop.oreilly.com/product/0636920030157.do), from an independent bookstore like [Powell's City of Books](http://www.powells.com/book/bioinformatics-data-skills-reproducible-robust-research-with-open-source-tools-9781449367374), or [Amazon.com](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/).
+You can purchase *Bioinformatics Data Skills* from an independent bookstore like [Powell's City of Books](http://www.powells.com/book/bioinformatics-data-skills-reproducible-robust-research-with-open-source-tools-9781449367374) or [Amazon.com](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/).
 
 ## Praise
 
-Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [O'Reilly's site](http://shop.oreilly.com/product/0636920030157.do) (4.8/5 stars, 14 reviews), [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.30/5 stars, 44 ratings), and [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.4 stars, 47 reviews). You can also read the review written by the terrific [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog. If you'd like to share your review, tweet it, and ping me at [@vsbuffalo](https://twitter.com/vsbuffalo).
+Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.3/5 stars, 72 ratings), [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.6/5 stars, 136 ratings), and O'Reilly (4.8/5 stars, 14 reviews). You can also read the review written by the terrific [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog. If you'd like to share your review, tweet it, and ping me at [@vsbuffalo](https://twitter.com/vsbuffalo).
 
 > Have I said lately how wonderful @vsbuffalo's book is? "#Bioinformatics #Data Skills." Buy it. For real.
 >
@@ -59,7 +59,13 @@ Readers can submit and view errata for *Bioinformatics Data Skills* on [O'Reilly
 
 </div>
 <aside class="book-covers">
+<figure>
 <img src="/new/images/cover_bds.png" alt="Bioinformatics Data Skills">
+<figcaption>Bioinformatics Data Skills (O'Reilly, 2015)</figcaption>
+</figure>
+<figure>
 <img src="/new/images/bds_japanese.jpg" alt="Bioinformatics Data Skills (Japanese edition)">
+<figcaption>Japanese edition</figcaption>
+</figure>
 </aside>
 </div>

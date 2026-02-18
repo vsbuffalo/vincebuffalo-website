@@ -206,7 +206,7 @@ body {
 .content {
   max-width: 680px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 /* Wider layout for about and pubs pages */
@@ -226,6 +226,47 @@ body {
 .page-pubs,
 .page-papers {
   max-width: 800px;
+}
+
+/* Papers page: style like blog */
+.page-papers h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-papers h2:first-of-type {
+  margin-top: 1rem;
+}
+
+.page-papers .pub-card {
+  margin-bottom: 1.5rem;
+}
+
+.page-papers .pub-card .post-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.page-papers .pub-card .post-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.page-papers .pub-card .post-info .pub-citation {
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* Book page needs to be wide for side-by-side layout */
@@ -290,21 +331,55 @@ article.page .page-content {
   border: 1px solid var(--border);
 }
 
+.book-covers figure {
+  margin: 0;
+}
+
 @media (max-width: 800px) {
   .book-page {
     flex-direction: column;
+    margin-top: 0;
+    gap: 1rem;
+    align-items: center;
   }
 
   .book-covers {
     flex-direction: row;
     position: static;
     justify-content: center;
+    align-items: flex-start;
     order: -1;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .book-covers figure {
+    width: 140px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .book-covers img {
-    width: 180px;
+    width: 140px !important;
+    height: auto !important;
+    max-height: 200px;
+    object-fit: contain !important;
+  }
+
+  .book-covers figcaption {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* Reduce top padding on book page mobile */
+  article.page-book .page-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .book-content {
+    width: 100%;
   }
 }
 
@@ -500,7 +575,13 @@ aside:not(.sidebar-container):not(.book-covers) a {
 
 .archive-description {
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+/* First year header after description - tighter spacing */
+.blog-archive .year-header:first-of-type {
+  margin-top: 1rem;
 }
 
 .year-header {
@@ -747,8 +828,14 @@ footer > div {
 .footer-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.25rem;
   margin-top: 0.75rem;
+}
+
+.footer-icons .theme-toggle {
+  display: flex;
+  align-items: center;
 }
 
 .footer-icons a {

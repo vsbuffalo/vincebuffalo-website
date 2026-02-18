@@ -1,11 +1,13 @@
 {{- $thumb := .Get "thumb" -}}
 {{- $blog := .Get "blog" -}}
-<div class="post-card">
+<article class="post-card pub-card">
   {{- with $thumb }}
-  <div class="pub-thumb" style="background-image: url('{{ strings.TrimPrefix "/" . | relURL }}')"></div>
+  <div class="post-image">
+    <img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">
+  </div>
   {{- end }}
   <div class="post-info">
-    <p>{{ .Inner | markdownify }}
+    <p class="pub-citation">{{ .Inner | markdownify }}
     {{- with $blog }} <a href="{{ strings.TrimPrefix "/" . | relURL }}">[blog post]</a>{{ end }}</p>
   </div>
-</div>
+</article>

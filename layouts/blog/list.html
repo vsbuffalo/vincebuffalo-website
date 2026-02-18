@@ -1,6 +1,5 @@
 {{ define "main" }}
 <div class="blog-archive">
-  <h1>{{ .Title }}</h1>
   {{ with .Content }}<div class="archive-description">{{ . }}</div>{{ end }}
 
   {{ $posts := .Pages.ByDate.Reverse }}

@@ -1,8 +1,10 @@
 {{ define "main" }}
 <article class="page page-{{ .File.ContentBaseName | urlize }}">
+  {{ if not .Params.hide_title }}
   <header class="page-header">
     <h1 class="page-title">{{ .Title }}</h1>
   </header>
+  {{ end }}
 
   <div class="page-content content">
     {{ .Content }}
