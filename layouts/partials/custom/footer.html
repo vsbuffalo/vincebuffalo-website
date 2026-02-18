@@ -1,5 +1,5 @@
 <div class="custom-footer-copyright">
-  &copy; 2012&ndash;{{ now.Year }} Vince Buffalo
+  &copy; 2012&ndash;{{ now.Year }} Vince Buffalo &middot; Views expressed here are my own
   <div class="footer-icons">
     <a href="https://github.com/vsbuffalo" title="GitHub">
       {{ partial "utils/icon.html" (dict "name" "github" "attributes" "height=20") }}
@@ -14,6 +14,6 @@
       {{ partial "utils/icon.html" (dict "name" "rss" "attributes" "height=20") }}
     </a>
     <span class="footer-divider">|</span>
-    {{ partial "theme-toggle.html" }}
+    {{ partial "theme-toggle.html" (dict "hideLabel" true) }}
   </div>
 </div>
