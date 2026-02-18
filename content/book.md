@@ -15,7 +15,11 @@ You can purchase *Bioinformatics Data Skills* directly from [O'Reilly](http://sh
 
 ## Praise
 
-Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [O'Reilly's site](http://shop.oreilly.com/product/0636920030157.do) (4.8/5 stars, 14 reviews), [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.30/5 stars, 44 ratings), and [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.4 stars, 47 reviews). You can also read the review written by the terrific [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog.
+Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [O'Reilly's site](http://shop.oreilly.com/product/0636920030157.do) (4.8/5 stars, 14 reviews), [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.30/5 stars, 44 ratings), and [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.4 stars, 47 reviews). You can also read the review written by the terrific [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog. If you'd like to share your review, tweet it, and ping me at [@vsbuffalo](https://twitter.com/vsbuffalo).
+
+> Have I said lately how wonderful @vsbuffalo's book is? "#Bioinformatics #Data Skills." Buy it. For real.
+>
+> — Sean Leonard ([@spleonard1](https://twitter.com/spleonard1/status/681763806893064196)), December 2015
 
 > I wish this book was available two years ago when I first started my graduate studies - It literally could have saved me a year.
 >
@@ -28,6 +32,18 @@ Below are some quotes from reviews of *Bioinformatics Data Skills*. Other review
 > I have been programming in a UNIX environment for 26 years, and a leader in bioinformatics since I entered the field in 1998, and was surprised to find that I was able to learn useful tips and tricks in nearly every chapter.
 >
 > — KATS, *review on O'Reilly.com*
+
+> This is literally "must read" for bioinformaticians. It teaches skills which will always be required, whatever software tools and technologies are around in 10 years.
+>
+> — Alex Ishkin, *[review on Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills)*
+
+> This is my new "go to" recommendation for people looking to get into the field.
+>
+> — Philipp, *[review on Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills)*
+
+> Very good book. And 85% of it will be just as relevant in ten years, which is an achievement.
+>
+> — Endre Bakken Stovner, *[Biostars](https://www.biostars.org/p/153594/)*
 
 ## Audience
 

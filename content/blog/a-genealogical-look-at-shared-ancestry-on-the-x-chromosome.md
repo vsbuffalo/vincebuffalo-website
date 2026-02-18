@@ -80,14 +80,14 @@ probability model. Finally, we'll look at what we can learn about the
 relationships of individuals that share sections of their X chromosome due to
 sharing a recent common ancestor.
 
-<aside><sup>1</sup> For example, see Graham's posts [on how many genomic blocks
+{{< aside >}}<sup>1</sup> For example, see Graham's posts [on how many genomic blocks
 you share with a
 cousin](http://gcbias.org/2013/12/02/how-many-genomic-blocks-do-you-share-with-a-cousin/),
 [how your number of genetic ancestors grows back in
 time](https://gcbias.org/2013/11/11/how-does-your-number-of-genetic-ancestors-grow-back-over-time/),
 and [how much of your genome is inherited from a particular
 ancestor](https://gcbias.org/2013/11/04/how-much-of-your-genome-do-you-inherit-from-a-particular-ancestor/)
-</aside>
+{{< /aside >}}
 
 ## Genealogies
 
@@ -113,13 +113,13 @@ distinct.<sup>2</sup> While pedigree collapse definitely occurs, throughout the
 rest of this blog post (and in our paper) we ignore it, as we model ancestry
 that's recent enough where pedigree collapse isn't a large problem.
 
-<aside> <sup>2</sup> Some beautiful probability theory by Chang (1999) has
+{{< aside >}} <sup>2</sup> Some beautiful probability theory by Chang (1999) has
 shown that the **most recent common ancestor** (the ancestor from which all
 current individuals in the population descend from) of a population of size *N*
 lived $T_N = \log_2(N)$ generations ago. Furthermore, rather amazingly, any
 individual $1.77 \log_2(N)$ generations ago that has *any* present-day
 descendents is actually (with very high probability) ancestors of *all* modern
-day individuals.</aside>
+day individuals.{{< /aside >}}
 
 ## Genetic Ancestry
 
@@ -153,8 +153,8 @@ marbles are connected by string that is cut and reattached (much like Morgan
 envisioned in his illustration)—leading recent ancestry to be blocky and
 segmented.
 
-<aside><sup>3</sup> One crossover per chromosome occurs to ensure proper
-disjunction during meiosis.</aside>
+{{< aside >}}<sup>3</sup> One crossover per chromosome occurs to ensure proper
+disjunction during meiosis.{{< /aside >}}
 
 Currently, there are computational methods (e.g. Browning and Browning, 2011)
 that take polymorphism datasets and using probabilistic models, identify large
@@ -170,7 +170,7 @@ mathematical details are rather complex (leading to fun conceptualizations like
 "a random walk on a hypercube"), but the underlying model can be simplified
 considerably.
 
-<aside><sup>4</sup> These shared blocks are due to recent ancestry; over long
+{{< aside >}}<sup>4</sup> These shared blocks are due to recent ancestry; over long
 periods of time the genome is eventually broken up into pieces that reflect
 only very distant ancestry.  
 
@@ -180,7 +180,7 @@ particularly elegant empirical demonstration of this fact comes from [Ralph and
 Coop
 (2013)](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001555).
 
-</aside>
+{{< /aside >}}
 
 Each generation, we can imagine that a random number $B$ of crossovers breaks
 the 22 human autosome, creating $B+22$ segments. As in Morgan's original
@@ -205,10 +205,10 @@ can be incorporated directly into the Poisson process by changing it's rate.
 Then, the expected number of segments $N$ shared between you and your ancestor
 in the <em>k<sup>th</sup></em> generation is:
 
-<aside> <sup>5</sup> The Poisson distribution, among it's many other uses, was
+{{< aside >}} <sup>5</sup> The Poisson distribution, among it's many other uses, was
 used to [famously model](https://en.wikipedia.org/wiki/Ladislaus_Bortkiewicz)
 the number of fatalities of Prussian soldiers due to horse kicks in the face.
-</aside>
+{{< /aside >}}
 
 $$\mathbb{E}[N] = \frac{1}{2^k}(22 + 33k)$$
 
@@ -225,12 +225,12 @@ not a genetic ancestor) and calculate the distribution of segment lengths.
 Additionally, these models can be easily extended to handle the segments shared
 between cousins.
 
-<aside> <sup>6</sup> In our paper, we end up finding a model closely related to
+{{< aside >}} <sup>6</sup> In our paper, we end up finding a model closely related to
 the thinned Poisson process is more accurate. We call this the Poisson-Binomial
 model; to keep this blog post simple, I don't discuss in detail here.
 Essentially, it's identical to the Poisson model, but the probability $N$
 segments survive given $b+22$ trials is Binomially distributed with probability
-<em>½<sup>k</sup></em>.</aside>
+<em>½<sup>k</sup></em>.{{< /aside >}}
 
 What's fascinating about this is that your may not share genetic material with
 your genealogical ancestors. If you play around with the equation above with
