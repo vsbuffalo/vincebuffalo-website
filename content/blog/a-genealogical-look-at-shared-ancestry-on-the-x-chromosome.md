@@ -426,9 +426,9 @@ genealogical relationships connecting us all.
 
 
 <!-- requisite JS below -->
-<script src="/new/js/d3.v3.min.js" charset="utf-8"></script>
-<script src="/new/js/familyarc.js" type="text/javascript" charset="utf-8"></script>
-<script src="/new/js/sharedsegments2.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/d3.v3.min.js" charset="utf-8"></script>
+<script src="/js/familyarc.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/sharedsegments2.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   
   var human_x = {
@@ -446,7 +446,7 @@ genealogical relationships connecting us all.
   }
 
 
-    d3.json("/new/js/x.json", function(data) {
+    d3.json("/js/x.json", function(data) {
       var config = single_chrom;
       config.genlen = data.genlen;
       if (data.type == 'x') {

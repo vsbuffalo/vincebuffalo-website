@@ -13,7 +13,7 @@ During my time as a bioinformatician at the UC Davis Genome Center and in the Du
 
 You can purchase *Bioinformatics Data Skills* from an independent bookstore like [Powell's City of Books](http://www.powells.com/book/bioinformatics-data-skills-reproducible-robust-research-with-open-source-tools-9781449367374) or [Amazon.com](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/).
 
-## Praise
+## Reviews
 
 Below are some quotes from reviews of *Bioinformatics Data Skills*. Other reviews are available at [Goodreads](https://www.goodreads.com/book/show/20578307-bioinformatics-data-skills) (4.3/5 stars, 72 ratings), [Amazon](http://www.amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372/) (4.6/5 stars, 136 ratings), and O'Reilly (4.8/5 stars, 14 reviews). You can also read the review written by the terrific [Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) blog. If you'd like to share your review, tweet it, and ping me at [@vsbuffalo](https://twitter.com/vsbuffalo).
 
@@ -60,11 +60,11 @@ Readers can submit and view errata for *Bioinformatics Data Skills* on [O'Reilly
 </div>
 <aside class="book-covers">
 <figure>
-<img src="/new/images/cover_bds.png" alt="Bioinformatics Data Skills">
+<img src="/images/cover_bds.png" alt="Bioinformatics Data Skills">
 <figcaption>Bioinformatics Data Skills (O'Reilly, 2015)</figcaption>
 </figure>
 <figure>
-<img src="/new/images/bds_japanese.jpg" alt="Bioinformatics Data Skills (Japanese edition)">
+<img src="/images/bds_japanese.jpg" alt="Bioinformatics Data Skills (Japanese edition)">
 <figcaption>Japanese edition</figcaption>
 </figure>
 </aside>

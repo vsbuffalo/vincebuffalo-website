@@ -45,7 +45,7 @@ individuals from other species met their fate in the quest to measure
 variability.
 
 <figure>
-<img src="/new/images/lewontin_book.jpg" width="260" class="img-responsive"/>
+<img src="/images/lewontin_book.jpg" width="260" class="img-responsive"/>
   <figcaption>
   Richard Lewontin's seminal 1974 book, <em>The Genetic Basis of Evolutionary
   Change</em>. Source: <a href="https://upload.wikimedia.org/wikipedia/en/e/e2/The_Genetic_Basis_of_Evolutionary_Change.jpg">Wikipedia</a>.
@@ -84,7 +84,7 @@ variability, but this genetic variability is minuscule compared to what's
 created by free mating in a sexually-reproducing species.
 
 <figure>
-<img src="/new/images/hubby_lewontin.png" width="460" class="img-responsive"/>
+<img src="/images/hubby_lewontin.png" width="460" class="img-responsive"/>
   <figcaption>
     The gel electrophoresis of the esterase-5 gene in <em>Drosophila pseudoobscura</em>.
     Each bar is where a sample's protein ended up after being drawn through a thick
@@ -227,7 +227,7 @@ However, the range of genetic variability across species was surprisingly
 narrow. Lewontin lays out why this is a problem visually in his book:
 
 <figure>
-<img src="/new/images/lewontin_1974.jpg" width="460" class="img-responsive"/>
+<img src="/images/lewontin_1974.jpg" width="460" class="img-responsive"/>
   <figcaption>
   A figure from Lewontin's 1974 book <em>The Genetic Basis of Evolutionary Change</em>
   on the "Paradox of Variation" (p. 209). The curved line is the hypothetical
@@ -272,7 +272,7 @@ and colleagues published a survey of estimates of protein heterozygosities for
 {{< /aside >}}
 
 <figure>
-<img src="/new/images/nevo.png" width="460" class="img-responsive"/>
+<img src="/images/nevo.png" width="460" class="img-responsive"/>
   <figcaption>
   Figure 2c from Nevo et al. <em>The Evolutionary Significance of Genetic
   Diversity: Ecological, Demographic and Life History Correlates</em> (1984).
@@ -325,7 +325,7 @@ next generation.  Our genomes, after all, are exactly half of each our parents'
 genomes, but a random mosaic of our four grandparents' genomes.
 
 <figure>
-<img src="/new/images/film-splice.png" width="460" class="img-responsive"/>
+<img src="/images/film-splice.png" width="460" class="img-responsive"/>
   <figcaption>
   A Griswald Junior Film Splicer splicing together two bits of 16mm film (this still is from 
   <a href="https://www.youtube.com/watch?v=x7vrs67YDZI&t=281s">this short film</a>).
@@ -360,7 +360,7 @@ diversity is highest in high recombination regions, and lowest in low
 recombination region across the *Drosophila melanogaster* genome:
 
 <figure>
-<img src="/new/images/begun_aquadro.png" alt="Correlation between diversity and recombination in Drosophila" />
+<img src="/images/begun_aquadro.png" alt="Correlation between diversity and recombination in Drosophila" />
 <figcaption>
 The correlation between pairwise diversity (a measure of genetic variability)
 and recombination rate in <em>Drosophila melanogaster</em>, from <a href="https://www.nature.com/articles/356519a0">Begun and Aquadro (1992)</a>.
@@ -428,7 +428,7 @@ habitable land, procreate, but ultimately may die. These dynamics also decrease
 effective population size and capture the messy reality of many species.
 
 <figure>
-<img src="/new/images/hewitt_iceage.png" width="460" class="img-responsive"/>
+<img src="/images/hewitt_iceage.png" width="460" class="img-responsive"/>
   <figcaption>
 
   The earth looked very different over the last 20,000 years than it did today.
@@ -542,7 +542,7 @@ genetic diversity and population size. Early work from Soulé (1976), Frankham
 early protein heterozygosity data:
 
 <figure>
-<img src="/new/images/frankham_soule_nei_graur.png" width="660" class="img-responsive"/>
+<img src="/images/frankham_soule_nei_graur.png" width="660" class="img-responsive"/>
   <figcaption>
   (A) Frankham (1996) using the data of Soulé (1976), and (B) Nei and Graur
   (1984). The solid line is neutral expectation if the mutation rate is \(\mu = 10^{-7}\).
@@ -570,7 +570,7 @@ population densities are surprisingly well correlated with body mass. Damuth
 supplement 1](https://elifesciences.org/articles/67509#fig1s1)):
 
 <figure>
-<img src="/new/images/damuth.png" width="560" class="img-responsive"/>
+<img src="/images/damuth.png" width="560" class="img-responsive"/>
   <figcaption>
   The relationship between population density and population body mass from Damuth's 
   1987 data.
@@ -591,7 +591,7 @@ then wrote some R code to automatically infer the ranges from this occurrence
 data. 
 
 <figure>
-<img src="/new/images/apis_mellifera.png" width="660" class="img-responsive"/>
+<img src="/images/apis_mellifera.png" width="660" class="img-responsive"/>
   <figcaption>
   The GBIF occurrence data (red points) and inferred range (green polygons) of
   the common honeybee (<em>Apis mellifera</em>). This shows some of the limitation of
@@ -635,7 +635,7 @@ Variation, through the relationship between genetic diversity and population
 size:
 
 <figure id="figure-2">
-<img src="/new/images/diversity_popsize_full.png" width="860" class="img-responsive"/>
+<img src="/images/diversity_popsize_full.png" width="860" class="img-responsive"/>
   <figcaption>
   The relationship between genetic diversity (\(\pi\)) and approximate population
   size (\(N_c\)) for 172 animal species. Note that genetic diversity varies just
@@ -661,7 +661,7 @@ population sizes and neutral evolution determined genetic diversity.
 ## Is the Diversity--Population-Size relationship meaningful?
 
 <figure>
-<img src="/new/images/darwin_i_think.png" width="560" class="img-responsive"/>
+<img src="/images/darwin_i_think.png" width="560" class="img-responsive"/>
   <figcaption>
   Darwin's sketch of a phylogenetic tree in his <em>First Notebook on
   Transmutation of Species</em>, 1837. Source: <a href="https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png">Wikimedia commons</a>.
@@ -709,7 +709,7 @@ diversity--population-size relationship may be *entirely* a spurious artifact
 of this shared ancestry. In his 1991 book, he has the following figure:
 
 <figure>
-<img src="/new/images/gillespie.png" width="460" class="img-responsive"/>
+<img src="/images/gillespie.png" width="460" class="img-responsive"/>
   <figcaption>
   John Gillespie suspected that the relationship between population size and
   genetic diversity found by Nei and Graur (1984) could be entirely an artifact
@@ -744,7 +744,7 @@ well-predicted by range and body mass (see [Supplementary Figure 2--figure
 supplement 3](https://elifesciences.org/articles/67509#fig2s3).
 
 <figure>
-<img src="/new/images/diversity_pcm.png" width="560" class="img-responsive"/>
+<img src="/images/diversity_pcm.png" width="560" class="img-responsive"/>
   <figcaption>
   The estimated ancestral population sizes and diversity levels across species (colors), 
   overlaid on the phylogenetic tree of all species for which data was available.
@@ -795,7 +795,7 @@ population sizes (such as fruitflies) typically have less recombination
 humans). I show this in Figure A below:
 
 <figure id="figure-3">
-<img src="/new/images/figure_3.png" width="860" class="img-responsive"/>
+<img src="/images/figure_3.png" width="860" class="img-responsive"/>
   <figcaption>
 
   (A) The relationship between recombination map length and population sizes.
@@ -864,7 +864,7 @@ the explanation requires synthesis and model building at so many different
 disciplines.
 
 <figure>
-<img src="/new/images/lewontin_chalkboard.jpeg" width="560" class="img-responsive"/>
+<img src="/images/lewontin_chalkboard.jpeg" width="560" class="img-responsive"/>
   <figcaption>
   Richard Lewontin at the chalkboard. It looks like he's explaining
   the interaction---and inseparability---of genotype and environment.

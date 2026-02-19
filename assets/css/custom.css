@@ -248,14 +248,19 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.page-papers .pub-card {
+  flex-direction: column;
+}
+
 .page-papers .pub-card .post-image {
   width: 100%;
+  max-width: 500px;
   height: auto;
   max-height: 300px;
   overflow: hidden;
   border-radius: 4px;
   border: 1px solid var(--border);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .page-papers .pub-card .post-image img {
@@ -326,7 +331,8 @@ article.page .page-content {
 }
 
 .book-covers img {
-  width: 250px;
+  width: auto;
+  height: 330px;
   border-radius: 4px;
   border: 1px solid var(--border);
 }
@@ -362,10 +368,8 @@ article.page .page-content {
   }
 
   .book-covers img {
-    width: 140px !important;
-    height: auto !important;
-    max-height: 200px;
-    object-fit: contain !important;
+    width: auto !important;
+    height: 185px !important;
   }
 
   .book-covers figcaption {

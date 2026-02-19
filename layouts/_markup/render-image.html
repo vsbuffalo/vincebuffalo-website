@@ -1,0 +1,5 @@
+{{- $url := .Destination -}}
+{{- if strings.HasPrefix $url "/" -}}
+{{- $url = $url | relURL -}}
+{{- end -}}
+<img src="{{ $url }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} data-custom-hook="true" />

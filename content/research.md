@@ -8,7 +8,7 @@ aliases:
 ## Across-species Population Genetics and Lewontin's Paradox of Variation
 
 <figure>
-<img src="/new/images/diversity_popsize_full.png" alt="Lewontin's Paradox of Variation" />
+<img src="/images/diversity_popsize_full.png" alt="Lewontin's Paradox of Variation" />
 <figcaption>
 
 A visualization of Lewontin's Paradox of Variation. This combines pairwise diversity estimates from Leffler et al. (2012), Corbett-Detig et al. (2015), and Romiguier et al. (2014) with census population sizes I've estimated using inferred range sizes and population densities estimated using macroecological scaling relationships. The gray ribbon illustrates genetic diversity under a neutral model were effective population size to equal census population size (\(N_e = N_c\)), for mutation rates ranging from \(1\times10^{-8}-1\times10^{-9}\). The gray dashed line is the ordinary least squares estimate, and the blue dashed line is the estimated relationship after accounting for phylogeny using mixed-effects models.
@@ -19,7 +19,7 @@ A visualization of Lewontin's Paradox of Variation. This combines pairwise diver
 ## Detecting Polygenic Adaptation From Temporal Genomic Data
 
 <figure>
-<img src="/new/images/rapidadapt_examples.png" alt="Rapid adaptation examples" />
+<img src="/images/rapidadapt_examples.png" alt="Rapid adaptation examples" />
 <figcaption>
 
 Two motivating examples of rapid phenotypic adaptation from the literature. Left, PC1 of beak size in Darwin's finches shifts rapidly and unpredictably due to selection responding to changing environments, from [Grant and Grant (2002)](https://science.sciencemag.org/content/296/5568/707). Right, a rapid shift in flowering time in *Brassica rapa* after a multiyear drought across wet and dry sites, from [Franks, Sim, and Weis (2007)](https://www.pnas.org/content/104/4/1278). A central aim of my research is detecting the signal of such rapid phenotypic shifts in genomic data, and understanding how it impacts genetic variation in the genome.
@@ -36,7 +36,7 @@ During my PhD, I became fascinated by the problem of detecting rapid polygenic<s
 In my PhD work, Graham Coop and I show that temporal genomic data (allele frequencies sampled from a population over many generations) provides a way to detect polygenic adaptation over very short timescales. The signal we use is that a neutral allele (i.e. an allele that does not directly affect fitness) behaves differently through time when selection is present. In particular, the allele frequency changes each generation (e.g. \(\Delta p_0 = p_1 - p_0, \Delta p_1 = p_2 - p_0, \) etc.) under drift are independent, and consequently the covariance between allele frequency changes (e.g. \(\text{cov}(\Delta p_t, \Delta p_s)\)) is expected to be zero. However, when heritable fitness variation exists in the population, this creates covariances in allele frequency changes that we can directly measure from genomic data. We call this **temporal autocovariance**. In our *Genetics* paper, *[The Linked Selection Signature of Rapid Adaptation in Temporal Genomic Data](https://www.genetics.org/content/213/3/1007)* we work out mathematical expressions for its strength and show how we can estimate additive genetic variance for fitness using measured levels of temporal autocovariance.
 
 <figure>
-<img src="/new/images/sim-pred-covs-varyl-alt.png" alt="Simulation results" />
+<img src="/images/sim-pred-covs-varyl-alt.png" alt="Simulation results" />
 <figcaption>
 
 Simulation results (points) show that our mathematical expressions for temporal autocovariance (lines) match closely. Additionally, the level of temporal autocovariance is a function of the total additive genetic variance in a region, and is invariant with respect to the number of loci (different colors). Since we currently lack mathematical models of the additive variance through time, we have used the different measures of this variation over time from the simulations to predict the level of temporal autocovariance (these are the different lines); more detail can be found in our manuscript.
@@ -54,7 +54,7 @@ In addition to allowing us to detect polygenic adaptation from temporal genomic 
 In a second paper, published in [PNAS](https://www.pnas.org/content/early/2020/08/07/1919039117/), we apply these ideas to three published temporal genomic datasets. We find extensive evidence in three studies that linked selection effects genome-wide allele frequencies over short timescales. Overall we estimate that at least 17% to 37% of allele frequency change is driven by selection in these experiments (using our measure **G** mentioned earlier). Results from a reanalysis of one of these studies is shown below:
 
 <figure>
-<img src="/new/images/figure-1.png" alt="Barghi et al. reanalysis" />
+<img src="/images/figure-1.png" alt="Barghi et al. reanalysis" />
 <figcaption>
 
 In one study we re-analyzed, [Barghi et al. (2019)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000128), we find that temporal autocovariances decay through time as our theory predicts (due to the effect of decreasing associated fitness variation and recombination shuffling genetic backgrounds), shown here in Figure A, which plots the rows of the temporal variance-covariance matrix (shown on the right). In Figure B, we show our measure **G**, the cumulative effects of linked selection on the proportion of total variation due to linked selection (schematic shown on bottom right).
@@ -69,7 +69,7 @@ Overall, this work begins to address two long-standing problems in evolutionary 
 ## X Chromosome Genealogies
 
 <figure>
-<img src="/new/images/x-arc.png" alt="X chromosome genealogy simulation" />
+<img src="/images/x-arc.png" alt="X chromosome genealogy simulation" />
 <figcaption>
 
 One simulation of an X-genealogy 10 generations back. Gray indicates genealogical ancestors that are not X ancestors, blue indicates male ancestors, red indicates female ancestors, and white indicates genealogical X ancestors that do not share genetic material with the present day individual. The transparency of the red and blue arcs is proportional to the genetic material shared that X ancestor and the present-day individual.
@@ -84,7 +84,7 @@ During summer 2015, Graham, [Steve Mount](http://www.clfs.umd.edu/labs/mount/), 
 </aside>
 
 <figure>
-<img src="/new/images/tree.png" alt="X chromosome blocks shared between ancestors" />
+<img src="/images/tree.png" alt="X chromosome blocks shared between ancestors" />
 <figcaption>
 X chromosome blocks shared between a present-day individual and their ancestors.
 </figcaption>

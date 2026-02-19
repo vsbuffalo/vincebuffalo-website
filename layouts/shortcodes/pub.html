@@ -1,9 +1,12 @@
 {{- $thumb := .Get "thumb" -}}
 {{- $blog := .Get "blog" -}}
+{{- $link := .Get "link" -}}
 <article class="post-card pub-card">
   {{- with $thumb }}
   <div class="post-image">
-    <img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">
+    {{- with $link }}<a href="{{ . }}">{{ end -}}
+    <img src="{{ strings.TrimPrefix "/" $thumb | relURL }}" alt="" loading="lazy">
+    {{- with $link }}</a>{{ end -}}
   </div>
   {{- end }}
   <div class="post-info">

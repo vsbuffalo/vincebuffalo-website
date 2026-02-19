@@ -11,7 +11,7 @@ summary: "Snakemake automates the tedious task of re-running data processing pip
 ---
 
 <figure>
-<img src="/new/images/snake_small.svg" alt="Heraldic snake symbol" />
+<img src="/images/snake_small.svg" alt="Heraldic snake symbol" />
 <figcaption>
 Heraldic snake from Flickr (CC Licensed).
 </figcaption>

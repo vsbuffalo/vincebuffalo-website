@@ -5,7 +5,7 @@ aliases:
   - /about/
 ---
 
-<img src="/new/images/tidepooling_selfie.png" alt="Vince Buffalo" class="about-photo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 300px; border-radius: 8px;">
+<img src="/images/tidepooling_selfie.png" alt="Vince Buffalo" class="about-photo" style="float: right; margin-left: 1.5em; margin-bottom: 1em; width: 300px; border-radius: 8px;">
 
 I'm Vince Buffalo, a Senior Research Scientist at the [Institute for Disease
 Modeling](https://www.idmod.org/) at the Gates Foundation, where I work on
@@ -19,7 +19,7 @@ O'Reilly book ([Bioinformatics Data Skills](/book/)), did a PhD with [Graham
 Coop](http://gcbias.org/) at UC Davis studying linked selection and the
 structure of genetic variation, and postdocs with [Andrew
 Kern](https://ie2.uoregon.edu/people/kern/) at the University of Oregon and
-[Rasmus Nielsen](https://nielsenlab.org/) at UC Berkeley.
+[Rasmus Nielsen](https://nielsen-lab.github.io/) at UC Berkeley.
 
 I build models and tools for decision-making under uncertainty. These days I
 think a lot about decision theory and the value of information in global
@@ -66,5 +66,5 @@ gmail</noscript>. You can also find me on [X](https://x.com/vsbuffalo) and
 
 ## Education
 
-**Ph.D. in Population Genetics**, UC Davis (with Graham Coop), 2019<br>
+**Ph.D. in Population Biology**, UC Davis (with Graham Coop), 2019<br>
 **B.A. in Economics and Political Science** (minor in Statistics), UC Davis, 2009

@@ -104,7 +104,7 @@ I've added faceting of multiple `SequenceSummary` objects' KL/k-mer
 diagnostics. Combined with a random data file, this really illustrated
 contamination:
 
-<a href="/new/images/large_facet_kl.png"><img src="/new/images/tiny_facet_kl.png"/></a>
+<a href="/images/large_facet_kl.png"><img src="/images/tiny_facet_kl.png"/></a>
 
 This is still in development; follow the code on
 [Github](http://github.com/vsbuffalo/qrqc) and feel free to contact me
