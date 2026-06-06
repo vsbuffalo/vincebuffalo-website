@@ -145,9 +145,9 @@ camdl:
 # Full model: 138 lines — see he2010 vignette
 
 forcing {
-  pop       : interpolated { data = "covariates.tsv", value_col = population }
-  birthrate : interpolated { data = "covariates.tsv", value_col = birthrate }
-  school    : periodic { period = 365.25 'days, step = 1 'days, on = [7:100, 115:199, 252:300, 308:356] }
+  pop       : interpolated 'count { data = "covariates.tsv", value_col = population }
+  birthrate : interpolated 'count { data = "covariates.tsv", value_col = birthrate }
+  school    : periodic 'ratio { period = 365.25 'days, step = 1 'days, on = [7:100, 115:199, 252:300, 308:356] }
 }
 
 let seas = 1.0 - amplitude + amplitude * (1.0 + 0.2411 / 0.7589) * school(t)
@@ -203,7 +203,7 @@ risk group, by vaccination status.
 
 Previously, adding these extra dimensions of realism could be a burden on the
 modeler --- especially since dimensions compound multiplicatively. For
-example, $P$ patches and $A$ age groups create $P \times A$ compartments, each
+example, \(P\) patches and \(A\) age groups create \(P \times A\) compartments, each
 of which needs careful, tedious and error-prone bookkeeping when writing out the
 transition logic; add a third stratifier and that count multiplies again. Suppose a modeler spends a day carefully coding one of these up, and a
 colleague then suggests fitting an alternate model with an extra risk-group
@@ -242,11 +242,11 @@ transitions {
 ```
 
 ![The age-stratified force-of-infection rule in two notations. Top: the ODE for
-$S_a$ and the force of infection $\lambda_a$ as a contact-weighted sum over
+\(S_a\) and the force of infection \(\lambda_a\) as a contact-weighted sum over
 source ages. Bottom: the same rule expressed in camdl, leveraging the compiler
 to expand everything per age class. Colors help illustrate the common notation
-structure between camdl and the math: the target index $a$ (red), source index
-$b$ (blue), and the shared dimension `age` (green). Every red age index `a` in
+structure between camdl and the math: the target index \(a\) (red), source index
+\(b\) (blue), and the shared dimension `age` (green). Every red age index `a` in
 the math has a red `a` index with the same role in the camdl, and `∑_{b ∈ age}`
 matches `sum(b in age, ...)` exactly.](/images/camdl-index-color.png)
 
@@ -255,8 +255,8 @@ compartments and 6 transitions, dim-checks the contact-matrix indexing (a
 typoed dimension key is a compile error, not a silent zero), and hands the
 runtime an IR that looks no different from the unstratified case. Surveying,
 fitting, and held-out validation all work on the expanded model unchanged. The
-same pattern composes: `stratify(by = [age, space])` builds the full age ×
-space product, with the same guarantees.
+same pattern composes: add a second `stratify(by = space)` and the compiler
+builds the full age × space product, with the same guarantees.
 
 ## A compiler doing what scripts can't
 
