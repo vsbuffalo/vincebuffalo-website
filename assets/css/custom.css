@@ -4,6 +4,54 @@
  * Fonts loaded via <link> in head-end.html
  */
 
+/* Safari stacking-context fix for the sticky navbar.
+ * Hextra's nav-container is `bg-transparent` and relies on an absolutely-
+ * positioned z-index:-1 blur child for its visible white background.
+ * In WebKit, that child can escape the parent's stacking context and
+ * render below the article body, which is what causes the navbar to look
+ * "offset down" with body content showing through where it should be opaque.
+ * Forcing an opaque background on the parent itself eliminates the
+ * dependence on that fragile child. The blur div's drop-shadow still works. */
+.nav-container {
+  background: var(--bg);
+}
+html.dark .nav-container {
+  background: var(--bg);
+}
+
+/* Editorial disclaimer / affiliation note under the post title.
+ * Uses --text-muted so it auto-adapts to light + dark modes. */
+.post-disclaimer {
+  font-size: 0.88em;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+.post-disclaimer a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Wide tables / wide text-art code blocks: shrink so they fit without overflow */
+.small-code pre,
+.small-code pre code {
+  font-size: 0.72em;
+  line-height: 1.35;
+}
+
+/* Light-mode Chroma fills for token classes the bundled stylesheet only
+ * styles in dark mode. Used by the camdl client-side highlighter (and by
+ * any Chroma block whose class set isn't fully covered upstream). */
+.highlight .chroma .k,
+.highlight .chroma .kn  { color: #d73a49; }
+.highlight .chroma .nf  { color: #6f42c1; font-weight: 700; }
+.highlight .chroma .s   { color: #032f62; }
+.highlight .chroma .m   { color: #005cc5; }
+.highlight .chroma .o   { color: #d73a49; font-weight: 700; }
+
 /* ============================================
    RESET HEXTRA UI
    ============================================ */
@@ -207,6 +255,9 @@ body {
   max-width: 680px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
+  /* Article sits inside a flex container; without this, wide children
+   * (code blocks, long inline links) force it past the viewport on mobile. */
+  min-width: 0;
 }
 
 /* Wider layout for about and pubs pages */
@@ -474,6 +525,32 @@ aside:not(.sidebar-container):not(.book-covers) sup {
 aside:not(.sidebar-container):not(.book-covers) a {
   color: var(--text-muted);
   border-bottom-color: var(--border);
+}
+
+/* Footnote refs: Hextra leaves them inheriting body color and unstyled,
+   which makes them disappear at sup-size. Color them like links and
+   bracket them so they read as a footnote pointer. */
+sup a.footnote-ref {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: none;
+}
+sup a.footnote-ref::before { content: "["; }
+sup a.footnote-ref::after  { content: "]"; }
+sup a.footnote-ref:hover {
+  text-decoration: underline;
+}
+
+/* Footnote definitions at the bottom: Hextra/Tailwind preflight strips
+   list-style from <ol>, so the numbers don't render. Restore decimal
+   numbering for the footnotes block. */
+.footnotes ol {
+  list-style: decimal outside;
+  padding-inline-start: 1.5em;
+}
+.footnotes ol li {
+  padding-inline-start: 0.25em;
 }
 
 /* Desktop: margin positioning for sidenotes */
@@ -754,6 +831,26 @@ figure.fullwidth {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+/* Wider-than-column images (Tufte-style) */
+figure.wide,
+.wide {
+  width: 1100px;
+  max-width: 90vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2em 0;
+}
+
+figure.wide img,
+.wide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 
 /* ============================================
