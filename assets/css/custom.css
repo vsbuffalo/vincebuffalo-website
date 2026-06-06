@@ -1002,3 +1002,23 @@ footer > div {
     height: 160px;
   }
 }
+
+/* Block-image figures: render-image.html wraps standalone images in
+   <figure> + <figcaption>. Caption is muted and adapts to light/dark
+   via --text-muted; left-aligned since captions are often multi-line. */
+figure.post-figure {
+  margin: 1.75rem 0;
+  text-align: center;
+}
+figure.post-figure img {
+  max-width: 100%;
+  height: auto;
+}
+figure.post-figure figcaption {
+  margin: 0.6rem auto 0;
+  max-width: 42rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  text-align: left;
+}

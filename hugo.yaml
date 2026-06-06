@@ -25,6 +25,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    parser:
+      wrapStandAloneImageWithinParagraph: false
     extensions:
       passthrough:
         delimiters:

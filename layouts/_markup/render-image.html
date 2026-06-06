@@ -2,4 +2,13 @@
 {{- if strings.HasPrefix $url "/" -}}
 {{- $url = $url | relURL -}}
 {{- end -}}
-<img src="{{ $url }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} data-custom-hook="true" />
+{{- if .IsBlock -}}
+<figure class="post-figure">
+  <img src="{{ $url }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} data-custom-hook="true" />
+  {{- with .Text }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>
+{{- else -}}
+<img src="{{ $url }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} data-custom-hook="true" />
+{{- end -}}
